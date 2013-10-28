@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Contact Form, Contact Form to DB, text, contact, form, contacts, contact form, request, contact me, feeDBack form, feeDBack, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy, save messages, download messafes, manage messages, 
 Requires at least: 3.2
-Tested up to: 3.6.1
-Stable tag: 1.2
+Tested up to: 3.7
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,29 +12,35 @@ This plugin allows you to manage the messages that have been sent from your site
 
 == Description ==
 
-Contact Form to DB allows you to manage the messages that have been sent from your site.
-This plugin is add-on ONLY for Contact Form plugin by BestWebSoft, thats why he will not work with any others plugins.
-At the work this plugin is used fancyBox - javascript-extension for jQuery.
-FancyBox was created by Janis Skarnelis ( email: janis@fancyapps.com ) licensed under Creative Commons Attribution-NonCommercial 3.0 license. 
+Contact Form to DB plugin is an exclusive add-on for the Contact Form plugin by BestWebSof. The plugin provides a unique opportunity to manage messages sent from your site via the contact form. The list of its features is really impressive: messages can be saved, browsed, deleted or downloaded from the Dashboard. In case you decide to deactivate the plugin, it will serve as a repository for your old messages. Once you install and activate it, not a single message will be lost!
+Please pay attention, that this plugin is an add-on ONLY for Contact Form plugin by BestWebSoft, that's why it will not work with any other contact form plugins.
+Contact Form to DB is compatible both with a free and a PRO version of Contact Form.
+There is also a premium version of the plugin, allowing to re-send and preiodically delete old messages, manage attachments and get detailed support and answers to your questions within one business day.
 
 <a href="http://wordpress.org/extend/plugins/contact-form-to-db/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 <a href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=52c469c463ea3722c39dd9c5d9ef54b2" target="_blank">Upgrade to Pro Version</a>
 
+<a href="http://bestwebsoft.com/plugin/contact-form-pro/?k=4028655c87316c98ae9ac7ca1928067f" target="_blank">Contact Form Pro</a> 
 <a href="http://wordpress.org/extend/plugins/contact-form-plugin" target="_blank">Contact Form Plugin</a>
-<a href="http://bestwebsoft.com/plugin/contact-form-pro/?k=4028655c87316c98ae9ac7ca1928067f" target="_blank">Upgrade Contact Form Plugin to Pro Version</a>
 
-= Copyrights for Resources used in this theme =
+= Copyrights for Resources used in this plugin =
 
 1. In Contact Form To DB Plugin used fancyBox which licensed under Creative Commons Attribution-NonCommercial 3.0 license.
-2. Files jquery.fancybox.pack.js, fancybox_overlay.png, fancybox_sprite.png, jquery.fancybox.css is a part of fancyBox and are under Creative Commons Attribution-NonCommercial 3.0 license.
-3. Everything else used in this plugin has been created by bestwebsoft, especially for Contact Form To DB Plugin and is distributed under GPL license.
+2. Everything else used in this plugin has been created by bestwebsoft, especially for the Contact Form To DB Plugin and is distributed under GPL license.
 
 = Features =
 
-* Actions: You can manage the messages that have been sent from the site through the Contact Form.
-* Actions: You can show, delete and download messages from dashboard.
+* Actions: You can save messages that have been sent from the site via the Contact Form to your databese.
+* Actions: You can manage messages (browse, delete and download messages) from Dashboard.
+
+= Recommended Plugins =
+
+The author of the Contact Form To DB also recommends the following plugins:
+
+* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=d76bbcf46476f5ab4bb7950255a738a6">Updater Pro</a> with more useful features available. It allows to update plugins and WordPress core on several websites. It can make backup of all your files and database before updating.
 
 = Translation =
 
@@ -58,44 +64,39 @@ We can fix some things for free for the users who provide translation of our plu
 
 == Frequently Asked Questions ==
 
-= How can i download a file which is attached to the letter? =
+= Why am I unable to see the file which is attached to the letter? =
 
-Two solutions:
-1. You can click on name of message author to slide down message content, hover your mouse over the file name and click on the "Download" link that appears.
-2. Also you can click on checkbox near name of message author, chose "Download attachments" from dropdown menu in top or bottom message list and click "Apply" button.
+Because the ability to save and manage attachments is available only in the PRO version of the plugin.
 
-= Why files with ".tiff" extension is not display in browser? =
-
-Browsers do not displaying images with ".tiff" extension.
-To view this images plugin convert ".tiff" to ".jpeg" for small thumbnails. But it work not to all servers.
-
-= In what formats messages can be saved? =
+= In what formats can the messages be saved? =
 
 You can save messages in "csv", "xml" and "eml" formats.
 
-= Why Contact Form to DB pugin is not work without Contact Form plugin? =
+= Why does Contact Form to DB pugin not work without Contact Form plugin? =
 
-This plugin was create specialy as extension to Contact Form plugin.
-He can receive messages ONLY from Contact Form plugin.
-If you used Contact Form plugin early with Contact Form to DB plugin and delete or deactivate it, 
-so Contact Form to DB plugin will work as archive of your old messages.
+This plugin was created especially as an extension for Contact Form plugin.
+It can receive messages ONLY from Contact Form plugin.
+In case you used Contact Form plugin with Contact Form to DB plugin arlier and decide to delete or deactivate it, Contact Form to DB plugin will work as an archive for your old messages.
 
-= How can I remove the column "Send counter" from list of messages? =
+= How can I remove the column "Send counter" from the list of messages? =
 
-You need click on "Screen Options" button on right top in manager page and deselect the item "Send counter".
+Click on "Screen Options" button in the right top corner on manager page and deselect the item "Send counter".
 
 == Screenshots ==
 
-1. Plugin settings in WordPress admin panel when "save message" option is disable.
-2. Plugin settings in WordPress admin panel when "save message" option is enable.
+1. Plugin settings in WordPress admin panel when "save message" option is disabled.
+2. Plugin settings in WordPress admin panel when "save message" option is enabled.
 3. Contact Form to DB manager page display.
-4. Contact Form to DB manager page display message.
-5. Contact Form to DB manager page display spam page.
+4. Message on the Contact Form to DB manager page display.
+5. Spam page on the Contact Form to DB manager page display.
 
 == Changelog ==
 
+= V1.3 - 28.10.2013 =
+* Update : We updated all functionality for wordpress 3.7.
+
 = V1.2 - 22.10.2013 =
-* Bugfix : Fixed a bug that appeared when you need to restore a message that has been marked as Trash.
+* Bugfix : Fixed a bug that appeared when you needed to restore a message that had been marked as Trash.
 
 = V1.1 - 18.10.2013 =
 * NEW : Added info about licenses for Resources used in this plugin. Fixed bugs that appeared when using this plugin in Wordpress Multisite.
@@ -105,8 +106,11 @@ You need click on "Screen Options" button on right top in manager page and desel
 
 == Upgrade Notice ==
 
+= V1.3 =
+We updated all functionality for wordpress 3.7.
+
 = V1.2 =
-Fixed a bug that appeared when you need to restore a message that has been marked as Trash. Upgrade immediately.
+Fixed a bug that appeared when you needed to restore a message that had been marked as Trash. Upgrade immediately.
 
 = V1.1 =
 Added info about licenses for Resources used in this plugin. Fixed bugs that appeared when using this plugin in Wordpress Multisite. Upgrade immediately.

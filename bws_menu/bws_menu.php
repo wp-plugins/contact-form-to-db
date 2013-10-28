@@ -5,11 +5,16 @@
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $wpdb, $wp_version, $title;
-		$active_plugins = get_option('active_plugins');
 		$all_plugins = get_plugins();
 		$error = '';
 		$message = '';
 		$bwsmn_form_email = '';
+		if ( is_multisite() ) {
+			$active_plugins = (array) array_keys( get_site_option( 'active_sitewide_plugins', array() ) );
+			$active_plugins = array_merge( $active_plugins , get_option( 'active_plugins' ) );
+		} else {
+			$active_plugins = get_option( 'active_plugins' );
+		}
 
 		$array_activate = array();
 		$array_install	= array();
@@ -33,22 +38,22 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'contact-form-to-db\/contact_form_to_db.php', 'Contact Form to DB', 'http://bestwebsoft.com/plugin/contact-form-to-db/', 'http://bestwebsoft.com/plugin/contact-form-to-db/#download', '/wp-admin/plugin-install.php?tab=search&s=Contact+Form+to+DB+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=cntctfrmtdb_settings' )
 		);
 		foreach ( $array_plugins as $plugins ) {
-			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
-				$array_activate[$count_activate]["title"] = $plugins[1];
-				$array_activate[$count_activate]["link"] = $plugins[2];
-				$array_activate[$count_activate]["href"] = $plugins[3];
-				$array_activate[$count_activate]["url"]	= $plugins[5];
+			if ( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
+				$array_activate[ $count_activate ]["title"]		= $plugins[1];
+				$array_activate[ $count_activate ]["link"]		= $plugins[2];
+				$array_activate[ $count_activate ]["href"]		= $plugins[3];
+				$array_activate[ $count_activate ]["url"]		= $plugins[5];
 				$count_activate++;
 			} else if ( array_key_exists( str_replace( "\\", "", $plugins[0] ), $all_plugins ) ) {
-				$array_install[$count_install]["title"] = $plugins[1];
-				$array_install[$count_install]["link"]	= $plugins[2];
-				$array_install[$count_install]["href"]	= $plugins[3];
+				$array_install[ $count_install ]["title"]	= $plugins[1];
+				$array_install[ $count_install ]["link"]	= $plugins[2];
+				$array_install[ $count_install ]["href"]	= $plugins[3];
 				$count_install++;
 			} else {
-				$array_recomend[$count_recomend]["title"] = $plugins[1];
-				$array_recomend[$count_recomend]["link"] = $plugins[2];
-				$array_recomend[$count_recomend]["href"] = $plugins[3];
-				$array_recomend[$count_recomend]["slug"] = $plugins[4];
+				$array_recomend[ $count_recomend ]["title"] = $plugins[1];
+				$array_recomend[ $count_recomend ]["link"]	= $plugins[2];
+				$array_recomend[ $count_recomend ]["href"]	= $plugins[3];
+				$array_recomend[ $count_recomend ]["slug"]	= $plugins[4];
 				$count_recomend++;
 			}
 		}
@@ -64,21 +69,21 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'contact-form-to-db-pro\/contact_form_to_db_pro.php', 'Contact Form to DB Pro', 'http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=6ce5f4a9006ec906e4db643669246c6a', 'http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=6ce5f4a9006ec906e4db643669246c6a#purchase', 'admin.php?page=cntctfrmtdbpr_settings' )
 		);
 		foreach ( $array_plugins_pro as $plugins ) {
-			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
-				$array_activate_pro[$count_activate_pro]["title"] = $plugins[1];
-				$array_activate_pro[$count_activate_pro]["link"] = $plugins[2];
-				$array_activate_pro[$count_activate_pro]["href"] = $plugins[3];
-				$array_activate_pro[$count_activate_pro]["url"]	= $plugins[4];
+			if ( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
+				$array_activate_pro[ $count_activate_pro ]["title"] = $plugins[1];
+				$array_activate_pro[ $count_activate_pro ]["link"]	= $plugins[2];
+				$array_activate_pro[ $count_activate_pro ]["href"]	= $plugins[3];
+				$array_activate_pro[ $count_activate_pro ]["url"]	= $plugins[4];
 				$count_activate_pro++;
-			} else if( array_key_exists(str_replace( "\\", "", $plugins[0]), $all_plugins ) ) {
-				$array_install_pro[$count_install_pro]["title"] = $plugins[1];
-				$array_install_pro[$count_install_pro]["link"]	= $plugins[2];
-				$array_install_pro[$count_install_pro]["href"]	= $plugins[3];
+			} else if ( array_key_exists( str_replace( "\\", "", $plugins[0]), $all_plugins ) ) {
+				$array_install_pro[ $count_install_pro ]["title"]	= $plugins[1];
+				$array_install_pro[ $count_install_pro ]["link"]	= $plugins[2];
+				$array_install_pro[ $count_install_pro ]["href"]	= $plugins[3];
 				$count_install_pro++;
 			} else {
-				$array_recomend_pro[$count_recomend_pro]["title"] = $plugins[1];
-				$array_recomend_pro[$count_recomend_pro]["link"] = $plugins[2];
-				$array_recomend_pro[$count_recomend_pro]["href"] = $plugins[3];
+				$array_recomend_pro[ $count_recomend_pro ]["title"] = $plugins[1];
+				$array_recomend_pro[ $count_recomend_pro ]["link"]	= $plugins[2];
+				$array_recomend_pro[ $count_recomend_pro ]["href"]	= $plugins[3];
 				$count_recomend_pro++;
 			}
 		}
@@ -113,13 +118,13 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 	    else
 	    	$memory_limit = __( 'N/A', 'bestwebsoft' );
 	    if ( function_exists( 'memory_get_usage' ) )
-	    	$memory_usage = round( memory_get_usage() / 1024 / 1024, 2 ) . __(' Mb', 'bestwebsoft' );
+	    	$memory_usage = round( memory_get_usage() / 1024 / 1024, 2 ) . __( ' Mb', 'bestwebsoft' );
 	    else
 	    	$memory_usage = __( 'N/A', 'bestwebsoft' );
 	    if ( is_callable( 'exif_read_data' ) )
-	    	$exif_read_data = __('Yes', 'bestwebsoft' ) . " ( V" . substr( phpversion( 'exif' ), 0,4 ) . ")" ;
+	    	$exif_read_data = __( 'Yes', 'bestwebsoft' ) . " ( V" . substr( phpversion( 'exif' ), 0,4 ) . ")" ;
 	    else
-	    	$exif_read_data = __('No', 'bestwebsoft' );
+	    	$exif_read_data = __( 'No', 'bestwebsoft' );
 	    if ( is_callable( 'iptcparse' ) )
 	    	$iptcparse = __( 'Yes', 'bestwebsoft' );
 	    else
@@ -143,13 +148,13 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 		} else
 			$multisite = __( 'N/A', 'bestwebsoft' );
 
-		$site_url = get_option('siteurl');
-		$home_url = get_option('home');
-		$db_version = get_option('db_version');
+		$site_url = get_option( 'siteurl' );
+		$home_url = get_option( 'home' );
+		$db_version = get_option( 'db_version' );
 		$system_info = array(
-			'system_info' => '',
-			'active_plugins' => '',
-			'inactive_plugins' => ''
+			'system_info'		=> '',
+			'active_plugins'	=> '',
+			'inactive_plugins'	=> ''
 		);
 		$system_info['system_info'] = array(
 	        __( 'Operating System', 'bestwebsoft' )				=> PHP_OS,
@@ -186,7 +191,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			 ( isset( $_REQUEST['bwsmn_form_submit_custom_email'] ) && check_admin_referer( plugin_basename(__FILE__), 'bwsmn_nonce_submit_custom_email' ) ) ) {
 			if ( isset( $_REQUEST['bwsmn_form_email'] ) ) {
 				$bwsmn_form_email = trim( $_REQUEST['bwsmn_form_email'] );
-				if( $bwsmn_form_email == "" || !preg_match( "/^((?:[a-z0-9']+(?:[a-z0-9\-_\.']+)?@[a-z0-9]+(?:[a-z0-9\-\.]+)?\.[a-z]{2,5})[, ]*)+$/i", $bwsmn_form_email ) ) {
+				if ( $bwsmn_form_email == "" || !preg_match( "/^((?:[a-z0-9']+(?:[a-z0-9\-_\.']+)?@[a-z0-9]+(?:[a-z0-9\-\.]+)?\.[a-z]{2,5})[, ]*)+$/i", $bwsmn_form_email ) ) {
 					$error = __( "Please enter a valid email address.", 'bestwebsoft' );
 				} else {
 					$email = $bwsmn_form_email;
@@ -228,11 +233,11 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 		}
 		?><div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
-			<h2><?php echo $title;?></h2>
-			<div class="updated fade" <?php if ( !( isset( $_REQUEST['bwsmn_form_submit'] ) || isset( $_REQUEST['bwsmn_form_submit_custom_email'] ) ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+			<h2><?php echo $title; ?></h2>
+			<div class="updated fade" <?php if ( ! ( isset( $_REQUEST['bwsmn_form_submit'] ) || isset( $_REQUEST['bwsmn_form_submit_custom_email'] ) ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div class="error" <?php if ( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
 			<h3 style="color: blue;"><?php _e( 'Pro plugins', 'bestwebsoft' ); ?></h3>
-			<?php if( 0 < $count_activate_pro ) { ?>
+			<?php if ( 0 < $count_activate_pro ) { ?>
 			<div style="padding-left:15px;">
 				<h4><?php _e( 'Activated plugins', 'bestwebsoft' ); ?></h4>
 				<?php foreach ( $array_activate_pro as $activate_plugin ) { ?>
@@ -240,7 +245,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php } ?>
 			</div>
 			<?php } ?>
-			<?php if( 0 < $count_install_pro ) { ?>
+			<?php if ( 0 < $count_install_pro ) { ?>
 			<div style="padding-left:15px;">
 				<h4><?php _e( 'Installed plugins', 'bestwebsoft' ); ?></h4>
 				<?php foreach ( $array_install_pro as $install_plugin) { ?>
@@ -248,7 +253,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php } ?>
 			</div>
 			<?php } ?>
-			<?php if( 0 < $count_recomend_pro ) { ?>
+			<?php if ( 0 < $count_recomend_pro ) { ?>
 			<div style="padding-left:15px;">
 				<h4><?php _e( 'Recommended plugins', 'bestwebsoft' ); ?></h4>
 				<?php foreach ( $array_recomend_pro as $recomend_plugin ) { ?>
@@ -258,15 +263,15 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			<?php } ?>
 			<br />
 			<h3 style="color: green"><?php _e( 'Free plugins', 'bestwebsoft' ); ?></h3>
-			<?php if( 0 < $count_activate ) { ?>
+			<?php if ( 0 < $count_activate ) { ?>
 			<div style="padding-left:15px;">
 				<h4><?php _e( 'Activated plugins', 'bestwebsoft' ); ?></h4>
-				<?php foreach( $array_activate as $activate_plugin ) { ?>
+				<?php foreach ( $array_activate as $activate_plugin ) { ?>
 				<div style="float:left; width:200px;"><?php echo $activate_plugin["title"]; ?></div> <p><a href="<?php echo $activate_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'bestwebsoft' ); ?></a> <a href="<?php echo $activate_plugin["url"]; ?>"><?php echo __( "Settings", 'bestwebsoft' ); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
-			<?php if( 0 < $count_install ) { ?>
+			<?php if ( 0 < $count_install ) { ?>
 			<div style="padding-left:15px;">
 				<h4><?php _e( 'Installed plugins', 'bestwebsoft' ); ?></h4>
 				<?php foreach ( $array_install as $install_plugin ) { ?>
@@ -274,7 +279,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php } ?>
 			</div>
 			<?php } ?>
-			<?php if( 0 < $count_recomend ) { ?>
+			<?php if ( 0 < $count_recomend ) { ?>
 			<div style="padding-left:15px;">
 				<h4><?php _e( 'Recommended plugins', 'bestwebsoft' ); ?></h4>
 				<?php foreach ( $array_recomend as $recomend_plugin ) { ?>

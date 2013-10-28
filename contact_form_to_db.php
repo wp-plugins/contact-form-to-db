@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB
 Plugin URI: http://bestwebsoft.com/plugin/
 Description:  Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.2
+Version: 1.3
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -87,7 +87,7 @@ if ( ! function_exists( 'cntctfrmtdb_admin_menu' ) ) {
 	function cntctfrmtdb_admin_menu() {
 		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'edit_themes', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 ); 
 		add_submenu_page( 'bws_plugins',__( 'Contact Form to DB', 'contact_form_to_db' ), __( 'Contact Form to DB', 'contact_form_to_db' ), 'edit_themes', 'cntctfrmtdb_settings', 'cntctfrmtdb_settings_page' );
-		$hook = add_menu_page( __( 'Contact Form to DB', 'contact_form_to_db' ), __( 'Contact Form to DB', 'contact_form_to_db' ), 'edit_posts', 'cntctfrmtdb_manager', 'cntctfrmtdb_manager_page', plugins_url( "images/icon_16_c.png", __FILE__ ), 27 );
+		$hook = add_menu_page( __( 'CF to DB', 'contact_form_to_db' ), __( 'CF to DB', 'contact_form_to_db' ), 'edit_posts', 'cntctfrmtdb_manager', 'cntctfrmtdb_manager_page', plugins_url( "images/px.png", __FILE__ ), 29 );
 		//call register settings function
 		add_action( 'admin_init', 'cntctfrmtdb_settings' );
 		// add Contact Form to DB manager page
@@ -145,7 +145,12 @@ if ( ! function_exists( 'cntctfrmtdb_check_contact_form' ) ) {
 			$cntctfrmtdb_contact_form_not_found = __( 'Contact Form Plugin is not found.</br>You need install and activate this plugin for correct  work with Contact Form to DB plugin.</br>You can download Contact Form Plugin from ', 'contact_form_to_db' ) . '<a href="' . esc_url( 'http://bestwebsoft.com/plugin/contact-form-pro/' ) . '" title="' . __( 'Developers website', 'contact_form_to_db' ). '"target="_blank">' . __( 'website of plugin Authors ', 'contact_form_to_db' ) . '</a>' . __( 'or ', 'contact_form_to_db' ) . '<a href="' . esc_url( 'http://wordpress.org' ) .'" title="Wordpress" target="_blank">'. __( 'Wordpress.', 'contact_form_to_db' ) . '</a>';
 		} else {
 			if ( ! ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) || is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) ) ) {
-				$cntctfrmtdb_contact_form_not_active = __( 'Contact Form Plugin is not active.</br>You need activate this plugin for correct work with Contact Form to DB plugin. ', 'contact_form_to_db' );
+				$cntctfrmtdb_contact_form_not_active = __( 'Contact Form Plugin is not active.</br>You need activate this plugin for correct work with Contact Form to DB plugin.', 'contact_form_to_db' );
+			}
+			/* old version */
+			if (  ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) && $all_plugins['contact-form-plugin/contact_form.php']['Version'] < '3.60' ) || 
+				( is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) && $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] < '1.12' ) ) {
+				$cntctfrmtdb_contact_form_not_found = __( 'Contact Form Plugin has old version.</br>You need update this plugin for correct work with Contact Form to DB plugin.', 'contact_form_to_db' );
 			}
 		}
 	}
@@ -490,7 +495,8 @@ if ( ! function_exists( 'cntctfrmtdb_check_dispatch' ) ) {
 		$dispatched = $cntctfrm_result ? 1 : 0;
 
 		if ( '1' == $cntctfrmtdb_options['cntctfrmtdb_save_messages_to_db'] ) {
-			if ( true == $_SESSION['cntctfrm_send_mail'] || true == $_SESSION['cntctfrmp_rsend_mail'] ) {
+			if ( ( isset( $_SESSION['cntctfrm_send_mail'] ) && true == $_SESSION['cntctfrm_send_mail'] ) ||
+				 ( isset( $_SESSION['cntctfrmpr_send_mail'] ) && true == $_SESSION['cntctfrmpr_send_mail'] ) ) {
 				// 
 			} else {
 				cntctfrmtdb_save_message();
@@ -959,9 +965,9 @@ if ( ! function_exists( 'cntctfrmtdb_action_links' ) ) {
 													if ( 'address' == $field->name ) 
 														$data_address = $field->field_value;
 													elseif ( 'phone' == $field->name )
-															$data_phone = $field->field_value;
+														$data_phone = $field->field_value;
 													elseif ( 'user_agent' == $field->name )
-															$data_user_agent = $field->field_value;
+														$data_user_agent = $field->field_value;
 												}
 												
 												if ( ! isset( $message ) ) 
@@ -991,7 +997,7 @@ if ( ! function_exists( 'cntctfrmtdb_action_links' ) ) {
 												if ( '' !=  $data->refer ) {
 													$message .= $enclosure . $data->refer . $enclosure . $separator;
 												}
-												if ( '' !=  $data_user_agent ) {
+												if ( isset( $data_user_agent ) && '' !=  $data_user_agent ) {
 													$message .= $enclosure . $data_user_agent . $enclosure . $separator;
 												}												
 												// if was chosen only one message
@@ -1335,9 +1341,9 @@ if ( ! function_exists( 'cntctfrmtdb_get_message_list' ) ) {
 			// fill "status" column 
 			$the_message_status = '<a href="?page=cntctfrmtdb_manager&action=change_status&status=' . $value->status_id . '&message_id[]=' . $value->id . '">';
 			if ( '1' == $value->status_id )
-				$the_message_status .= '<div class="cntctfrmtdb-letter" title="'. __( 'Letter', 'contact_form_to_db' ) . '">' . $value->status_id . '</div>';
+				$the_message_status .= '<div class="cntctfrmtdb-letter" title="'. __( 'Mark as Spam', 'contact_form_to_db' ) . '">' . $value->status_id . '</div>';
 			elseif ( '2' == $value->status_id )
-				$the_message_status .= '<div class="cntctfrmtdb-spam" title="'. __( 'Spam!', 'contact_form_to_db' ) . '">' . $value->status_id . '</div>';
+				$the_message_status .= '<div class="cntctfrmtdb-spam" title="'. __( 'Mark as Trash', 'contact_form_to_db' ) . '">' . $value->status_id . '</div>';
 			elseif ( '3' == $value->status_id )
 				$the_message_status .= '<div class="cntctfrmtdb-trash" title="'. __( 'in Trash', 'contact_form_to_db' ) . '">' . $value->status_id . '</div>';
 			else
@@ -1393,6 +1399,8 @@ FROM `" . $prefix . "field_selection` INNER JOIN `" . $wpdb->prefix . "cntctfrm_
 							</tr>
 						</tbody>
 					</table>';
+
+				$attachments_icon = '<div class="cntctfrmtdb-has-attachment" title="' . __( "This option is available in Pro version", "contact_form_to_db" ) . '"></div>';				
 			}
 
 			$message_content .= '</div>';

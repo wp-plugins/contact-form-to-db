@@ -13,10 +13,17 @@
 .admin-color-classic .wrap #icon-options-general.icon32-bws {
 	background: url("../images/icon_36_b.png") no-repeat scroll left top transparent;
 }
+#adminmenu #toplevel_page_cntctfrmtdb_manager div.wp-menu-image {
+	background: url("../images/menu.png") no-repeat scroll left -33px transparent;
+}
+#adminmenu #toplevel_page_cntctfrmtdb_manager:hover div.wp-menu-image,
+#adminmenu #toplevel_page_cntctfrmtdb_manager.current div.wp-menu-image {
+	background: url("../images/menu.png") no-repeat scroll left -3px transparent;
+}
 #toplevel_page_bws_plugins .wp-submenu .wp-first-item {
 	display:none;
 }
-.bws_system_info_mata_box {
+.bws_system_info_meta_box {
     width: 850px;
 }
 .bws_system_info_meta_box .hndle {
@@ -33,7 +40,7 @@
     width: 50%;
 }
 .bws_system_info tbody td {
-	border-bottom: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
 }
 /*
 * styles for options page
@@ -361,6 +368,12 @@
 .cntctfrmtdb .tablenav option[value="re_send_messages"],
 .cntctfrmtdb .tablenav option[value="download_attachments"] {
 	display: none;
+}
+.cntctfrmtdb-has-attachment {
+	display: inline-block;
+	width: 11px;
+	height: 16px;
+	background: url('../images/status-icons.png') -11px 0px;
 }
 /*
 * styles for pro_version settings and tooltip 
