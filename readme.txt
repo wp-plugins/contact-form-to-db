@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Contact Form, Contact Form to DB, text, contact, form, contacts, contact form, request, contact me, feeDBack form, feeDBack, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy, save messages, download messafes, manage messages, 
 Requires at least: 3.2
-Tested up to: 3.7
-Stable tag: 1.3
+Tested up to: 3.7.1
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,13 +17,13 @@ Please pay attention, that this plugin is an add-on ONLY for Contact Form plugin
 Contact Form to DB is compatible both with a free and a PRO version of Contact Form.
 There is also a premium version of the plugin, allowing to re-send and preiodically delete old messages, manage attachments and get detailed support and answers to your questions within one business day.
 
-<a href="http://wordpress.org/extend/plugins/contact-form-to-db/faq/" target="_blank">FAQ</a>
+<a href="http://wordpress.org/plugins/contact-form-to-db/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 <a href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=52c469c463ea3722c39dd9c5d9ef54b2" target="_blank">Upgrade to Pro Version</a>
 
 <a href="http://bestwebsoft.com/plugin/contact-form-pro/?k=4028655c87316c98ae9ac7ca1928067f" target="_blank">Contact Form Pro</a> 
-<a href="http://wordpress.org/extend/plugins/contact-form-plugin" target="_blank">Contact Form Plugin</a>
+<a href="http://wordpress.org/plugins/contact-form-plugin" target="_blank">Contact Form Plugin</a>
 
 = Copyrights for Resources used in this plugin =
 
@@ -45,6 +45,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 = Translation =
 
 * Russian (ru_RU)
+* Ukrainian (uk)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
@@ -92,6 +93,11 @@ Click on "Screen Options" button in the right top corner on manager page and des
 
 == Changelog ==
 
+= V1.3.1 - 1.11.2013 =
+* NEW : Add checking installed wordpress version.
+* NEW : The Ukrainian language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.7.1.
+
 = V1.3 - 28.10.2013 =
 * Update : We updated all functionality for wordpress 3.7.
 
@@ -105,6 +111,9 @@ Click on "Screen Options" button in the right top corner on manager page and des
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.3.1 =
+Add checking installed wordpress version. The Ukrainian language file is added to the plugin. We updated all functionality for wordpress 3.7.1.
 
 = V1.3 =
 We updated all functionality for wordpress 3.7.

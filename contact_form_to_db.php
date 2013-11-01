@@ -4,11 +4,11 @@ Plugin Name: Contact Form to DB
 Plugin URI: http://bestwebsoft.com/plugin/
 Description:  Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.3
+Version: 1.3.1
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
-/*  Copyright 2013  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  @ Copyright 2013  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -26,6 +26,23 @@ License: GPLv2 or later
 */
 
 require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+
+/*
+* Function for adding menu and submenu 
+*/
+if ( ! function_exists( 'cntctfrmtdb_admin_menu' ) ) {
+	function cntctfrmtdb_admin_menu() {
+		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'edit_themes', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 ); 
+		add_submenu_page( 'bws_plugins',__( 'Contact Form to DB', 'contact_form_to_db' ), __( 'Contact Form to DB', 'contact_form_to_db' ), 'edit_themes', 'cntctfrmtdb_settings', 'cntctfrmtdb_settings_page' );
+		$hook = add_menu_page( __( 'CF to DB', 'contact_form_to_db' ), __( 'CF to DB', 'contact_form_to_db' ), 'edit_posts', 'cntctfrmtdb_manager', 'cntctfrmtdb_manager_page', plugins_url( "images/px.png", __FILE__ ), 29 );
+		//call register settings function
+		add_action( 'admin_init', 'cntctfrmtdb_settings' );
+		// add Contact Form to DB manager page
+		add_action( "load-$hook", 'cntctfrmtdb_add_options_manager' );
+		add_action( 'admin_init', 'cntctfrmtdb_create_table' );
+	}
+}
+
 /*
 * Function initialisation plugin 
 */
@@ -80,19 +97,19 @@ if ( ! function_exists ( 'cntctfrmtdb_admin_head' ) ) {
 	}
 }
 
-/*
-* Function for adding menu and submenu 
-*/
-if ( ! function_exists( 'cntctfrmtdb_admin_menu' ) ) {
-	function cntctfrmtdb_admin_menu() {
-		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'edit_themes', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 ); 
-		add_submenu_page( 'bws_plugins',__( 'Contact Form to DB', 'contact_form_to_db' ), __( 'Contact Form to DB', 'contact_form_to_db' ), 'edit_themes', 'cntctfrmtdb_settings', 'cntctfrmtdb_settings_page' );
-		$hook = add_menu_page( __( 'CF to DB', 'contact_form_to_db' ), __( 'CF to DB', 'contact_form_to_db' ), 'edit_posts', 'cntctfrmtdb_manager', 'cntctfrmtdb_manager_page', plugins_url( "images/px.png", __FILE__ ), 29 );
-		//call register settings function
-		add_action( 'admin_init', 'cntctfrmtdb_settings' );
-		// add Contact Form to DB manager page
-		add_action( "load-$hook", 'cntctfrmtdb_add_options_manager' );
-		add_action( 'admin_init', 'cntctfrmtdb_create_table' );
+/* Function check if plugin is compatible with current WP version  */
+if ( ! function_exists ( 'cntctfrmtdb_version_check' ) ) {
+	function cntctfrmtdb_version_check() {
+		global $wp_version;
+		$plugin_data	=	get_plugin_data( __FILE__, false );
+		$require_wp		=	"3.2"; /* Wordpress at least requires version */
+		$plugin			=	plugin_basename( __FILE__ );
+	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
+			if( is_plugin_active( $plugin ) ) {
+				deactivate_plugins( $plugin );
+				wp_die( "<strong>" . $plugin_data['Name'] . " </strong> " . __( 'requires', 'contact_form_to_db' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'contact_form_to_db') . "<br /><br />" . __( 'Back to the WordPress', 'contact_form_to_db') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'contact_form_to_db') . "</a>." );
+			}
+		}
 	}
 }
 
@@ -120,7 +137,7 @@ if ( ! function_exists( 'cntctfrmtdb_register_plugin_links' ) ) {
 		$base = plugin_basename( __FILE__ );
 		if ( $file == $base ) {
 			$links[] = '<a href="admin.php?page=cntctfrmtdb_settings">' . __( 'Settings','contact_form_to_db' ) . '</a>';
-			$links[] = '<a href="http://wordpress.org/extend/plugins/contact-form-to-db/faq/" target="_blank">' . __( 'FAQ','contact_form_to_db' ) . '</a>';
+			$links[] = '<a href="http://wordpress.org/plugins/contact-form-to-db/faq/" target="_blank">' . __( 'FAQ','contact_form_to_db' ) . '</a>';
 			$links[] = '<a href="http://support.bestwebsoft.com">' . __( 'Support','contact_form_to_db' ) . '</a>';
 		}
 		return $links;
@@ -135,21 +152,17 @@ if ( ! function_exists( 'cntctfrmtdb_check_contact_form' ) ) {
 		require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		global $cntctfrmtdb_contact_form_not_found, $cntctfrmtdb_contact_form_not_active;
 		$all_plugins = get_plugins();
-		if ( is_multisite() ){
-			$active_plugins = (array) array_keys( get_site_option( 'active_sitewide_plugins', array() ) );
-			$active_plugins = array_merge( $active_plugins , get_option('active_plugins') );
-		} else {
-			$active_plugins = get_option('active_plugins');
-		}
+		if ( ! function_exists( 'is_plugin_active_for_network' ) )
+			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		if ( ! ( array_key_exists( 'contact-form-plugin/contact_form.php', $all_plugins ) || array_key_exists( 'contact-form-pro/contact_form_pro.php', $all_plugins ) ) ) {
 			$cntctfrmtdb_contact_form_not_found = __( 'Contact Form Plugin is not found.</br>You need install and activate this plugin for correct  work with Contact Form to DB plugin.</br>You can download Contact Form Plugin from ', 'contact_form_to_db' ) . '<a href="' . esc_url( 'http://bestwebsoft.com/plugin/contact-form-pro/' ) . '" title="' . __( 'Developers website', 'contact_form_to_db' ). '"target="_blank">' . __( 'website of plugin Authors ', 'contact_form_to_db' ) . '</a>' . __( 'or ', 'contact_form_to_db' ) . '<a href="' . esc_url( 'http://wordpress.org' ) .'" title="Wordpress" target="_blank">'. __( 'Wordpress.', 'contact_form_to_db' ) . '</a>';
 		} else {
-			if ( ! ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) || is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) ) ) {
+			if ( ! ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) || is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) || is_plugin_active_for_network( 'contact-form-plugin/contact_form.php' ) || is_plugin_active_for_network( 'contact-form-pro/contact_form_pro.php' ) ) ) {
 				$cntctfrmtdb_contact_form_not_active = __( 'Contact Form Plugin is not active.</br>You need activate this plugin for correct work with Contact Form to DB plugin.', 'contact_form_to_db' );
 			}
 			/* old version */
-			if (  ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) && $all_plugins['contact-form-plugin/contact_form.php']['Version'] < '3.60' ) || 
-				( is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) && $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] < '1.12' ) ) {
+			if (  ( is_plugin_active( 'contact-form-plugin/contact_form.php' || is_plugin_active_for_network( 'contact-form-plugin/contact_form.php' ) ) && $all_plugins['contact-form-plugin/contact_form.php']['Version'] < '3.60' ) || 
+				( is_plugin_active( 'contact-form-pro/contact_form_pro.php' || is_plugin_active_for_network( 'contact-form-pro/contact_form_pro.php' ) ) && $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] < '1.12' ) ) {
 				$cntctfrmtdb_contact_form_not_found = __( 'Contact Form Plugin has old version.</br>You need update this plugin for correct work with Contact Form to DB plugin.', 'contact_form_to_db' );
 			}
 		}
@@ -178,7 +191,7 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 }
 
 /* 
-* Function to create a new tables in data base 
+* Function to create a new tables in database 
 */
 if ( ! function_exists( 'cntctfrmtdb_create_table' ) ) {
 	function cntctfrmtdb_create_table() {
@@ -267,6 +280,8 @@ if ( ! function_exists ( 'cntctfrmtdb_delete_options' ) ) {
 		$wpdb->query( $sql );
 		delete_option( "cntctfrmtdb_version" );
 		delete_option( "cntctfrmtdb_options" );
+		delete_site_option( "cntctfrmtdb_version" );
+		delete_site_option( "cntctfrmtdb_options" );
 	}
 }
 
@@ -352,7 +367,7 @@ if ( ! function_exists( 'cntctfrmtdb_settings_page' ) ) {
 							<input type="checkbox" id="cntctfrmtdb_save_messages_to_db" name="cntctfrmtdb_save_messages_to_db" value="1" <?php if( 1 == $cntctfrmtdb_options['cntctfrmtdb_save_messages_to_db'] ) echo "checked=\"checked\" "; ?>/>
 						</td>
 					</tr>					
-					<tr valign="top" class="cntctfrmtdb_options" <?php if( ! 1 == $cntctfrmtdb_options['cntctfrmtdb_save_messages_to_db'] ) echo 'style="display: none;"' ;?>>
+					<tr valign="top" class="cntctfrmtdb_options" <?php if ( ! 1 == $cntctfrmtdb_options['cntctfrmtdb_save_messages_to_db'] ) echo 'style="display: none;"' ;?>>
 						<th scope="row" style="width:200px;"><?php _e( 'Download messages in', 'contact_form_to_db' ); ?></th>
 						<td>
 							<select name="cntctfrmtdb_format_save_messages" id="cntctfrmtdb_format_save_messages">
@@ -1733,7 +1748,7 @@ if ( ! function_exists( 'cntctfrmtdb_manager_page' ) ) {
 					<p><strong><?php echo _e( 'WARNING: ', 'contact_form_to_db' ); ?></strong><?php echo _e( 'For fully-functional work of plugin, please, enable javascript.', 'contact_form_to_db' ); ?></p>
 				</div>
 			</noscript>
-			<div class="icon32 icon32-bws" id="icon-options-general"></div>
+			<div class="icon32 icon32-contact-form-to-db" id="icon-options-general"></div>
 			<h2><?php _e( 'Contact Form to DB', 'contact_form_to_db' ); ?></h2>
 			<div class="updated" <?php if ( '' == $cntctfrmtdb_done_message ) echo 'style="display: none;"'?>><p><?php echo $cntctfrmtdb_done_message ?></p></div>
 			<div class="cntctfrmtdb-notice" <?php if ( '' == $cntctfrmtdb_error_message ) echo 'style="display: none;"'?>><p><strong><?php __( 'WARNING: ', 'contact_form_to_db' ); ?></strong><?php echo $cntctfrmtdb_error_message .  __( ' Please, try it later.', 'contact_form_to_db' ); ?></p></div>
@@ -1866,6 +1881,7 @@ add_action( 'init', 'cntctfrmtdb_plugin_init' );
 add_action( 'init', 'cntctfrmtdb_check_contact_form' );
 add_action( 'init', 'cntctfrmtdb_action_links' );
 add_action( 'init', 'cntctfrmtdb_settings' );
+add_action( 'admin_init', 'cntctfrmtdb_version_check' );
 // add pligin scripts and stylesheets
 add_action( 'admin_enqueue_scripts', 'cntctfrmtdb_admin_head' );
 // add menu items in to dashboard menu

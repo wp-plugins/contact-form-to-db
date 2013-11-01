@@ -13,6 +13,9 @@
 .admin-color-classic .wrap #icon-options-general.icon32-bws {
 	background: url("../images/icon_36_b.png") no-repeat scroll left top transparent;
 }
+.wrap #icon-options-general.icon32-contact-form-to-db {
+	background: url("../images/icon_32.png") no-repeat scroll left top transparent;
+}
 #adminmenu #toplevel_page_cntctfrmtdb_manager div.wp-menu-image {
 	background: url("../images/menu.png") no-repeat scroll left -33px transparent;
 }
