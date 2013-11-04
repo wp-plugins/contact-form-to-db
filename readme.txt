@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Contact Form, Contact Form to DB, text, contact, form, contacts, contact form, request, contact me, feeDBack form, feeDBack, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy, save messages, download messafes, manage messages, 
 Requires at least: 3.2
 Tested up to: 3.7.1
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ There is also a premium version of the plugin, allowing to re-send and preiodica
 
 <a href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=52c469c463ea3722c39dd9c5d9ef54b2" target="_blank">Upgrade to Pro Version</a>
 
-<a href="http://bestwebsoft.com/plugin/contact-form-pro/?k=4028655c87316c98ae9ac7ca1928067f" target="_blank">Contact Form Pro</a> 
+<a href="http://bestwebsoft.com/plugin/contact-form-pro/?k=1f9b7d7895c20420af788d9413ed8562" target="_blank">Contact Form Pro</a> 
 <a href="http://wordpress.org/plugins/contact-form-plugin" target="_blank">Contact Form Plugin</a>
 
 = Copyrights for Resources used in this plugin =
@@ -93,6 +93,9 @@ Click on "Screen Options" button in the right top corner on manager page and des
 
 == Changelog ==
 
+= V1.3.2 - 4.11.2013 =
+* NEW : Add notice about disabled option "Save messages to database".
+
 = V1.3.1 - 1.11.2013 =
 * NEW : Add checking installed wordpress version.
 * NEW : The Ukrainian language file is added to the plugin.
@@ -111,6 +114,9 @@ Click on "Screen Options" button in the right top corner on manager page and des
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.3.2 =
+Add notice about disabled option "Save messages to database".
 
 = V1.3.1 =
 Add checking installed wordpress version. The Ukrainian language file is added to the plugin. We updated all functionality for wordpress 3.7.1.

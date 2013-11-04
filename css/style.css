@@ -483,3 +483,15 @@ a.bws_plugin_menu_pro_version,
     margin: 8px;
     cursor: pointer;
 }
+.cntctfrmtdb_save_messages_to_db .cntctfrmtdb_close_icon {
+    float: right;
+    margin: 8px 0;
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid #E6DB55;
+}
+.cntctfrmtdb_save_messages_to_db > div {
+    float: left;
+    margin: 9px;
+    width: 95%;
+}

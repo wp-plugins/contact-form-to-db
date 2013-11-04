@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB
 Plugin URI: http://bestwebsoft.com/plugin/
 Description:  Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.3.1
+Version: 1.3.2
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -34,7 +34,7 @@ if ( ! function_exists( 'cntctfrmtdb_admin_menu' ) ) {
 	function cntctfrmtdb_admin_menu() {
 		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'edit_themes', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 ); 
 		add_submenu_page( 'bws_plugins',__( 'Contact Form to DB', 'contact_form_to_db' ), __( 'Contact Form to DB', 'contact_form_to_db' ), 'edit_themes', 'cntctfrmtdb_settings', 'cntctfrmtdb_settings_page' );
-		$hook = add_menu_page( __( 'CF to DB', 'contact_form_to_db' ), __( 'CF to DB', 'contact_form_to_db' ), 'edit_posts', 'cntctfrmtdb_manager', 'cntctfrmtdb_manager_page', plugins_url( "images/px.png", __FILE__ ), 29 );
+		$hook = add_menu_page( __( 'CF to DB', 'contact_form_to_db' ), __( 'CF to DB', 'contact_form_to_db' ), 'edit_posts', 'cntctfrmtdb_manager', 'cntctfrmtdb_manager_page', plugins_url( "images/px.png", __FILE__ ), 30 );
 		//call register settings function
 		add_action( 'admin_init', 'cntctfrmtdb_settings' );
 		// add Contact Form to DB manager page
@@ -161,8 +161,8 @@ if ( ! function_exists( 'cntctfrmtdb_check_contact_form' ) ) {
 				$cntctfrmtdb_contact_form_not_active = __( 'Contact Form Plugin is not active.</br>You need activate this plugin for correct work with Contact Form to DB plugin.', 'contact_form_to_db' );
 			}
 			/* old version */
-			if (  ( is_plugin_active( 'contact-form-plugin/contact_form.php' || is_plugin_active_for_network( 'contact-form-plugin/contact_form.php' ) ) && $all_plugins['contact-form-plugin/contact_form.php']['Version'] < '3.60' ) || 
-				( is_plugin_active( 'contact-form-pro/contact_form_pro.php' || is_plugin_active_for_network( 'contact-form-pro/contact_form_pro.php' ) ) && $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] < '1.12' ) ) {
+			if ( ( is_plugin_active( 'contact-form-plugin/contact_form.php' || is_plugin_active_for_network( 'contact-form-plugin/contact_form.php' ) ) && isset( $all_plugins['contact-form-plugin/contact_form.php']['Version'] ) && $all_plugins['contact-form-plugin/contact_form.php']['Version'] < '3.60' ) || 
+				( is_plugin_active( 'contact-form-pro/contact_form_pro.php' || is_plugin_active_for_network( 'contact-form-pro/contact_form_pro.php' ) ) && isset( $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] ) && $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] < '1.12' ) ) {
 				$cntctfrmtdb_contact_form_not_found = __( 'Contact Form Plugin has old version.</br>You need update this plugin for correct work with Contact Form to DB plugin.', 'contact_form_to_db' );
 			}
 		}
@@ -174,7 +174,7 @@ if ( ! function_exists( 'cntctfrmtdb_check_contact_form' ) ) {
 */
 if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 	function cntctfrmtdb_show_notices() { 
-		global $hook_suffix, $cntctfrmtdb_contact_form_not_found, $cntctfrmtdb_contact_form_not_active;
+		global $hook_suffix, $cntctfrmtdb_contact_form_not_found, $cntctfrmtdb_contact_form_not_active, $cntctfrmtdb_options;
 		$cntctfrmtdb_pages = array(
 			'bws_plugins',
 			'cntctfrmtdb_manager',
@@ -185,7 +185,34 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 				<div class="error">
 					<p><strong><?php _e( 'WARNING: ', 'contact_form_to_db'); ?></strong><?php echo $cntctfrmtdb_contact_form_not_found . $cntctfrmtdb_contact_form_not_active; ?></p>
 				</div>
-		<?php }
+			<?php }
+		}
+		/* chech plugin settings and add notice */
+		if ( isset( $_REQUEST['page'] ) && 'cntctfrmtdb_manager' == $_REQUEST['page'] ) {
+			if ( ! isset( $cntctfrmtdb_options['cntctfrmtdb_save_messages_to_db'] ) )
+				$cntctfrmtdb_options = get_option( 'cntctfrmtdb_options' );
+			if ( isset( $cntctfrmtdb_options['cntctfrmtdb_save_messages_to_db'] ) && 0 == $cntctfrmtdb_options['cntctfrmtdb_save_messages_to_db'] ) { ?>
+				<script type="text/javascript" src="<?php echo plugins_url( 'js/c_o_o_k_i_e.js', __FILE__ ); ?>"></script>
+				<script type="text/javascript">		
+					(function($) {
+						$(document).ready( function() {		
+							var hide_message = $.cookie( "cntctfrmtdb_save_messages_to_db" );
+							if ( hide_message == "true" ) {
+								$( ".cntctfrmtdb_save_messages_to_db" ).css( "display", "none" );
+							};
+							$( ".cntctfrmtdb_close_icon" ).click( function() {
+								$( ".cntctfrmtdb_save_messages_to_db" ).css( "display", "none" );
+								$.cookie( "cntctfrmtdb_save_messages_to_db", "true", { expires: 7 } );
+							});	
+						});
+					})(jQuery);				
+				</script>
+				<div class="updated fade cntctfrmtdb_save_messages_to_db">		       							                      
+					<div><strong><?php _e( 'Notice:', 'contact_form_to_db'); ?></strong> <?php _e( 'Option "Save messages to database" was disabled on the plugin settings page.', 'contact_form_to_db'); ?> <a href="admin.php?page=cntctfrmtdb_settings"><?php _e( 'Enable it for saving messages from Contact Form', 'contact_form_to_db'); ?></a></div>
+					<img class="cntctfrmtdb_close_icon" title="" src="<?php echo plugins_url( 'images/close_banner.png', __FILE__ ); ?>" alt=""/>
+					<div style="clear:both;float: none;margin: 0;"></div>
+				</div>
+			<?php }
 		}
 	}
 }
@@ -1844,7 +1871,7 @@ if ( ! function_exists ( 'cntctfrmtdb_plugin_banner' ) ) {
 		$plugin_info = get_plugin_data( __FILE__ );		
 		if ( $hook_suffix == 'plugins.php' ) {              
 	       	echo '<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
-	       		<script type="text/javascript" src="' . plugins_url( 'js/c_o_o_k_i_e.js', __FILE__ ).'"></script>
+	       		<script type="text/javascript" src="' . plugins_url( 'js/c_o_o_k_i_e.js', __FILE__ ) . '"></script>
 				<script type="text/javascript">		
 					(function($) {
 						$(document).ready( function() {		
@@ -1900,7 +1927,7 @@ add_action( 'wp_ajax_cntctfrmtdb_read_message', 'cntctfrmtdb_read_message' );
 add_action( 'wp_ajax_cntctfrmtdb_show_attachment', 'cntctfrmtdb_show_attachment' );
 add_action( 'wp_ajax_cntctfrmtdb_change_staus', 'cntctfrmtdb_change_status' );
 // add banner on the plugins page
-add_action('admin_notices', 'cntctfrmtdb_plugin_banner');
+add_action( 'admin_notices', 'cntctfrmtdb_plugin_banner' );
 // uninstal hook
 register_uninstall_hook( __FILE__, 'cntctfrmtdb_delete_options' );
 ?>
