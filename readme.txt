@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Contact Form, Contact Form to DB, text, contact, form, contacts, contact form, request, contact me, feeDBack form, feeDBack, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy, save messages, download messafes, manage messages, 
 Requires at least: 3.2
 Tested up to: 3.7.1
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ This plugin allows you to manage the messages that have been sent from your site
 
 == Description ==
 
-Contact Form to DB plugin is an exclusive add-on for the Contact Form plugin by BestWebSof. The plugin provides a unique opportunity to manage messages sent from your site via the contact form. The list of its features is really impressive: messages can be saved, browsed, deleted or downloaded from the Dashboard. In case you decide to deactivate the plugin, it will serve as a repository for your old messages. Once you install and activate it, not a single message will be lost!
+Contact Form to DB plugin is an exclusive add-on for the Contact Form plugin by BestWebSoft. The plugin provides a unique opportunity to manage messages sent from your site via the contact form. The list of its features is really impressive: messages can be saved, browsed, deleted or downloaded from the Dashboard. In case you decide to deactivate the plugin, it will serve as a repository for your old messages. Once you install and activate it, not a single message will be lost!
 Please pay attention, that this plugin is an add-on ONLY for Contact Form plugin by BestWebSoft, that's why it will not work with any other contact form plugins.
 Contact Form to DB is compatible both with a free and a PRO version of Contact Form.
 There is also a premium version of the plugin, allowing to re-send and preiodically delete old messages, manage attachments and get detailed support and answers to your questions within one business day.
@@ -40,10 +40,11 @@ There is also a premium version of the plugin, allowing to re-send and preiodica
 The author of the Contact Form To DB also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=d76bbcf46476f5ab4bb7950255a738a6">Updater Pro</a> with more useful features available. It allows to update plugins and WordPress core on several websites. It can make backup of all your files and database before updating.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=d76bbcf46476f5ab4bb7950255a738a6">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
+* French (fr_FR) (thanks to <a href="mailto:lcapronnier@yahoo.com">Capronnier luc</a>)
 * Russian (ru_RU)
 * Ukrainian (uk)
 
@@ -93,6 +94,10 @@ Click on "Screen Options" button in the right top corner on manager page and des
 
 == Changelog ==
 
+= V1.3.3 - 25.11.2013 =
+* NEW : The French language file is added to the plugin.
+* Update : BWS plugins section is updated.
+
 = V1.3.2 - 4.11.2013 =
 * NEW : Add notice about disabled option "Save messages to database".
 
@@ -114,6 +119,9 @@ Click on "Screen Options" button in the right top corner on manager page and des
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.3.3 =
+The French language file is added to the plugin. BWS plugins section is updated.
 
 = V1.3.2 =
 Add notice about disabled option "Save messages to database".

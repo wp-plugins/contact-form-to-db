@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB
 Plugin URI: http://bestwebsoft.com/plugin/
 Description:  Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.3.2
+Version: 1.3.3
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -161,8 +161,8 @@ if ( ! function_exists( 'cntctfrmtdb_check_contact_form' ) ) {
 				$cntctfrmtdb_contact_form_not_active = __( 'Contact Form Plugin is not active.</br>You need activate this plugin for correct work with Contact Form to DB plugin.', 'contact_form_to_db' );
 			}
 			/* old version */
-			if ( ( is_plugin_active( 'contact-form-plugin/contact_form.php' || is_plugin_active_for_network( 'contact-form-plugin/contact_form.php' ) ) && isset( $all_plugins['contact-form-plugin/contact_form.php']['Version'] ) && $all_plugins['contact-form-plugin/contact_form.php']['Version'] < '3.60' ) || 
-				( is_plugin_active( 'contact-form-pro/contact_form_pro.php' || is_plugin_active_for_network( 'contact-form-pro/contact_form_pro.php' ) ) && isset( $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] ) && $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] < '1.12' ) ) {
+			if ( ( ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) || is_plugin_active_for_network( 'contact-form-plugin/contact_form.php' ) ) && isset( $all_plugins['contact-form-plugin/contact_form.php']['Version'] ) && $all_plugins['contact-form-plugin/contact_form.php']['Version'] < '3.60' ) || 
+				( ( is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) || is_plugin_active_for_network( 'contact-form-pro/contact_form_pro.php' ) ) && isset( $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] ) && $all_plugins['contact-form-pro/contact_form_pro.php']['Version'] < '1.12' ) ) {
 				$cntctfrmtdb_contact_form_not_found = __( 'Contact Form Plugin has old version.</br>You need update this plugin for correct work with Contact Form to DB plugin.', 'contact_form_to_db' );
 			}
 		}
@@ -1443,6 +1443,8 @@ FROM `" . $prefix . "field_selection` INNER JOIN `" . $wpdb->prefix . "cntctfrm_
 					</table>';
 
 				$attachments_icon = '<div class="cntctfrmtdb-has-attachment" title="' . __( "This option is available in Pro version", "contact_form_to_db" ) . '"></div>';				
+			} else {
+				$attachments_icon = '';
 			}
 
 			$message_content .= '</div>';
@@ -1868,34 +1870,56 @@ if ( ! function_exists( 'cntctfrmtdb_change_status' ) ) {
 if ( ! function_exists ( 'cntctfrmtdb_plugin_banner' ) ) {
 	function cntctfrmtdb_plugin_banner() {
 		global $hook_suffix;	
-		$plugin_info = get_plugin_data( __FILE__ );		
-		if ( $hook_suffix == 'plugins.php' ) {              
-	       	echo '<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
-	       		<script type="text/javascript" src="' . plugins_url( 'js/c_o_o_k_i_e.js', __FILE__ ) . '"></script>
-				<script type="text/javascript">		
-					(function($) {
-						$(document).ready( function() {		
-							var hide_message = $.cookie( "cntctfrmtdb_hide_banner_on_plugin_page" );
-							if ( hide_message == "true" ) {
-								$( ".cntctfrmtdb_message" ).css( "display", "none" );
-							};
-							$( ".cntctfrmtdb_close_icon" ).click( function() {
-								$( ".cntctfrmtdb_message" ).css( "display", "none" );
-								$.cookie( "cntctfrmtdb_hide_banner_on_plugin_page", "true", { expires: 32 } );
-							});	
-						});
-					})(jQuery);				
-				</script>					                      
-				<div class="cntctfrmtdb_message">
-					<a class="button cntctfrmtdb_button" target="_blank" href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=a0297729ff05dc9a4dee809c8b8e94bf&pn=91&v=' . $plugin_info["Version"] . '">Learn More</a>				
-					<div class="cntctfrmtdb_text">
-						It’s time to upgrade your <strong>Contact Form to DB</strong> to <strong>PRO</strong> version!<br />
-						<span>Extend standard plugin functionality with new great options.</span>
-					</div> 					
-					<img class="cntctfrmtdb_close_icon" title="" src="' . plugins_url( 'images/close_banner.png', __FILE__ ) . '" alt=""/>
-					<img class="cntctfrmtdb_icon" title="" src="' . plugins_url( 'images/banner.png', __FILE__ ) . '" alt=""/>	
-				</div>  
-			</div>';      
+		if ( $hook_suffix == 'plugins.php' ) {  
+			$banner_array = array(
+				array( 'pdtr_hide_banner_on_plugin_page', 'updater/updater.php', '1.12' ),
+				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),
+				array( 'cntctfrmpr_for_ctfrmtdb_hide_banner_on_plugin_page', 'contact-form-pro/contact_form_pro.php', '1.14' ),
+				array( 'cntctfrm_for_ctfrmtdb_hide_banner_on_plugin_page', 'contact-form-plugin/contact_form.php', '3.62' ),
+				array( 'cntctfrm_hide_banner_on_plugin_page', 'contact-form-plugin/contact_form.php', '3.47' ),	
+				array( 'cptch_hide_banner_on_plugin_page', 'captcha/captcha.php', '3.8.4' ),
+				array( 'gllr_hide_banner_on_plugin_page', 'gallery-plugin/gallery-plugin.php', '3.9.1' )				
+			);
+			$plugin_info = get_plugin_data( __FILE__ );		
+			if ( ! function_exists( 'is_plugin_active_for_network' ) )
+				require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+			$active_plugins = get_option( 'active_plugins' );			
+			$all_plugins = get_plugins();
+			$this_banner = 'cntctfrmtdb_hide_banner_on_plugin_page';
+			foreach ( $banner_array as $key => $value ) {
+				if ( $this_banner == $value[0] ) {            
+			       	echo '<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
+						<script type="text/javascript" src="' . plugins_url( 'js/c_o_o_k_i_e.js', __FILE__ ) . '"></script>
+						<script type="text/javascript">		
+							(function($) {
+								$(document).ready( function() {		
+									var hide_message = $.cookie( "cntctfrmtdb_hide_banner_on_plugin_page" );
+									if ( hide_message == "true" ) {
+										$( ".cntctfrmtdb_message" ).css( "display", "none" );
+									};
+									$( ".cntctfrmtdb_close_icon" ).click( function() {
+										$( ".cntctfrmtdb_message" ).css( "display", "none" );
+										$.cookie( "cntctfrmtdb_hide_banner_on_plugin_page", "true", { expires: 32 } );
+									});	
+								});
+							})(jQuery);				
+						</script>					                      
+						<div class="cntctfrmtdb_message">
+							<a class="button cntctfrmtdb_button" target="_blank" href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=a0297729ff05dc9a4dee809c8b8e94bf&pn=91&v=' . $plugin_info["Version"] . '">Learn More</a>				
+							<div class="cntctfrmtdb_text">
+								It’s time to upgrade your <strong>Contact Form to DB</strong> to <strong>PRO</strong> version!<br />
+								<span>Extend standard plugin functionality with new great options.</span>
+							</div> 					
+							<img class="cntctfrmtdb_close_icon" title="" src="' . plugins_url( 'images/close_banner.png', __FILE__ ) . '" alt=""/>
+							<img class="cntctfrmtdb_icon" title="" src="' . plugins_url( 'images/banner.png', __FILE__ ) . '" alt=""/>	
+						</div>  
+					</div>';
+					break;
+				}
+				if ( isset( $all_plugins[ $value[1] ] ) && $all_plugins[ $value[1] ]["Version"] >= $value[2] && ( 0 < count( preg_grep( '/' . str_replace( '/', '\/', $value[1] ) . '/', $active_plugins ) ) || is_plugin_active_for_network( $value[1] ) ) && ! isset( $_COOKIE[ $value[0] ] ) ) {
+					break;
+				}
+			}    
 		}
 	}
 }

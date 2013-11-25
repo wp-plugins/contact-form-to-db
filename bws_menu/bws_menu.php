@@ -4,7 +4,7 @@
 */
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
-		global $wpdb, $wp_version, $title;
+		global $wpdb, $wp_version;
 		if ( ! function_exists( 'is_plugin_active_for_network' ) )
 			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		$all_plugins = get_plugins();
@@ -55,6 +55,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				$count_recomend++;
 			}
 		}
+
 		$array_activate_pro = array();
 		$array_install_pro	= array();
 		$array_recomend_pro = array();
@@ -85,6 +86,41 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				$count_recomend_pro++;
 			}
 		}
+		if ( $wp_version >= '3.4' ) {
+			$wp_list_table = _get_list_table( 'WP_Themes_List_Table'  );
+			$wp_list_table->prepare_items();
+			$current_theme = wp_get_theme();
+			$array_activate_theme = array();
+			$array_install_theme = array();
+			$array_recomend_theme = array();
+			$count_activate_theme = $count_install_theme = $count_recomend_theme = 0;
+			$array_theme = array(
+				array( 'central', 'Central', 'http://bestwebsoft.com/theme/central/', 'http://bestwebsoft.com/theme/central/#download', '/wp-admin/theme-install.php?tab=search&s=Central&search=Search' ),
+				array( 'simple-classic', 'Simple Classic', 'http://bestwebsoft.com/theme/simple-classic/', 'http://bestwebsoft.com/theme/simple-classic/#download', '/wp-admin/theme-install.php?tab=search&type=term&s=Simple+Classic&search=Search' ),
+				array( 'reddish', 'Reddish', 'http://bestwebsoft.com/theme/reddish/', 'http://bestwebsoft.com/theme/reddish/#download', '/wp-admin/theme-install.php?tab=search&type=term&s=reddish&search=Search' ),
+				array( 'wordpost', 'Wordpost', 'http://bestwebsoft.com/theme/wordpost/', 'http://bestwebsoft.com/theme/wordpost/#download', '/wp-admin/theme-install.php?tab=search&type=term&s=Wordpost&search=Search' )
+			);
+			foreach ( $array_theme as $theme ) {
+				if ( $current_theme->get( 'Name' ) == $theme[1] ) {
+					$array_activate_theme[ $count_activate_theme ]["title"] = $theme[1];
+					$array_activate_theme[ $count_activate_theme ]["link"]	= $theme[2];
+					$array_activate_theme[ $count_activate_theme ]["href"]	= $theme[3];
+					$count_activate_theme++;
+				} elseif ( array_key_exists( $theme[0], $wp_list_table->items ) ) {
+					$array_install_theme[ $count_install_theme ]["title"]	= $theme[1];
+					$array_install_theme[ $count_install_theme ]["link"]	= $theme[2];
+					$array_install_theme[ $count_install_theme ]["href"]	= $theme[3];
+					$count_install_theme++;
+				} else {
+					$array_recomend_theme[ $count_recomend_theme ]["title"] = $theme[1];
+					$array_recomend_theme[ $count_recomend_theme ]["link"]	= $theme[2];
+					$array_recomend_theme[ $count_recomend_theme ]["href"]	= $theme[3];
+					$array_recomend_theme[ $count_recomend_theme ]["slug"]	= $theme[4];
+					$count_recomend_theme++;
+				}
+			}
+		}
+
 		$sql_version = $wpdb->get_var( "SELECT VERSION() AS version" );
 	    $mysql_info = $wpdb->get_results( "SHOW VARIABLES LIKE 'sql_mode'" );
 	    if ( is_array( $mysql_info) )
@@ -229,9 +265,10 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 					$error = __( "Sorry, email message could not be delivered.", 'bestwebsoft' );
 			}
 		}
-		?><div class="wrap">
+		?>
+		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
-			<h2><?php echo $title; ?></h2>
+			<h2>BestWebSoft</h2>
 			<div class="updated fade" <?php if ( ! ( isset( $_REQUEST['bwsmn_form_submit'] ) || isset( $_REQUEST['bwsmn_form_submit_custom_email'] ) ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div class="error" <?php if ( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
 			<h3 style="color: blue;"><?php _e( 'Pro plugins', 'bestwebsoft' ); ?></h3>
@@ -285,7 +322,33 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php } ?>
 			</div>
 			<?php } ?>	
-			<br />		
+			<br />
+			<?php if ( $wp_version >= '3.4' ) { ?>	
+				<h3 style="color: green"><?php _e( 'Free themes', 'bestwebsoft' ); ?></h3>
+				<?php if ( 0 < $count_activate_theme ) { ?>
+				<div style="padding-left:15px;">
+					<h4><?php _e( 'Activated theme', 'bestwebsoft' ); ?></h4>
+					<div style="float:left; width:200px;"><?php echo $array_activate_theme[0]["title"]; ?></div> <p><a href="<?php echo $array_activate_theme[0]["link"]; ?>" target="_blank"><?php echo __( "Read more", 'bestwebsoft' ); ?></a> <a href="<?php echo wp_customize_url(); ?>" title="<?php echo esc_attr( sprintf( __( 'Customize &#8220;%s&#8221;' ), $current_theme->display('Name') ) ); ?>"><?php _e( 'Customize' ); ?></a></p>
+				</div>
+				<?php } ?>
+				<?php if ( 0 < $count_install_theme ) { ?>
+				<div style="padding-left:15px;">
+					<h4><?php _e( 'Installed themes', 'bestwebsoft' ); ?></h4>
+					<?php foreach ( $array_install_theme as $install_theme ) { ?>
+					<div style="float:left; width:200px;"><?php echo $install_theme["title"]; ?></div> <p><a href="<?php echo $install_theme["link"]; ?>" target="_blank"><?php echo __( "Read more", 'bestwebsoft' ); ?></a></p>
+					<?php } ?>
+				</div>
+				<?php } ?>
+				<?php if ( 0 < $count_recomend_theme ) { ?>
+				<div style="padding-left:15px;">
+					<h4><?php _e( 'Recommended themes', 'bestwebsoft' ); ?></h4>
+					<?php foreach ( $array_recomend_theme as $recomend_theme ) { ?>
+					<div style="float:left; width:200px;"><?php echo $recomend_theme["title"]; ?></div> <p><a href="<?php echo $recomend_theme["link"]; ?>" target="_blank"><?php echo __( "Read more", 'bestwebsoft' ); ?></a> <a href="<?php echo $recomend_theme["href"]; ?>" target="_blank"><?php echo __( "Download", 'bestwebsoft' ); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_theme["slug"]; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_theme["title"] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'bestwebsoft' ) ?></a></p>
+					<?php } ?>
+				</div>
+				<?php } ?>	
+				<br />
+			<?php } ?>	
 			<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via', 'bestwebsoft' ); ?> <a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a></span>
 			<div id="poststuff" class="bws_system_info_meta_box">
 				<div class="postbox">
