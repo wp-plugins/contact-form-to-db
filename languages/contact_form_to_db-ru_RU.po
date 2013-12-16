@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: contact_form_to_db\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 14:52+0300\n"
-"PO-Revision-Date: 2013-11-01 14:54+0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2013-12-16 14:19+0300\n"
+"PO-Revision-Date: 2013-12-16 14:22+0300\n"
+"Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: contact_form_to_db.php:36
-#: contact_form_to_db.php:1752
+#: contact_form_to_db.php:1808
 msgid "Contact Form to DB"
 msgstr "Contact Form To DB"
 
@@ -39,7 +39,7 @@ msgid "Spam!"
 msgstr "Спам!"
 
 #: contact_form_to_db.php:72
-#: contact_form_to_db.php:1363
+#: contact_form_to_db.php:1417
 msgid "in Trash"
 msgstr "в Корзине"
 
@@ -47,695 +47,797 @@ msgstr "в Корзине"
 msgid "Status was not changed"
 msgstr "Статус не был изменён"
 
-#: contact_form_to_db.php:110
+#: contact_form_to_db.php:113
 msgid "requires"
 msgstr "требует"
 
-#: contact_form_to_db.php:110
+#: contact_form_to_db.php:113
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
 msgstr "или выше, поэтому плагин был деактивирован! Пожалуйста обновите WordPress и повторите попытку."
 
-#: contact_form_to_db.php:110
+#: contact_form_to_db.php:113
 msgid "Back to the WordPress"
 msgstr "Вернуться на WordPress"
 
-#: contact_form_to_db.php:110
+#: contact_form_to_db.php:113
 msgid "Plugins page"
 msgstr "cтраницу плагинов"
 
-#: contact_form_to_db.php:125
-#: contact_form_to_db.php:139
-#: contact_form_to_db.php:356
+#: contact_form_to_db.php:128
+#: contact_form_to_db.php:142
+#: contact_form_to_db.php:394
 msgid "Settings"
 msgstr "Настройки"
 
-#: contact_form_to_db.php:140
-#: contact_form_to_db.php:357
-#: contact_form_to_db.php:1743
+#: contact_form_to_db.php:143
+#: contact_form_to_db.php:395
+#: contact_form_to_db.php:1799
 msgid "FAQ"
 msgstr "FAQ"
 
-#: contact_form_to_db.php:141
+#: contact_form_to_db.php:144
 msgid "Support"
 msgstr "Поддержка"
 
-#: contact_form_to_db.php:158
+#: contact_form_to_db.php:161
 msgid "Contact Form Plugin is not found.</br>You need install and activate this plugin for correct  work with Contact Form to DB plugin.</br>You can download Contact Form Plugin from "
 msgstr "Плагин Контактная форма не найден.</br>Вам необходимо установить этот плагин для корректной работы с плагином  Contact Form To DB. </br>Вы можете скачать плагин Contact Form to DB с "
 
-#: contact_form_to_db.php:158
+#: contact_form_to_db.php:161
 msgid "Developers website"
 msgstr "сайта разработчиков "
 
-#: contact_form_to_db.php:158
+#: contact_form_to_db.php:161
 msgid "website of plugin Authors "
 msgstr "сайта авторов плагина "
 
-#: contact_form_to_db.php:158
+#: contact_form_to_db.php:161
 msgid "or "
 msgstr "или "
 
-#: contact_form_to_db.php:158
+#: contact_form_to_db.php:161
 msgid "Wordpress."
 msgstr "Wordpress"
 
-#: contact_form_to_db.php:161
+#: contact_form_to_db.php:164
 msgid "Contact Form Plugin is not active.</br>You need activate this plugin for correct work with Contact Form to DB plugin."
 msgstr "Плагин Контактная форма не активирован.</br>Вам необходимо активировать этот плагин для корректной работы с плагином Contact Form To DB."
 
-#: contact_form_to_db.php:166
+#: contact_form_to_db.php:169
 msgid "Contact Form Plugin has old version.</br>You need update this plugin for correct work with Contact Form to DB plugin."
 msgstr "Плагин Contact Form имеет слишком старую версию.</br>Вам необходимо обновить этот плагин для корректной работы с плагином Contact Form To DB."
 
-#: contact_form_to_db.php:186
-#: contact_form_to_db.php:1748
-#: contact_form_to_db.php:1754
+#: contact_form_to_db.php:189
+#: contact_form_to_db.php:1804
+#: contact_form_to_db.php:1810
 msgid "WARNING: "
 msgstr "Внимание: "
 
-#: contact_form_to_db.php:354
+#: contact_form_to_db.php:214
+#: contact_form_to_db.php:391
+msgid "Notice:"
+msgstr "Внимание:"
+
+#: contact_form_to_db.php:214
+msgid "Option \"Save messages to database\" was disabled on the plugin settings page."
+msgstr "Опция  \"Сохранять сообщения в базу данных \" была отключенана странице настроек плагина."
+
+#: contact_form_to_db.php:214
+msgid "Enable it for saving messages from Contact Form"
+msgstr "Включите ее для сохранения собщений Контактной формы"
+
+#: contact_form_to_db.php:390
 msgid "Contact Form to DB Settings"
 msgstr "Настройки плагина Contact Form to DB"
 
-#: contact_form_to_db.php:357
-#: contact_form_to_db.php:358
-msgid "This setting is available in Pro version"
-msgstr "Данняе настройки доступны в PRO версии плагина"
+#: contact_form_to_db.php:391
+msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
+msgstr "Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, не забудьте нажать кнопку 'Сохранить'."
 
-#: contact_form_to_db.php:358
-msgid "User guide"
-msgstr "Руководство пользователя"
-
-#: contact_form_to_db.php:361
+#: contact_form_to_db.php:392
 msgid "Settings saved."
 msgstr "Опции сохранены."
 
-#: contact_form_to_db.php:365
+#: contact_form_to_db.php:395
+#: contact_form_to_db.php:396
+msgid "This setting is available in Pro version"
+msgstr "Данняе настройки доступны в PRO версии плагина"
+
+#: contact_form_to_db.php:396
+msgid "User guide"
+msgstr "Руководство пользователя"
+
+#: contact_form_to_db.php:402
 msgid "Save messages to database"
 msgstr "Сохранять сообщения в базу данных"
 
-#: contact_form_to_db.php:371
+#: contact_form_to_db.php:408
 msgid "Download messages in"
 msgstr "Сохранять сообщения в "
 
-#: contact_form_to_db.php:378
+#: contact_form_to_db.php:415
 msgid "format"
 msgstr "формате"
 
-#: contact_form_to_db.php:380
+#: contact_form_to_db.php:417
 msgid "Input symbols for separator and enclosure"
 msgstr "Введите символы для разделителя и ограничителя"
 
-#: contact_form_to_db.php:386
+#: contact_form_to_db.php:423
 msgid " separator"
 msgstr "разделитель"
 
-#: contact_form_to_db.php:392
+#: contact_form_to_db.php:429
 msgid " enclosure"
 msgstr "ограничитель"
 
-#: contact_form_to_db.php:397
+#: contact_form_to_db.php:434
 msgid "Show messages per page"
 msgstr "Сообщений на странице"
 
-#: contact_form_to_db.php:413
+#: contact_form_to_db.php:450
 msgid "Save attachments"
 msgstr "Сохранять прикрепленные файлы"
 
-#: contact_form_to_db.php:419
+#: contact_form_to_db.php:456
 msgid "Save attachments to database."
 msgstr "Сохранять прикреплённые файлы в базу данных."
 
-#: contact_form_to_db.php:421
+#: contact_form_to_db.php:458
 msgid "Save attachments to \"Uploads\"."
 msgstr "Сохранять в папку \"Uploads\"."
 
-#: contact_form_to_db.php:426
+#: contact_form_to_db.php:463
 msgid "Periodically delete old messages"
 msgstr "Периодически удалять старые сообщения"
 
-#: contact_form_to_db.php:431
+#: contact_form_to_db.php:468
 msgid "every 24 hours"
 msgstr "каждые 24 часа"
 
-#: contact_form_to_db.php:432
+#: contact_form_to_db.php:469
 msgid "every 3 days"
 msgstr "каждые 3 дня"
 
-#: contact_form_to_db.php:433
+#: contact_form_to_db.php:470
 msgid "every 1 week"
 msgstr "каждую неделю"
 
-#: contact_form_to_db.php:434
+#: contact_form_to_db.php:471
 msgid "every 2 weeks"
 msgstr "каждые 2 недели"
 
-#: contact_form_to_db.php:435
+#: contact_form_to_db.php:472
 msgid "every 1 month"
 msgstr "каждый месяц"
 
-#: contact_form_to_db.php:436
+#: contact_form_to_db.php:473
 msgid "every 6 months"
 msgstr "каждые 6 месяцев"
 
-#: contact_form_to_db.php:437
+#: contact_form_to_db.php:474
 msgid "every 1 year"
 msgstr "раз в год"
 
-#: contact_form_to_db.php:439
+#: contact_form_to_db.php:476
 msgid "(All messages older than the specified period will be deleted at the end of the same period)"
 msgstr "(Bсе сообщения старше указанного периода будут удалены по истечении того же периода)"
 
-#: contact_form_to_db.php:444
+#: contact_form_to_db.php:481
 msgid "Show attachments"
 msgstr "Отображать прикреплённые файлы"
 
-#: contact_form_to_db.php:448
+#: contact_form_to_db.php:485
 msgid "Use fancybox to image view"
 msgstr "Использовать fancybox для просмотра изображений"
 
-#: contact_form_to_db.php:453
+#: contact_form_to_db.php:490
+msgid "If you upgrade to Pro version all your settings will be saved."
+msgstr "При переходе на Pro версию все ваши настройки сохраняются."
+
+#: contact_form_to_db.php:495
 msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
 msgstr "Данный функционал доступен в Pro версии плагина. Для детальной информации перейдите по ссылке"
 
-#: contact_form_to_db.php:461
+#: contact_form_to_db.php:505
 msgid "Save Changes"
 msgstr "Save Changes"
 
-#: contact_form_to_db.php:847
+#: contact_form_to_db.php:511
+msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+msgstr "Если вам понравился плагин, поставте нам 5 звезд на WordPress"
+
+#: contact_form_to_db.php:512
+msgid "Rate the plugin"
+msgstr "Оценить плагин"
+
+#: contact_form_to_db.php:515
+msgid "If there is something wrong about it, please contact us"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь"
+
+#: contact_form_to_db.php:901
 msgid "Contact from to DB"
 msgstr "Contact from to DB"
 
-#: contact_form_to_db.php:857
+#: contact_form_to_db.php:911
 msgid "This message was re-sent from "
 msgstr "Это сообщение было переслано с сайта "
 
-#: contact_form_to_db.php:860
+#: contact_form_to_db.php:914
 msgid "Name"
 msgstr "Имя"
 
-#: contact_form_to_db.php:865
+#: contact_form_to_db.php:919
 msgid "Address"
 msgstr "Адрес"
 
-#: contact_form_to_db.php:870
+#: contact_form_to_db.php:924
 msgid "Email"
 msgstr "Email"
 
-#: contact_form_to_db.php:875
+#: contact_form_to_db.php:929
 msgid "Phone"
 msgstr "Телефон"
 
-#: contact_form_to_db.php:880
+#: contact_form_to_db.php:934
 msgid "Subject"
 msgstr "Тема"
 
-#: contact_form_to_db.php:883
-#: contact_form_to_db.php:1592
+#: contact_form_to_db.php:937
+#: contact_form_to_db.php:1648
 msgid "Message"
 msgstr "Сообщение"
 
-#: contact_form_to_db.php:886
+#: contact_form_to_db.php:940
 msgid "Site"
 msgstr "Сайт"
 
-#: contact_form_to_db.php:897
+#: contact_form_to_db.php:951
 msgid "Sent from (ip address)"
 msgstr "Отправлено от (ip адрес)"
 
-#: contact_form_to_db.php:902
+#: contact_form_to_db.php:956
 msgid "Date/Time"
 msgstr "Дата/Время"
 
-#: contact_form_to_db.php:907
-#: contact_form_to_db.php:913
+#: contact_form_to_db.php:961
+#: contact_form_to_db.php:967
 msgid "Sent from (referer)"
 msgstr "Пришло из (реферер)"
 
-#: contact_form_to_db.php:926
-#: contact_form_to_db.php:928
+#: contact_form_to_db.php:980
+#: contact_form_to_db.php:982
 msgid "From: "
 msgstr "От: "
 
-#: contact_form_to_db.php:929
+#: contact_form_to_db.php:983
 msgid "To: "
 msgstr "Кому: "
 
-#: contact_form_to_db.php:930
+#: contact_form_to_db.php:984
 msgid "Subject: "
 msgstr "Тема: "
 
-#: contact_form_to_db.php:931
+#: contact_form_to_db.php:985
 msgid "Date/Time: "
 msgstr "Дата/Время "
 
-#: contact_form_to_db.php:1009
+#: contact_form_to_db.php:1063
 msgid "Sent from (ip address): "
 msgstr "Отправлено от (ip адрес): "
 
-#: contact_form_to_db.php:1215
+#: contact_form_to_db.php:1269
 msgid "Can not create XML-files."
 msgstr "Невозможно создать XML-файл."
 
-#: contact_form_to_db.php:1219
+#: contact_form_to_db.php:1273
 msgid "Can not create ZIP-archive."
 msgstr "Невозможно создать ZIP-архив."
 
-#: contact_form_to_db.php:1223
+#: contact_form_to_db.php:1277
 msgid "Unknown format."
 msgstr "Неизвестный формат."
 
-#: contact_form_to_db.php:1234
+#: contact_form_to_db.php:1288
 msgid "There are some problems while deleting message."
 msgstr "Возникли проблемы во время удаления сообщений. "
 
-#: contact_form_to_db.php:1248
-#: contact_form_to_db.php:1264
-#: contact_form_to_db.php:1285
-#: contact_form_to_db.php:1288
-#: contact_form_to_db.php:1821
-#: contact_form_to_db.php:1824
+#: contact_form_to_db.php:1302
+#: contact_form_to_db.php:1318
+#: contact_form_to_db.php:1339
+#: contact_form_to_db.php:1342
+#: contact_form_to_db.php:1877
+#: contact_form_to_db.php:1880
 msgid "Undo"
 msgstr "Отменить"
 
-#: contact_form_to_db.php:1250
+#: contact_form_to_db.php:1304
 msgid "Problems while marking messages as Spam."
 msgstr "Возникли проблемы во время маркировки сообщения как Спам."
 
-#: contact_form_to_db.php:1266
+#: contact_form_to_db.php:1320
 msgid "Problems while moving messages to Trash."
 msgstr "Возникли проблемы во время перемещения сообщений в корзину."
 
-#: contact_form_to_db.php:1266
-#: contact_form_to_db.php:1754
+#: contact_form_to_db.php:1320
+#: contact_form_to_db.php:1810
 msgid " Please, try it later."
 msgstr " Пожалуйста, попробуйте позднее."
 
-#: contact_form_to_db.php:1275
+#: contact_form_to_db.php:1329
 msgid "Problems during the restoration messages"
 msgstr "Возникли проблемы во время восстановления сообщений."
 
-#: contact_form_to_db.php:1282
-#: contact_form_to_db.php:1818
+#: contact_form_to_db.php:1336
+#: contact_form_to_db.php:1874
 msgid "One message was marked as Normal."
 msgstr "Одно сообщение было промаркировано как Нормальное."
 
-#: contact_form_to_db.php:1285
+#: contact_form_to_db.php:1339
 msgid "One message was marked as Spam. "
 msgstr "Одно сообщение было промаркировано как Спам."
 
-#: contact_form_to_db.php:1288
+#: contact_form_to_db.php:1342
 msgid "One message was marked as Trash. "
 msgstr "Одно сообщение было перемещено в Корзину."
 
-#: contact_form_to_db.php:1291
+#: contact_form_to_db.php:1345
 msgid "Unknown result."
 msgstr "Неизвестный результат."
 
-#: contact_form_to_db.php:1295
+#: contact_form_to_db.php:1349
 msgid "Problems while changing status of message."
 msgstr "Возникли проблемы во время изменения статуса сообщений."
 
-#: contact_form_to_db.php:1302
+#: contact_form_to_db.php:1356
 msgid "Unknown action."
 msgstr "Неизвесное действие."
 
-#: contact_form_to_db.php:1304
+#: contact_form_to_db.php:1358
 msgid "Can not display results."
 msgstr "Невозможно отобразить результат."
 
-#: contact_form_to_db.php:1310
+#: contact_form_to_db.php:1364
 msgid "Can not handle request. May be you need choose some messages to handle them."
 msgstr "Нельзя обработать запрос. Возможно, Вам необходимо Выбрать некоторые сообщения для их обработки."
 
-#: contact_form_to_db.php:1359
-#: contact_form_to_db.php:1674
+#: contact_form_to_db.php:1413
+#: contact_form_to_db.php:1730
 msgid "Mark as Spam"
 msgstr "Маркировать как Спам"
 
-#: contact_form_to_db.php:1361
-#: contact_form_to_db.php:1683
+#: contact_form_to_db.php:1415
+#: contact_form_to_db.php:1739
 msgid "Mark as Trash"
 msgstr "Переместить в корзину"
 
-#: contact_form_to_db.php:1365
+#: contact_form_to_db.php:1419
 msgid "unknown status"
 msgstr "неизвестный статус"
 
-#: contact_form_to_db.php:1375
+#: contact_form_to_db.php:1429
 msgid "- Unknown name -"
 msgstr "- Неизвестное имя -"
 
-#: contact_form_to_db.php:1401
+#: contact_form_to_db.php:1455
 msgid " - No text in this message - "
 msgstr "- Текст отсутствует -"
 
-#: contact_form_to_db.php:1411
-#: contact_form_to_db.php:1412
-#: contact_form_to_db.php:1418
-#: contact_form_to_db.php:1698
-#: contact_form_to_db.php:1742
-#: contact_form_to_db.php:1743
-#: contact_form_to_db.php:1796
-#: contact_form_to_db.php:1797
+#: contact_form_to_db.php:1465
+#: contact_form_to_db.php:1466
+#: contact_form_to_db.php:1472
+#: contact_form_to_db.php:1754
+#: contact_form_to_db.php:1798
+#: contact_form_to_db.php:1799
+#: contact_form_to_db.php:1852
+#: contact_form_to_db.php:1853
 msgid "This option is available in Pro version"
 msgstr "Данная опция доступна в PRO версии плагина"
 
-#: contact_form_to_db.php:1411
+#: contact_form_to_db.php:1465
 msgid "Download"
 msgstr "Скачать"
 
-#: contact_form_to_db.php:1412
+#: contact_form_to_db.php:1466
 msgid "View"
 msgstr "Просмотреть"
 
-#: contact_form_to_db.php:1423
+#: contact_form_to_db.php:1479
 msgid "The number of dispatches"
 msgstr "Количество пересылок"
 
-#: contact_form_to_db.php:1425
+#: contact_form_to_db.php:1481
 msgid "This message was not sent"
 msgstr "Это сообщение не было отослано"
 
-#: contact_form_to_db.php:1509
+#: contact_form_to_db.php:1565
 msgid "message"
 msgstr "сообщение"
 
-#: contact_form_to_db.php:1510
+#: contact_form_to_db.php:1566
 msgid "messages"
 msgstr "сообщения"
 
-#: contact_form_to_db.php:1547
+#: contact_form_to_db.php:1603
 msgid "No messages that have been sent."
 msgstr "Отсутствуют отосланные сообщения"
 
-#: contact_form_to_db.php:1549
+#: contact_form_to_db.php:1605
 msgid "No messages that have not been sent."
 msgstr "Отсутствуют неотосланные сообщения."
 
-#: contact_form_to_db.php:1551
+#: contact_form_to_db.php:1607
 msgid "No messages that have was read."
 msgstr "Отсутствуют прочтённые сообщения."
 
-#: contact_form_to_db.php:1553
+#: contact_form_to_db.php:1609
 msgid "No messages that have was not read."
 msgstr "Отсутствуют непрочтённые сообщения."
 
-#: contact_form_to_db.php:1555
+#: contact_form_to_db.php:1611
 msgid "No messages that have attachments."
 msgstr "Отсутствуют сообщения с прикреплёнными файлами."
 
-#: contact_form_to_db.php:1557
+#: contact_form_to_db.php:1613
 msgid "No messages that was marked as Spam."
 msgstr "Отсутствуют сообщения, помеченные как Спам."
 
-#: contact_form_to_db.php:1559
+#: contact_form_to_db.php:1615
 msgid "No messages that was marked as Trash."
 msgstr "Отсутствуют сообщения в корзине."
 
-#: contact_form_to_db.php:1561
+#: contact_form_to_db.php:1617
 msgid "No messages found."
 msgstr "Сообщения не найдены."
 
-#: contact_form_to_db.php:1591
+#: contact_form_to_db.php:1647
 msgid "From"
 msgstr "От"
 
-#: contact_form_to_db.php:1594
+#: contact_form_to_db.php:1650
 msgid "Send Counter"
 msgstr "Счетчик отправок"
 
-#: contact_form_to_db.php:1595
+#: contact_form_to_db.php:1651
 msgid "Date"
 msgstr "Дата"
 
-#: contact_form_to_db.php:1607
+#: contact_form_to_db.php:1663
 msgid "All"
 msgstr "Все"
 
-#: contact_form_to_db.php:1608
+#: contact_form_to_db.php:1664
 msgid "Sent"
 msgstr "Отосланные"
 
-#: contact_form_to_db.php:1609
+#: contact_form_to_db.php:1665
 msgid "Not sent"
 msgstr "Неотосланные"
 
-#: contact_form_to_db.php:1610
+#: contact_form_to_db.php:1666
 msgid "Read"
 msgstr "Прочтённые"
 
-#: contact_form_to_db.php:1611
+#: contact_form_to_db.php:1667
 msgid "Unread"
 msgstr "Непрочтённые"
 
-#: contact_form_to_db.php:1612
+#: contact_form_to_db.php:1668
 msgid "Has attachments"
 msgstr "С прикреплениями"
 
-#: contact_form_to_db.php:1613
-#: contact_form_to_db.php:1700
+#: contact_form_to_db.php:1669
+#: contact_form_to_db.php:1756
 msgid "Spam"
 msgstr "Спам"
 
-#: contact_form_to_db.php:1614
-#: contact_form_to_db.php:1701
-#: contact_form_to_db.php:1710
+#: contact_form_to_db.php:1670
+#: contact_form_to_db.php:1757
+#: contact_form_to_db.php:1766
 msgid "Trash"
 msgstr "Корзина"
 
-#: contact_form_to_db.php:1673
+#: contact_form_to_db.php:1729
 msgid "Download messages"
 msgstr "Скачать сообщения"
 
-#: contact_form_to_db.php:1677
+#: contact_form_to_db.php:1733
 msgid "Not Spam"
 msgstr "Не Спам"
 
-#: contact_form_to_db.php:1679
-#: contact_form_to_db.php:1706
+#: contact_form_to_db.php:1735
+#: contact_form_to_db.php:1762
 msgid "Restore"
 msgstr "Восстановить"
 
-#: contact_form_to_db.php:1681
-#: contact_form_to_db.php:1708
+#: contact_form_to_db.php:1737
+#: contact_form_to_db.php:1764
 msgid "Delete Permanently"
 msgstr "Удалить безвозвратно"
 
-#: contact_form_to_db.php:1685
+#: contact_form_to_db.php:1741
 msgid "Re-send messages"
 msgstr "Перевыслать сообщения"
 
-#: contact_form_to_db.php:1686
+#: contact_form_to_db.php:1742
 msgid "Download attachments"
 msgstr "Скачать файлы"
 
-#: contact_form_to_db.php:1698
+#: contact_form_to_db.php:1754
 msgid "Re-send Message"
 msgstr "Перевыслать сообщение"
 
-#: contact_form_to_db.php:1699
+#: contact_form_to_db.php:1755
 msgid "Download Message"
 msgstr "Скачать сообщение"
 
-#: contact_form_to_db.php:1704
+#: contact_form_to_db.php:1760
 msgid "Not spam"
 msgstr "Не Спам"
 
-#: contact_form_to_db.php:1742
+#: contact_form_to_db.php:1798
 msgid "User Guide"
 msgstr "Руководство пользователя"
 
-#: contact_form_to_db.php:1748
+#: contact_form_to_db.php:1804
 msgid "For fully-functional work of plugin, please, enable javascript."
 msgstr "Для полноценной работы плагина, пожалуйста, включите javascript."
 
-#: contact_form_to_db.php:1757
+#: contact_form_to_db.php:1813
 #, php-format
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "Результаты запроса для &#8220;%s&#8221;"
 
-#: contact_form_to_db.php:1797
+#: contact_form_to_db.php:1853
 msgid "Can not display thumbnail"
 msgstr "Невозможно отобразить миниатюру"
 
-#: contact_form_to_db.php:1821
+#: contact_form_to_db.php:1877
 msgid "One message was marked as Spam."
 msgstr "Одно сообщение было маркировано как спам."
 
-#: contact_form_to_db.php:1824
+#: contact_form_to_db.php:1880
 msgid "One message was marked as Trash."
 msgstr "Одно сообщение было перемещено в козину."
 
-#: contact_form_to_db.php:1827
+#: contact_form_to_db.php:1883
 msgid "<strong>WARNING: </strong>Unknown result."
 msgstr "<strong>Внимание: </strong>Неизвестный результат."
 
-#: contact_form_to_db.php:1831
+#: contact_form_to_db.php:1887
 msgid "<strong>WARNING: </strong>Problems while changing status of message. Please, try it later."
 msgstr "<strong>Внимание: </strong>Возникли проблемы во время изменения статуса сообщения. Пожалуйста, попробуйте позднее."
 
 #~ msgid "Contact form to DB"
 #~ msgstr "Contact from to DB"
+
 #~ msgid ""
 #~ "If you can see this MIME, it means that the MIME type is not supported by "
 #~ "your email client!"
 #~ msgstr ""
 #~ "Если вы можете видеть этот MIME значит ваш почтовый клиент не "
 #~ "поддерживает MIME тип!"
+
 #~ msgid "There are some problems while re-sending messages."
 #~ msgstr "Возникли проблемы во время пересылки сообщений."
+
 #~ msgid "There are some problems while downloading files."
 #~ msgstr "Возникли проблемы во время скачивания файлов."
+
 #~ msgid " MB"
 #~ msgstr " MБ"
+
 #~ msgid " KB"
 #~ msgstr "КБ"
+
 #~ msgid " Bytes"
 #~ msgstr "Байт"
+
 #~ msgid "Problems while uploading file "
 #~ msgstr "Возникли проблемы во время загрузки файлов."
+
 #~ msgid "See User guide"
 #~ msgstr "Смотри руководство пользователя"
+
 #~ msgid "Attachment was not been saved because of the plugin settings"
 #~ msgstr "Прикрепленный файл не был сохранён в связи с настройками плагина"
+
 #~ msgid "Not set"
 #~ msgstr "Не задан"
+
 #~ msgid "On"
 #~ msgstr "Вкл"
+
 #~ msgid "Off"
 #~ msgstr "Вкл"
+
 #~ msgid "N/A"
 #~ msgstr "Неизвестно"
+
 #~ msgid " Mb"
 #~ msgstr " Mб"
+
 #~ msgid "Yes"
 #~ msgstr "Да"
+
 #~ msgid "No"
 #~ msgstr "Нет"
+
 #~ msgid "Operating System"
 #~ msgstr "Операционная система"
+
 #~ msgid "Server"
 #~ msgstr "Тип сервера"
+
 #~ msgid "Memory usage"
 #~ msgstr "Памяти использовано"
+
 #~ msgid "MYSQL Version"
 #~ msgstr "Версия MYSQL"
+
 #~ msgid "SQL Mode"
 #~ msgstr "Режим SQL"
+
 #~ msgid "PHP Version"
 #~ msgstr "Версия PHP"
+
 #~ msgid "PHP Safe Mode"
 #~ msgstr "PHP Safe Mode"
+
 #~ msgid "PHP Allow URL fopen"
 #~ msgstr "PHP Allow URL fopen"
+
 #~ msgid "PHP Memory Limit"
 #~ msgstr "Лимит памяти"
+
 #~ msgid "PHP Max Upload Size"
 #~ msgstr "Макс. размер загружаемого файла"
+
 #~ msgid "PHP Max Post Size"
 #~ msgstr "Макс. размер записи"
+
 #~ msgid "PHP Max Script Execute Time"
 #~ msgstr "Макс. время выполнения сценария"
+
 #~ msgid "PHP Exif support"
 #~ msgstr "Поддержка PHP Exif"
+
 #~ msgid "PHP IPTC support"
 #~ msgstr "Поддержка PHP IPTC"
+
 #~ msgid "PHP XML support"
 #~ msgstr "Поддержка PHP XML"
+
 #~ msgid "Site URL"
 #~ msgstr "Адрес сайта"
+
 #~ msgid "Home URL"
 #~ msgstr "Основной адрес сайта"
+
 #~ msgid "WordPress Version"
 #~ msgstr "Версия WordPress"
+
 #~ msgid "WordPress DB Version"
 #~ msgstr "Версия базы данных WordPress"
+
 #~ msgid "Multisite"
 #~ msgstr "Мультиблог"
+
 #~ msgid "Active Theme"
 #~ msgstr "Текущая тема"
+
 #~ msgid "Please enter a valid email address."
 #~ msgstr "Пожалуйста, введите валидный email."
+
 #~ msgid "Email with system info is sent to "
 #~ msgstr "E-mail с системной информацией отправлен на"
+
 #~ msgid "Thank you for contacting us."
 #~ msgstr "Спасибо за контакт с нами."
+
 #~ msgid "Sorry, email message could not be delivered."
 #~ msgstr "Извините, ваш email не может быть отправлен."
+
 #~ msgid "Pro plugins"
 #~ msgstr "Pro плагины"
+
 #~ msgid "Activated plugins"
 #~ msgstr "Активированные плагины"
+
 #~ msgid "Read more"
 #~ msgstr "Читать далее"
+
 #~ msgid "Installed plugins"
 #~ msgstr "Установленные плагины"
+
 #~ msgid "Recommended plugins"
 #~ msgstr "Рекомендованные к установке плагины"
+
 #~ msgid "Purchase"
 #~ msgstr "Купить"
-#~ msgid "Free plugins"
-#~ msgstr "Бесплатные плагины"
+
 #~ msgid "Install %s"
 #~ msgstr "Установлено %s"
+
 #~ msgid "Install now from wordpress.org"
 #~ msgstr "Установить с wordpress.org"
-#~ msgid "If you have any questions, please contact us via"
-#~ msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
+
 #~ msgid "System status"
 #~ msgstr "Системная информация"
+
 #~ msgid "Environment"
 #~ msgstr "Системная среда"
+
 #~ msgid "Active Plugins"
 #~ msgstr "Активированные плагины"
+
 #~ msgid "Inactive Plugins"
 #~ msgstr "Неактивированные плагины"
+
 #~ msgid "Send to support"
 #~ msgstr "Отправить в тех.поддержку"
+
 #~ msgid "Send to custom email &#187;"
 #~ msgstr "Отправить на емейл &#187;"
+
 #~ msgid "Include content of  attachments in to \"csv\"-file"
 #~ msgstr "Всавить содержимое прикрепленных файлов в \"csv\"-файл"
+
 #~ msgid ""
 #~ "Re-send a message to the email address specified in Contact Form Settings"
 #~ msgstr ""
 #~ "Перевыслать сообщение на электронный адрес, указанный в плагине "
 #~ "Контактная Форма"
+
 #~ msgid ""
 #~ "( If the option is disabled, all messages will be sent to the email "
 #~ "address which was valid at the time of receipt of the message )"
 #~ msgstr ""
 #~ "( если настройка включена, все сообщения старше указанного периода будут "
 #~ "удалены по истечении того же периода )"
+
 #~ msgid "Contact Form to DB User Guide"
 #~ msgstr "Руководство пользователя плагина Contact Form To DB"
+
 #~ msgid "Content"
 #~ msgstr "Содержание"
+
 #~ msgid "Introduction"
 #~ msgstr "Вступдение"
+
 #~ msgid "Settings page"
 #~ msgstr "Страница настроек."
+
 #~ msgid "Messages manager page"
 #~ msgstr "Страница менеджера сообщений"
+
 #~ msgid "Column \"Status\""
 #~ msgstr "Колонка \"Статус\""
+
 #~ msgid "Column \"From\""
 #~ msgstr "Колонка \"От\""
+
 #~ msgid "Column \"Message\""
 #~ msgstr "Колонка \"Сообщение\""
+
 #~ msgid "Column \"Attached files\""
 #~ msgstr "Колонка \"Прикреплённые файлы\""
+
 #~ msgid "Column \"Send Counter\""
 #~ msgstr "Колонка \"Счётчик отправок\""
+
 #~ msgid "Column \"Date\""
 #~ msgstr "Колонка \"Дата\""
+
 #~ msgid "Main functions"
 #~ msgstr "Основные функции"
+
 #~ msgid "Drop-down menu functions"
 #~ msgstr "Функции выпадающего меню"
+
 #~ msgid "Column \"Message\" functions"
 #~ msgstr "Функции колонки \"Сообщение\""
+
 #~ msgid ""
 #~ "Plugin Contact Form To DB is an extension of the Contact Form plugin by "
 #~ "BestWebSoft. The plugin allows to view and manage messages, coming via "
@@ -745,16 +847,20 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Контактная Форма кампании BestWebSoft.  Плагин предоставляет возможность "
 #~ "просмотра и администрирования сообщений, исходящих из контактной формы на "
 #~ "Вашем сайте."
+
 #~ msgid "Attention:"
 #~ msgstr "Внимание:"
+
 #~ msgid ""
 #~ "Plugin Contact Form To DB is only compatible with the Contact Form plugin "
 #~ "by BestWebSoft and doesn't work with any other similar plugins."
 #~ msgstr ""
 #~ "плагин Contact Form To DB совместим только с плагином Контактная Форма "
 #~ "кампании BestWebSoft и не работает c другими подобными плагинами."
+
 #~ msgid "Picture not found"
 #~ msgstr "Картинка не найдена"
+
 #~ msgid ""
 #~ "On the plugin settings page there are redirecting links to the following "
 #~ "pages: \"User guide\" and \"FAQs\"."
@@ -762,51 +868,65 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "На странице настроек присутствуют ссылки для перехода к страницам "
 #~ "\"Руководство пользователя ( User guide )\" и \"Часто задаваемые вопросы "
 #~ "( FAQ )\"."
+
 #~ msgid ""
 #~ "On the settings page you can select the required settings and turn off "
 #~ "unnecessary settings."
 #~ msgstr ""
 #~ "На странице настроек Вы можете выбрать необходимые настройки или "
 #~ "отключить ненужные."
+
 #~ msgid "Messages manager"
 #~ msgstr "Менеджер сообщений"
+
 #~ msgid "Manager page"
 #~ msgstr "Страница менеджера"
+
 #~ msgid ""
 #~ "The messages manager page shows all the messages coming via contact form "
 #~ "on your site."
 #~ msgstr ""
 #~ "Страница менеджера сообщений отображает все сообщения, исходящие из "
 #~ "контактной формы на Вашем сайте."
+
 #~ msgid ""
 #~ "The main elements of the page: search field, drop-down menu \"Bulk actions"
 #~ "\", filters panel, the table of messages."
 #~ msgstr ""
 #~ "Основные элементы страницы: поле поиска, выпадающе меню \"Bulk actions\", "
 #~ "строка фильтров, таблица сообщений."
+
 #~ msgid "The search field"
 #~ msgstr "Поле поиска"
+
 #~ msgid "serves to search messages in accordance with the applied criterion."
 #~ msgstr ""
 #~ "предназначено для осуществления поиска по сообщениямм согласно введённого "
 #~ "критерия."
+
 #~ msgid "Drop-down menu \"Bulk actions\""
 #~ msgstr "Выпадающе меню \"Bulk actions\""
+
 #~ msgid ""
 #~ "includes the functions for processing messages in groups. Depending on "
 #~ "the selected filter, different messages will be displayed."
 #~ msgstr ""
 #~ "содержит функции для групповой обработки собщений. В зависимости от "
 #~ "установленного фильтра, будет выводится различный набор сообщений."
+
 #~ msgid "Row of filters"
 #~ msgstr "Строка фильтров"
+
 #~ msgid "By clicking one of the links in"
 #~ msgstr "Нажав на одну из ссылок в"
+
 #~ msgid "filters panel"
 #~ msgstr "строке фильтров"
+
 #~ msgid ", you can view messages grouped according to one of the criteria:"
 #~ msgstr ""
 #~ ", Вы можете просмотреть сообщения, объединённые по одному из признаков:"
+
 #~ msgid ""
 #~ "\"All\" - all the meaasges that are not spam or are not in the trash to "
 #~ "be deleted later. This filter is set by default when entering the page."
@@ -814,12 +934,14 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "\"Все ( All ) \" - все письма, не являющиеся спамом и не находящиеся в "
 #~ "корзине для последующего удаления. Данный фильтр устанавливается по "
 #~ "умолчанию при входе на страницу."
+
 #~ msgid ""
 #~ "\"Sent\" - all successfully sent messages that are not spam or are not in "
 #~ "the trash to be deleted later."
 #~ msgstr ""
 #~ "\"Отосланные ( Sent ) \" - все, успешно отосланные, письма, не являющиеся "
 #~ "спамом и не находящиеся в корзине для последующего удаления."
+
 #~ msgid ""
 #~ "\"Not sent\" - all the messages that failed to be sent and that are not "
 #~ "spam or are not in the trash to be deleted later."
@@ -827,18 +949,21 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "\"Неотосланные ( Not sent ) \" - все письма, отсылка которых не удалась и "
 #~ "не являющиеся спамом, а также не находящиеся в корзине для последующего "
 #~ "удаления."
+
 #~ msgid ""
 #~ "\"Read\" - all read messages that are not spam or are not in the trash to "
 #~ "be deleted later."
 #~ msgstr ""
 #~ "\"Прочитанные ( Read )\" - все прочтённые письма, не являющиеся спамом и "
 #~ "не находящиеся в корзине для последующего удаления."
+
 #~ msgid ""
 #~ "\"Unread\" - all unread messages that are not spam or are not in the "
 #~ "trash to be deleted later."
 #~ msgstr ""
 #~ "\"Непрочитанные ( Unread )\" - все непрочтённые письма, не являющиеся "
 #~ "спамом и не находящиеся в корзине для последующего удаления."
+
 #~ msgid ""
 #~ "\"Has attachment\" - all the messages having attachments that are not "
 #~ "spam or are not in the trash to be deleted later."
@@ -846,18 +971,24 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "\"С прикреплениями ( Has attachment )\" - все письма, с прикреплёнными к "
 #~ "ним файлами, не являющиеся спамом и не находящиеся в корзине для "
 #~ "последующего удаления."
+
 #~ msgid "\"Spam\" - all the messages marked as spam."
 #~ msgstr "\"Спам ( Spam )\" - все письма, помеченные как Спам."
+
 #~ msgid "\"Trash\" - all the messages to be deleted later."
 #~ msgstr ""
 #~ "\"Корзина ( Trash )\" - все письма, находящиеся в корзине для "
 #~ "последующего удаления."
+
 #~ msgid "Work with columns"
 #~ msgstr "Работа с колонками"
+
 #~ msgid "tables of messages."
 #~ msgstr "таблицы собщений."
+
 #~ msgid "displays three possible statuses of a message:"
 #~ msgstr "отражает три возможных состояния сообщения:"
+
 #~ msgid ""
 #~ "Status \"Normal\" - is set by default for all messages, is available to "
 #~ "be displayed by means of all filters except \"Spam\" and \"Trash\". The "
@@ -869,6 +1000,7 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "( Spam ) \" и \"Корзина ( Trash ) \". Сообщение, имеющее данный статус "
 #~ "доступно для всех основных манипуляций, предусмотренных функциями плагина "
 #~ "Contact Form To DB."
+
 #~ msgid ""
 #~ "Status \"Spam\" - is set for suspicious messages that have possibly been "
 #~ "sent as a result of commercial, political etc mailout. It is possible to "
@@ -878,14 +1010,16 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Статус \"Спам\" - устанавливается для подозрительных сообщений, которые "
 #~ "возможно были отправлены в результате массовой рассылки коммерческой, "
 #~ "политической и иной рекламы (информации) или иного вида сообщений. "
-#~ "Просмотр спам-сообщений доступен при применнении фильтра \"Спам ( Spam )"
-#~ "\". Спам-сообщение не доступно для пересылки или скачивания."
+#~ "Просмотр спам-сообщений доступен при применнении фильтра \"Спам "
+#~ "( Spam )\". Спам-сообщение не доступно для пересылки или скачивания."
+
 #~ msgid ""
 #~ "Plugin Contact Form To DB does not provide automatic messages marking as "
 #~ "\"Spam\". This marking is up to you."
 #~ msgstr ""
 #~ "плагин Contact Form To DB не поддерживает автоматическую маркировку "
 #~ "сообщений как \"Спам\". Данная маркировка полностью зависит от Вас."
+
 #~ msgid ""
 #~ "Status \"in Trash\" - is set for messages to be deleted later. Forwarding "
 #~ "or downloading functions are not available for a message marked as \"in "
@@ -894,8 +1028,10 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Статус \"в Корзине ( in Trash )\" - устанавливается для сообщений с целью "
 #~ "последующего их удаления. Для сообщения, помеченного как \"в Корзине ( in "
 #~ "Trash ) \" не доступны функции пересылки или скачивания."
+
 #~ msgid "Message status change:"
 #~ msgstr "Смена статуса сообщения:"
+
 #~ msgid ""
 #~ "if it is necessary to change the status of a message, you can click the "
 #~ "icon displaying the current status. The icon will be changed click-by-"
@@ -908,12 +1044,14 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "иконки. После последнего нажатия статус будет автоматически изменён, "
 #~ "сообщение удалиться из списка и будет доступно при применении фильтра, "
 #~ "соответствующего новому статусу сообщения, из строки фильтров."
+
 #~ msgid ""
 #~ "for your convenience in working with this option it is necessary to "
 #~ "enable javascript in your browser."
 #~ msgstr ""
 #~ "для более комфортной работы с данной функцией в Вашем браузере должен "
 #~ "быть включен javascript."
+
 #~ msgid ""
 #~ "displays the sender's contact information and the recipient's email "
 #~ "address. Depending on the Contact Form plugin settings and the fields, "
@@ -923,12 +1061,14 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "получателя сообщения. В зависимости от настроек плагина Контактная Форма "
 #~ "и полей, заполненных автором сообщения, список контактных данных может "
 #~ "быть разнообразным."
+
 #~ msgid ""
 #~ "To view the contact information and the whole message ( if javascript is "
 #~ "enabled ) you just need to click on the sender's name."
 #~ msgstr ""
 #~ "Для просмотра контактных данных и всего сообщения ( при включенном "
 #~ "javascript ) Вам достаточно нажать на имени автора указателем мышки."
+
 #~ msgid ""
 #~ "If the sender's name is in bold, the message has the status of \"Unread"
 #~ "\". This staus is automatically changed for \"Read\" by clicking on the "
@@ -937,6 +1077,7 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Если имя автора ссобщения выделено жирным шрифтом, то сообщение имеет "
 #~ "статус \"непрочитанное\". Данный статус автоматически меняется на "
 #~ "\"прочитанное\" при нажатии на имени автора сообщения."
+
 #~ msgid ""
 #~ "displays the text of te message, as well as the name and the size of "
 #~ "attached files. If javascript is enabled, the corresponding thumbnail is "
@@ -949,46 +1090,59 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "миниатюра, если прикреплённый файл является изображением. Для просмотра "
 #~ "полного текста сообщения Вам необходимо нажать указателем мыши на имени "
 #~ "автора сообщения в колонке \"От\"."
+
 #~ msgid "In column \"Attached files\""
 #~ msgstr "В колонке \"Прикреплённые файлы\""
+
 #~ msgid "the following icons can be displayed:"
 #~ msgstr "могут отражаться следующие иконки:"
+
 #~ msgid "Icon"
 #~ msgstr "Иконка"
+
 #~ msgid "shows if there is an attached file."
 #~ msgstr "показывает наличие прикреплённого к сообщению файла."
+
 #~ msgid ""
 #~ "is displayed if a file has been attached to the message but because of "
 #~ "the Contact Form to DB plugin settings it hasn't been saved."
 #~ msgstr ""
 #~ "отражается, если к письму был прикреплён файл, однако в связи с "
 #~ "настройками плагина Contact Form to DB он не был сохранён."
+
 #~ msgid ""
 #~ "notifies if there are any errors can occur when saving attached files on "
 #~ "the server or in the database."
 #~ msgstr ""
 #~ "сигнализирует о возможных ошибках при сохранении прикреплённых файлов на "
 #~ "сервер или в базу данных."
+
 #~ msgid ""
 #~ "displays the total number of messages sending attempts both via the "
 #~ "contact form and the site's admin panel. Icon"
 #~ msgstr ""
 #~ "отражает суммарное количество попыток отправок сообщения как из "
 #~ "контактной формы, так и из административной панели сайта. Иконка"
+
 #~ msgid ""
 #~ "as well as the message's lines highlited pink (if javascript is enabled ) "
 #~ "is displayed in case if the message failed to be sent."
 #~ msgstr ""
 #~ "как и выделение розовым цветом строки сообщения ( при включенном "
 #~ "javascript ) отражается при неудачной попытке пересылке сообщения."
+
 #~ msgid "shows the date when the message's was recorded."
 #~ msgstr "отражает дату записи сообщения."
+
 #~ msgid "Drop-down menu functions ( Bulk actions )"
 #~ msgstr "Функции выпадающего меню ( Bulk actions )"
+
 #~ msgid "serve to manage messages in groups."
 #~ msgstr "предназначены для групповой обработки сообщений."
+
 #~ msgid "Bulk actions"
 #~ msgstr "Групповые действия"
+
 #~ msgid ""
 #~ "\"Re-send messages\" - allows to send all selected messages to the "
 #~ "sender's email address, specified in column \"From\". The function is not "
@@ -998,6 +1152,7 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "выбранные письма по электронному адресу отпраителю, указанному в колонке "
 #~ "\"От\". Функция не доступна для обработки спам-сообщений и сообщений, "
 #~ "маркированных  как \"в Корзине\""
+
 #~ msgid ""
 #~ "\"Download messages\" - allows to save all selected messages on a local "
 #~ "PC in the following formats: csv, xml, eml. The format can be selected on "
@@ -1009,6 +1164,7 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "eml. Выбор формата для сохранения сообщения осуществляется со страницы "
 #~ "настроек плагина. Функция не доступна для обработки спам-сообщений и "
 #~ "сообщений, маркированных  как \"в Корзине\"."
+
 #~ msgid ""
 #~ "\"Download attachments\" - allows to download an attached file. The "
 #~ "function is not available to manage spam-messages or messages marked as "
@@ -1017,22 +1173,26 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "\"Сохранить прикрепления ( Download attachments )\" - позволяет скачать "
 #~ "прикреплённый к сообщению файл.  Функция не доступна для обработки спам-"
 #~ "сообщений и сообщений, маркированных  как \"в Корзине\"."
+
 #~ msgid "\"Mark as Spam\" - allows to mark all selected messages as spam."
 #~ msgstr ""
 #~ "\"Маркировать как спам ( Mark as Spam )\" - позволяет маркировать все "
 #~ "выбранные сообщения как спам-сообщения."
+
 #~ msgid ""
 #~ "\"Mark as Trash\" - allows to mark all selected messages that will be "
 #~ "deleted later."
 #~ msgstr ""
 #~ "\"Переместить в корзину ( Mark as Trash )\" - позволяет маркировать все "
 #~ "выбранные сообщения для последующего удаления."
+
 #~ msgid ""
 #~ "\"Not Spam\" - allows to mark all selected spam-messages as not spam. The "
 #~ "messages will be marked as \"Normal\"."
 #~ msgstr ""
 #~ "\"Не спам ( Not Spam )\" - позволяет размаркировать выыбранные спам-"
 #~ "сообщения. Сообщения будут промаркированы как \"Нормальные\"."
+
 #~ msgid ""
 #~ "\"Restore\" - allows to remove all selected messages from the list of "
 #~ "messages to be deleted  later. The messages will be marked as \"Normal\"."
@@ -1040,20 +1200,24 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "\"Восстановить ( Restore )\" - позволяет удалить выбранные сообщения из "
 #~ "списка последующего удаления. Сообщения будут промаркированы как "
 #~ "\"Нормальные\"."
+
 #~ msgid ""
 #~ "\"Delete Permanently\" - allows to delete completely the information "
 #~ "about all selected messages."
 #~ msgstr ""
 #~ "\"Удалить безвозвратно ( Delete Permanently )\" - позволяет полностью "
 #~ "удалить информацию о выбрынных сообщениях."
+
 #~ msgid "Column \"Messages\" functions"
 #~ msgstr "Функции колонки \"Сообщение\""
+
 #~ msgid ""
 #~ "serve to manage single messages and they are displayed when pointing to "
 #~ "the column."
 #~ msgstr ""
 #~ "предназначены для обработки одиночных сообщений и отражаются при "
 #~ "наведении курсора мыши на саму колонку."
+
 #~ msgid ""
 #~ "\"Re-send message\" - allows to re-send a message to the sender's email "
 #~ "address, specified in column \"From\". The function is not available to "
@@ -1063,6 +1227,7 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "сообщение по указааномму в колонке \"от\" электронному адресу получателя. "
 #~ "Функция не доступна для обработки спам-сообщений и сообщений, "
 #~ "маркированных  как \"в Корзине\"."
+
 #~ msgid ""
 #~ "\"Download message\" - allows to save a message on a local PC in the "
 #~ "following formats: csv, xml, eml. The format can be selected on the "
@@ -1074,61 +1239,78 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "формата для сохранения сообщения осуществляется со страницы настроек "
 #~ "плагина. Функция не доступна для обработки спам-сообщений и сообщений, "
 #~ "маркированных  как \"в Корзине\"."
+
 #~ msgid "\"Spam\" - allows to mark a message as spam."
 #~ msgstr ""
 #~ "\"Спам ( Spam )\" - позволяет маркировать сообщение как спам-сообщение."
+
 #~ msgid "\"Trash\" - allows to mark a message that will be deleted later."
 #~ msgstr ""
 #~ "\"Корзина ( Trash )\" - позволяет маркировать сообщение для последующего "
 #~ "удаления."
+
 #~ msgid ""
 #~ "\"Not Spam\" - allows to mark a spam-message as not spam. The message "
 #~ "will be marked as \"Normal\""
 #~ msgstr ""
 #~ "\"Не спам ( Not Spam )\" - позволяет размаркировать спам-сообщение. "
 #~ "Сообщение будет промаркировано как \"Нормальное\"."
+
 #~ msgid ""
 #~ "\"Restore\" - allows to remove a message from the list of messages to be "
 #~ "deleted  later. The messages will be marked as \"Normal\"."
 #~ msgstr ""
 #~ "\"Восстановить ( Restore )\" - позволяет удалить сообщение из списка "
 #~ "последующего удаления. Сообщение будет промаркировано как \"Нормальное\"."
+
 #~ msgid ""
 #~ "\"Delete Permanently\" - allows to delete completely the information "
 #~ "about the message."
 #~ msgstr ""
 #~ "\"Удалить безвозвратно\" - позволяет полностью удалить информацию о "
 #~ "сообщении."
+
 #~ msgid "\"Download\" - allows to download an attached file."
 #~ msgstr ""
 #~ "\"Скачать ( Download )\" - позволяет скачать прикреплённый к сообщению "
 #~ "файл."
+
 #~ msgid "\"View\" - allows to view an image attached to the message."
 #~ msgstr ""
 #~ "\"Просмотр ( View )\" - позволяет прсмотреть изображение, прикреплённное "
 #~ "к сообщению."
+
 #~ msgid "To get more information please go to"
 #~ msgstr "Для получения дополнительной информации Вы можете просмотреть"
+
 #~ msgid "FAQs page"
 #~ msgstr "страничку часто задаваемых вопросов"
+
 #~ msgid "of the plugin or contact"
 #~ msgstr "плагина или обратиться в"
+
 #~ msgid "BestWebSoft support team"
 #~ msgstr "службу поддержки"
+
 #~ msgid "with a question."
 #~ msgstr "кампании BestWebSoft с интересующим Вас вопросом."
+
 #~ msgid "Contact Form to DB FAQ"
 #~ msgstr "Часто задаваемые вопросы Contact Form To DB"
+
 #~ msgid "Why does fancyBox not work in Wordpress 3.1.1?"
 #~ msgstr "Почему не работает fancyBox в Wordpress 3.1.1?"
+
 #~ msgid ""
 #~ "Unfortunately in the core of Wordpress 3.1.1 there is a jQuery library "
 #~ "v1.4.4, that doesn't work with fancyBox library v2.1.5."
 #~ msgstr ""
 #~ "К сожалению, в ядре Wordpress 3.1.1 присутствует библиотека jQuery версии "
 #~ "1.4.4, которая не работает с библиотекой fancyBox v2.1.5."
+
 #~ msgid "How can I change the number of messages shown on a page?"
 #~ msgstr "Как поменять количество отображаемых сообщений на странице?"
+
 #~ msgid ""
 #~ "In order to do that you should select \"BWS Plugins\" in the menu and go "
 #~ "to the plugin settings page selecting \"Contact Form To DB\". In block "
@@ -1140,8 +1322,10 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "\"Настройки сохранения\" выбрать из выпадающего списка необходимое Вам "
 #~ "количество сообщений и сохранить настройки, нажав на кнопку \"Сохранить "
 #~ "изменения\""
+
 #~ msgid "Is it possible to forward messages to other users?"
 #~ msgstr "Можно ли пересылать сообщения другим пользователям?"
+
 #~ msgid ""
 #~ "A message can only be sent to the users whose email addresses were "
 #~ "specified in the Contact Form plugin settings as of the time sending a "
@@ -1150,20 +1334,26 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Сообщение пересылается только тем пользователям, чей адрес электронной "
 #~ "почт был указан в настройках плагина Контактная форма на момент отпраки "
 #~ "сообщения или указанный на текущий момент."
+
 #~ msgid "I would like to get extra settings for your plugin"
 #~ msgstr "Я бы хотел получить дополнительные настройки для Вашего плагина"
+
 #~ msgid "You can contact our company's "
 #~ msgstr "Вы можете обратиться в "
+
 #~ msgid "support team"
 #~ msgstr "службу поддержки"
+
 #~ msgid ""
 #~ "with a detailed description of your requirements. Our support team will "
 #~ "be glad to assist you."
 #~ msgstr ""
 #~ "нашей кампании с полным описанием необходимых изменений. Наши специалисты "
 #~ "с радостью помогут Вам."
+
 #~ msgid "Is it possible to re-send a spam-message?"
 #~ msgstr "Как переслать спам-сообщение?"
+
 #~ msgid ""
 #~ "If you are sure that the necessary message to be re-send is not spam, it "
 #~ "is necessary to change its status for \"Normal\". In order to do that you "
@@ -1172,20 +1362,24 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Если Вы уверены, что необходимое Вам для пересылки сообщение не является "
 #~ "спамом, то Вам необходимо поменять статус сообщения на \"нормальное\". "
 #~ "Для этого Вы можете:"
+
 #~ msgid ""
 #~ "chande the status of the message in column \"Status\" ( how to do that "
 #~ "see here"
 #~ msgstr ""
 #~ "поменять статус сообщения в колонке \"Статус\" ( как это сделать описано "
 #~ "на странице"
+
 #~ msgid "the user's guide"
 #~ msgstr "руководство пользователя"
+
 #~ msgid ""
 #~ "click \"Not spam\" in the panel of functional references of column "
 #~ "\"Messages\";"
 #~ msgstr ""
 #~ "нажать на ссылку \"Не спам\" в строке функциональных ссылок колонки "
 #~ "\"Сообщения\";"
+
 #~ msgid ""
 #~ "select the necessary message ( or messages ), and then make use of the "
 #~ "function \"Not spam\" in the drop-down menu \"Gruop actions\"."
@@ -1193,35 +1387,48 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "выделить необходимое Вам сообщение ( одно или несколько ), а затем "
 #~ "воспользоваться функцией \"Не спам\" из выпадающего меню \"Групповые "
 #~ "действия\"."
+
 #~ msgid "After that the message is available for re-sending and downloading."
 #~ msgstr ""
 #~ "После выполнения вышеуказанных действий сообщение доступно для пересылки "
 #~ "и скачивания."
+
 #~ msgid "If you have any questions, feel free to contact"
 #~ msgstr ""
 #~ "Если у Вас есть какие-либо ещё интересующие вопросы, Вы можете обратиться "
 #~ "в"
+
 #~ msgid "BestWebSoft support team."
 #~ msgstr "службу поддержки кампании BestWebSoft."
+
 #~ msgid "weekly"
 #~ msgstr "еженедельно"
+
 #~ msgid "monthly"
 #~ msgstr "ежемесячно"
+
 #~ msgid "yearly"
 #~ msgstr "ежегодно"
+
 #~ msgid "<strong>WARNING: </strong> Errors while periodic deleting messages."
 #~ msgstr ""
 #~ "<strong>Внимание: </strong>Возникли проблемы во время удаления сообщений."
+
 #~ msgid "Save Options:"
 #~ msgstr "Настройки сохранения:"
+
 #~ msgid "Download Options:"
 #~ msgstr "Настройки Скачивания:"
+
 #~ msgid "Re-send Options:"
 #~ msgstr "Настройки пересылки:"
+
 #~ msgid "Delete Options:"
 #~ msgstr "Настройки удаления:"
+
 #~ msgid "Display Options:"
 #~ msgstr "Настройки отображения:"
+
 #~ msgid ""
 #~ "The settings page is divided into five blocks: Save Options, Download "
 #~ "Options, Re-send Options, Delete Options, Display Options."
@@ -1230,10 +1437,13 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Options ), настройки скачивания ( Download Options ), настройки пересылки "
 #~ "( Re-send Options ), настройки удаления ( Delete Options ), настройки "
 #~ "отображения ( Display Options )."
+
 #~ msgid "In"
 #~ msgstr "В"
+
 #~ msgid "Save Options"
 #~ msgstr "настройках сохранения ( Save Options )"
+
 #~ msgid ""
 #~ "you can select whether to save or not the messages in the database, save "
 #~ "or not attached files. It is also possible to select whether to save "
@@ -1243,8 +1453,10 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "или нет прикреплённые файлы. Также предоставляется возможность выбора "
 #~ "сохранения прикреплённых файлов в базу данных или в папку \"Uploads\" "
 #~ "Вашего сайта."
+
 #~ msgid "Re-send Options"
 #~ msgstr "настройках пересылки ( Re-send Options )"
+
 #~ msgid ""
 #~ "you can select the option to re-send a message to the email address "
 #~ "relevant as of the time receiveing the message, or to the email address "
@@ -1253,8 +1465,10 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Вы можете выбрать возможность пересылать сообщение на електронный адрес, "
 #~ "актуальный на момент получения сообщения, или на электронный адрес, "
 #~ "указанный на данный момент в настройках плагина Контактная Форма."
+
 #~ msgid "Download Options"
 #~ msgstr "настройках скачивания ( Download Options )"
+
 #~ msgid ""
 #~ "you can select a folder to save attached files and messages. For your "
 #~ "convenience messages can be saved on your PC's HDD in one of the "
@@ -1270,8 +1484,10 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "разделитель и ограничитель. Также вы можете выбрать добавлять ли "
 #~ "содержимое прикреплённого файла в \"csv\"-файл сообщения или сохранить "
 #~ "отдельно."
+
 #~ msgid "Delete Options"
 #~ msgstr "настройках удаления ( Delete Options )"
+
 #~ msgid ""
 #~ "you can enable automatic old messages deleting, as well as the timeframe "
 #~ "to recur the operation. In accordance with the selected settings all the "
@@ -1284,8 +1500,10 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "будут удаляться все записи о сообщениях из базы данных, а также "
 #~ "прикреплённые к ним файлы, срок давности поступления которых больше "
 #~ "указанного в настройках периода."
+
 #~ msgid "Display Options"
 #~ msgstr "настройках отображения ( Display Options )"
+
 #~ msgid ""
 #~ "you can select the number of messages shown on a page. Yuo can also "
 #~ "select whether to show or not the information about attached files, use "
@@ -1294,58 +1512,79 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Вы можете выбрать количество отображаемых сообщений на странице, "
 #~ "показывать или нет информацию о прикреплённых файлах, использовать или "
 #~ "нет для просмотра картинок плагин FancyBox."
+
 #~ msgid "Contact Form to DB Options"
 #~ msgstr "Настройки плагина Contact form to DB"
+
 #~ msgid "One message was re-sent successfully"
+
 #~ msgid_plural "%s messages was re-sent successfully."
 #~ msgstr[0] "Одно сообщение было переслано"
 #~ msgstr[1] "%s сообщения были пересланы"
 #~ msgstr[2] "%s сообщений были пересланы"
 #~ msgstr[3] "%s сообщение было переслано"
+
 #~ msgid "One file was not found."
+
 #~ msgid_plural "%s files was not found."
 #~ msgstr[0] "Один файл не найден"
 #~ msgstr[1] "%s файла не найдены"
 #~ msgstr[2] "%s файлов не найдено"
 #~ msgstr[3] "%s файл не найден"
+
 #~ msgid "One message was delete successfully"
+
 #~ msgid_plural "%s messages was delete successfully."
 #~ msgstr[0] "Одно сообщение было полностью удалено"
 #~ msgstr[1] "%s сообщение были полностью удалены"
 #~ msgstr[2] "%s сообщений были полностью удалены"
 #~ msgstr[3] "%s сообщение было полностью удалено"
+
 #~ msgid "One message was moved to Trash."
+
 #~ msgid_plural "%s messages was moved to Trash."
 #~ msgstr[0] "Одно сообщение было перемещено в козину."
 #~ msgstr[1] "%s сообщения были перемещены в козину."
 #~ msgstr[2] "%s сообщений были перемещены в козину."
 #~ msgstr[3] "%s сообщение было перемещено в козину."
+
 #~ msgid "Contact Form Plugin is not active."
 #~ msgstr "Плагин Contact Form не активен."
+
 #~ msgid ""
 #~ "You need activate this plugin for correct work with Contact Form to DB "
 #~ "plugin. "
 #~ msgstr ""
 #~ "Вам необходимо активировать этот плагин для корректной работы с плагином "
 #~ "Contact Form To DB. "
+
 #~ msgid "You can download Contact Form Plugin from "
 #~ msgstr "Вы можете скачать плагин Контактная форма с "
+
 #~ msgid "3 days"
 #~ msgstr "3 дня"
+
 #~ msgid "1 week"
 #~ msgstr "1 неделя"
+
 #~ msgid "2 weeks"
 #~ msgstr "2 недели"
+
 #~ msgid "1 month"
 #~ msgstr "1 месяц"
+
 #~ msgid "6 months"
 #~ msgstr "6 месяцев"
+
 #~ msgid "Status was changed successfull"
 #~ msgstr "Статус был успешно изменён"
+
 #~ msgid "Input save file folder ( whithout last slash )"
 #~ msgstr "Введите путь для сохранения файлов( без последнего слеша )"
+
 #~ msgid "daily"
 #~ msgstr "ежедневно"
+
 #~ msgid ""
 #~ "for more correct work of this option please, make sure that in the field "
 #~ "\"Timezone\" from \"General\" exposed to the correct value"
@@ -1353,316 +1592,445 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "для более коррестной работы этой настройки убедитесь, что в поле "
 #~ "\"Часовой пояс\" на странице настроек \"Общиеl\"  выставлено правильное "
 #~ "значение"
+
 #~ msgid "Show shipments counter."
 #~ msgstr "Показать счетчик пересылок."
+
 #~ msgid "There are some problems while downloading messages"
 #~ msgstr "Возникли проблемы во время скачивания сообщений."
+
 #~ msgid "Can not create folder for saving files. Please check in options page"
 #~ msgstr ""
 #~ "Невозможно создать папку для сохранения файлов. Пожалуйста, проверьте на "
 #~ "странице настроек."
+
 #~ msgid "ID"
 #~ msgstr "№"
+
 #~ msgid "Read messages"
 #~ msgstr "Отосланные"
+
 #~ msgid "Not read messages"
 #~ msgstr "Непрочтенные"
+
 #~ msgid ""
 #~ "<strong>WARNING: </strong>Can not create folder for saving files. Please "
 #~ "check in options page"
 #~ msgstr ""
 #~ "<strong>Внимание: </strong>Невозможно создать папку для сохранения "
 #~ "файлов. Пожалуйста, проверьте на странице настроек плагина."
+
 #~ msgid "File was succesfully download."
 #~ msgstr "Файл был успешно сохранён."
+
 #~ msgid "<strong>WARNING: </strong>File not found. Please, try it later."
 #~ msgstr ""
 #~ "<strong>Внимание: </strong>Файл не найден. Пожалуйста, попробуйте позднее."
+
 #~ msgid ""
 #~ "<strong>WARNING: </strong>There are some problems while downloading file. "
 #~ "Please, try it later."
 #~ msgstr ""
 #~ "<strong>Внимание: </strong>Возникли проблемы во время сохранения "
 #~ "сообщения. Пожалуйста, попробуйте позднее."
+
 #~ msgid "Contact Form Manager"
 #~ msgstr "Менеджер Контактной Формы"
+
 #~ msgid "Contact Form"
 #~ msgstr "Контактная Форма"
+
 #~ msgid "Contact Form Pro Extra Settings"
 #~ msgstr "Extra Настройки Контактной Формы"
+
 #~ msgid "Name:"
 #~ msgstr "Имя:"
+
 #~ msgid "Address:"
 #~ msgstr "Адрес:"
+
 #~ msgid "Email Address:"
 #~ msgstr "E-mail адрес:"
+
 #~ msgid "Phone number:"
 #~ msgstr "Телефон:"
+
 #~ msgid "Message:"
 #~ msgstr "Сообщение:"
+
 #~ msgid "Attachment:"
 #~ msgstr "Прикрепить файл:"
+
 #~ msgid "Send me a copy"
 #~ msgstr "Отправить мне копию"
+
 #~ msgid "Submit"
 #~ msgstr "Отправить"
+
 #~ msgid "Your name is required."
 #~ msgstr "Ваше имя - это обязательное поле."
+
 #~ msgid "Address is required."
 #~ msgstr "Поле адреса - обязательное для заполнения."
+
 #~ msgid "A valid email address is required."
 #~ msgstr "Поле email адреса - обязательное для заполнения."
+
 #~ msgid "Phone number is required."
 #~ msgstr "Телефон - это обязательное поле."
+
 #~ msgid "Subject is required."
 #~ msgstr "Поле Тема - обязательное поле."
+
 #~ msgid "Message text is required."
 #~ msgstr "Поле Сообщение - обязательное поле."
+
 #~ msgid "File format is not valid."
 #~ msgstr "Прикрепленный тип файла не поддерживается"
+
 #~ msgid "File upload error."
 #~ msgstr "Ошибка загрузки файла."
+
 #~ msgid "The file could not be uploaded."
 #~ msgstr "Невозможно загрузить файл."
+
 #~ msgid "This file is too large."
 #~ msgstr "Размер файла слишком большой."
+
 #~ msgid "Please fill out the CAPTCHA."
 #~ msgstr "Пожалуйста, заполните КАПЧУ."
+
 #~ msgid "Please make corrections below and try again."
 #~ msgstr ""
 #~ "Пожалуйста, сделайте исправления в отмеченных полях ниже и повторите "
 #~ "попытку."
+
 #~ msgid ""
 #~ "If the 'Redirect to page' option is selected then the URL field should be "
 #~ "in the following format"
 #~ msgstr ""
 #~ "Если опция 'Перейти на страницу \"выбран, то Урл поле должно быть "
 #~ "заполнено в следующем формате"
+
 #~ msgid "Such user does not exist. Settings are not saved."
 #~ msgstr "Данный пользователь не найден. Настройки не сохранены"
+
 #~ msgid ""
 #~ "Please enter a valid email address in the 'FROM' field. Settings are not "
 #~ "saved."
 #~ msgstr ""
 #~ "Пожалуйста, введите корректный email для поля 'FROM'. Настройки не "
 #~ "сохранены."
+
 #~ msgid "Extra settings"
 #~ msgstr "Extra Настройки"
+
 #~ msgid ""
 #~ "If you would like to add the Contact Form to your website, just copy and "
 #~ "paste this shortcode to your post or page or widget:"
 #~ msgstr ""
 #~ "Если вы хотите добавить Контактную Форму на свой сайт, вам надо только "
 #~ "скопировать и вставить шорткод в контент страницы или поста или виджета:"
+
 #~ msgid ""
 #~ "If have any problems with the standard shortcode [contact_form], you "
 #~ "should use the shortcode"
 #~ msgstr ""
 #~ "Если у вас возникают проблемы с использованием стандартного шорткода "
 #~ "[contact_form], то используйте шортокод"
+
 #~ msgid "They work the same way."
 #~ msgstr "Шорткоды работают одинаково."
+
 #~ msgid ""
 #~ "If you leave the fields empty, the messages will be sent to the email "
 #~ "address specified during registration."
 #~ msgstr ""
 #~ "Если информация в полях ниже отсутствует, соощения будут оправлены на "
 #~ "email адрес, который был указан при регистрации сайта."
+
 #~ msgid "The user's email address:"
 #~ msgstr "Email пользователя сайта:"
+
 #~ msgid "Create a username"
 #~ msgstr "Выберите имя пользователя"
+
 #~ msgid ""
 #~ "Enter a username of the person who should get the messages from the "
 #~ "contact form."
 #~ msgstr ""
 #~ "Укажите логин пользователя, который будет получать сообщения контактной "
 #~ "формы."
+
 #~ msgid "Use this email address:"
 #~ msgstr "Использовать этот email:"
+
 #~ msgid "Enter the email address you want the messages forwarded to."
 #~ msgstr "Укажите email адрес, на который будут отправляться сообщения."
+
 #~ msgid "Additional options"
 #~ msgstr "Дополнительные настройки"
+
 #~ msgid "What to use?"
 #~ msgstr "Что использовать?"
+
 #~ msgid "Wp-mail"
 #~ msgstr "Wp-mail"
+
 #~ msgid "You can use the wp_mail function for mailing"
 #~ msgstr "Для отправки почты вы можете использовать функцию WordPress wp_mail"
+
 #~ msgid "Mail"
 #~ msgstr "Mail"
+
 #~ msgid "To send mail you can use the php mail function"
 #~ msgstr "Для отправки почты вы можете использовать функцию php mail"
+
 #~ msgid "Change text of the 'FROM' field"
 #~ msgstr "Изменить текст для поля ОТ в письме"
+
 #~ msgid "Enter the email address in the 'From' field"
 #~ msgstr "Выберите email для поля 'FROM' письма"
+
 #~ msgid ""
 #~ "The email address of the user who fills the form will be used in the "
 #~ "field 'From'."
 #~ msgstr ""
 #~ "В поле \"From\" в письме будет использоваться электронная почта того "
 #~ "пользователя, который заполняет форму."
+
 #~ msgid "This email address will be used in the 'From' field."
 #~ msgstr ""
 #~ "В поле \"From\" в письме будет использоваться данная электронная почта."
+
 #~ msgid "Attachment block"
 #~ msgstr "Блок Прикрепить файл"
+
 #~ msgid "Users can attach the following file formats"
 #~ msgstr "Пользователи могут прикрепить файлы таких типов"
+
 #~ msgid "Captcha"
 #~ msgstr "КАПЧА"
+
 #~ msgid "(powered by bestwebsoft.com)"
 #~ msgstr "(powered by bestwebsoft.com)"
+
 #~ msgid "Activate captcha"
 #~ msgstr "Активировать Капчу"
+
 #~ msgid "Display tips below the Attachment block"
 #~ msgstr "Отображать пояснения после блока \"Прикрепить файл\""
+
 #~ msgid "Delete an attachment file from the server after the email is sent"
 #~ msgstr "Удалить прикрепленный файл с сервера после отправки письма"
+
 #~ msgid "Display 'Send me a copy' block"
 #~ msgstr "Отображать блок 'Отправить мне копию'"
+
 #~ msgid "Email Address"
 #~ msgstr "Email адрес"
+
 #~ msgid "Display additional info in the email"
 #~ msgstr "Отображение дополнительной информации в письме"
+
 #~ msgid "Example: Sent from (IP address):\t127.0.0.1"
 #~ msgstr "Пример: Sent from (IP address):\t127.0.0.1"
+
 #~ msgid "Example: Date/Time:\tAugust 19, 2013 8:50 pm"
 #~ msgstr "Пример: Date/Time:\tAugust 19, 2013 8:50 pm"
+
 #~ msgid ""
 #~ "Example: Sent from (referer):\thttp://bestwebsoft.com/contacts/contact-us/"
 #~ msgstr ""
 #~ "Пример: Sent from (referer):\thttp://bestwebsoft.com/contacts/contact-us/"
+
 #~ msgid "Using (user agent)"
 #~ msgstr "Используя (user agent)"
+
 #~ msgid ""
 #~ "Example: Using (user agent):\tMozilla/5.0 (Windows NT 6.2; WOW64) "
 #~ "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36"
 #~ msgstr ""
 #~ "Пример: Using (user agent):\tMozilla/5.0 (Windows NT 6.2; WOW64) "
 #~ "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36"
+
 #~ msgid "Language settings for the field names in the form"
 #~ msgstr "Языковые настройки для названия полей в форме"
+
 #~ msgid "Add a language"
 #~ msgstr "Добавить язык"
+
 #~ msgid "Change the names of the contact form fields and error messages"
 #~ msgstr "Изменить названия полей  контактной формы и сообщений об ошибках"
+
 #~ msgid "English"
 #~ msgstr "Английский"
+
 #~ msgid "Error message for the Name field"
 #~ msgstr "Сообщение об ошибке для поля Name"
+
 #~ msgid "Error message for the Address field"
 #~ msgstr "Сообщение об ошибке для поля Address"
+
 #~ msgid "Error message for the Email field"
 #~ msgstr "Сообщение об ошибке для поля Email"
+
 #~ msgid "Error message for the Phone field"
 #~ msgstr "Сообщение об ошибке для поля Phone"
+
 #~ msgid "Error message for the Subject field"
 #~ msgstr "Сообщение об ошибке для поля Subject"
+
 #~ msgid "Error message for the Message field"
 #~ msgstr "Сообщение об ошибке для поля Message"
+
 #~ msgid "Error message about the file type for the Attachment field"
 #~ msgstr "Сообщение об ошибке о типе файла для поля Attachment"
+
 #~ msgid ""
 #~ "Error message while uploading a file for the Attachment field to the "
 #~ "server"
 #~ msgstr ""
 #~ "Сообщение об ошибке при загрузке файла на сервер для поля Attachment"
+
 #~ msgid "Error message while moving the file for the Attachment field"
 #~ msgstr "Сообщение об ошибке при перемещении файла для поля Attachment"
+
 #~ msgid ""
 #~ "Error message when file size limit for the Attachment field is exceeded"
 #~ msgstr ""
 #~ "Сообщение об ошибке когда размер файла превышает размер разрешенного "
 #~ "сервером для поля Attachment"
+
 #~ msgid "Error message for the Captcha field"
 #~ msgstr "Сообщение об ошибке для поля Captcha"
+
 #~ msgid "Error message for the whole form"
 #~ msgstr "Сообщение об ошибке для всей формы"
+
 #~ msgid "Use shortcode"
 #~ msgstr "Использовать шорткод"
+
 #~ msgid "for this language"
 #~ msgstr "для данного языка"
+
 #~ msgid "Action after email is sent"
 #~ msgstr "Действие после отправки письма"
+
 #~ msgid "Display text"
 #~ msgstr "Отобразить текст"
+
 #~ msgid "Text"
 #~ msgstr "Текст"
+
 #~ msgid "Redirect to the page"
 #~ msgstr "Перенаправление на страницу"
+
 #~ msgid "Url"
 #~ msgstr "Урл"
+
 #~ msgid "Contact Form Pro | Extra Settings"
 #~ msgstr "Contact Form Pro | Extra Настройки"
+
 #~ msgid "Errors output"
 #~ msgstr "Отображение ошибок"
+
 #~ msgid "Color of the input field errors."
 #~ msgstr "Отображать ошибки цветом для полей ввода"
+
 #~ msgid "Display error messages & color of the input field errors"
 #~ msgstr "Отображать сообщения об ошибках & цвет полей ввода с ошибками"
+
 #~ msgid "Add placeholder to the input blocks"
 #~ msgstr "Добавить вспомогательный текст в поля ввода"
+
 #~ msgid "Add tooltips"
 #~ msgstr "Добавить подсказки"
+
 #~ msgid "Email address"
 #~ msgstr "Email адрес"
+
 #~ msgid "Phone Number"
 #~ msgstr "Телефон"
+
 #~ msgid "Text color"
 #~ msgstr "Цвет текста"
+
 #~ msgid "Default"
 #~ msgstr "По-умолчанию"
+
 #~ msgid "Label text color"
 #~ msgstr "Цвет текста"
+
 #~ msgid "Placeholder color"
 #~ msgstr "Цвет замещающегося текста"
+
 #~ msgid "Errors color"
 #~ msgstr "Цвет ошибок"
+
 #~ msgid "Error text color"
 #~ msgstr "Цвет текста для ошибок"
+
 #~ msgid "Background color of the input field errors"
 #~ msgstr "Цвет фона для полей ввода с ошибками"
+
 #~ msgid "Border color of the input field errors"
 #~ msgstr "Цвет рамки для полей ввода с ошибками"
+
 #~ msgid "Placeholder color of the input field errors"
 #~ msgstr "Цвет вспомогательного текста для полей ввода с ошибками"
+
 #~ msgid "Input fields"
 #~ msgstr "Поля ввода"
+
 #~ msgid "Input fields background color"
 #~ msgstr "Цвет фона для полей ввода"
+
 #~ msgid "Text fields color"
 #~ msgstr "Цвет текста для полей ввода"
+
 #~ msgid "Border width in px, numbers only"
 #~ msgstr "Ширина рамки в пикселях, только цифры"
+
 #~ msgid "Border color"
 #~ msgstr "Цвет рамки"
+
 #~ msgid "Submit button"
 #~ msgstr "Кнопка Отправить"
+
 #~ msgid "Width in px, numbers only"
 #~ msgstr "Ширина в пикселях, только цифры"
+
 #~ msgid "Button color"
 #~ msgstr "Цвет кнопки"
+
 #~ msgid "Button text color"
 #~ msgstr "Цвет текста для кнопки"
+
 #~ msgid "Contact Form Pro | Preview"
 #~ msgstr "Contact Form Pro | Предпросмотр"
+
 #~ msgid "Show with errors"
 #~ msgstr "Отображать с ошибками"
+
 #~ msgid "Please enter your full name..."
 #~ msgstr "Пожалуйста введите ваше имя..."
+
 #~ msgid "Please enter your address..."
 #~ msgstr "Пожалуйста введите ваш адресс..."
+
 #~ msgid "Please enter your email address..."
 #~ msgstr "Пожалуйста введите ваш email..."
+
 #~ msgid "Please enter your phone number..."
 #~ msgstr "Пожалуйста введите ваш телефон..."
+
 #~ msgid "Please enter subject..."
 #~ msgstr "Пожалуйста введите тему..."
+
 #~ msgid "Please enter your message..."
 #~ msgstr "Пожалуйста введите ваше сообщение..."
+
 #~ msgid ""
 #~ "Supported file types: HTML, TXT, CSS, GIF, PNG, JPEG, JPG, TIFF, BMP, AI, "
 #~ "EPS, PS, RTF, PDF, DOC, DOCX, XLS, ZIP, RAR, WAV, MP3, PPT. Max file "
@@ -1671,12 +2039,16 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #~ "Поддерживаемые типы файлов: HTML, TXT, CSS, GIF, PNG, JPEG, JPG, TIFF, "
 #~ "BMP, AI, EPS, PS, RTF, PDF, DOC, DOCX, XLS, ZIP, RAR, WAV, MP3, PPT. "
 #~ "Максимальный размер файла: 2 МБ"
+
 #~ msgid "You can attach the following file formats"
 #~ msgstr "Пользователи могут прикрепить файлы таких типов"
+
 #~ msgid "Are you sure that you want to delete this language data?"
 #~ msgstr "Вы действительно хотите удалить данные для этого языка?"
+
 #~ msgid "Display Attachment tips"
 #~ msgstr "Отобразить пояснения для блока Прикрепить файл"
+
 #~ msgid "Display a phone number field"
 #~ msgstr "Отобразить поле для телефона"
 
@@ -1689,6 +2061,6 @@ msgstr "<strong>Внимание: </strong>Возникли проблемы в�
 #, fuzzy
 #~ msgid "E-Mail Address"
 #~ msgstr "E-mail адрес:"
+
 #~ msgid "Install Now"
 #~ msgstr "Установить сейчас"
-

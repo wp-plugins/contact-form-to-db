@@ -1,20 +1,33 @@
-#adminmenu #toplevel_page_bws_plugins div.wp-menu-image,
-.admin-color-classic #adminmenu #toplevel_page_bws_plugins div.wp-menu-image,
-#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image,
-#adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image {
-    background: url("../images/icon_16_single.png") no-repeat scroll center center transparent;
+#adminmenu #toplevel_page_bws_plugins div.wp-menu-image {
+	background: url("../images/icon_16.png") no-repeat scroll center center transparent;
+}
+.admin-color-classic #adminmenu #toplevel_page_bws_plugins div.wp-menu-image {
+	background: url("../images/icon_16_b.png") no-repeat scroll center center transparent;
+}
+#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image, #adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image {
+	background: url("../images/icon_16_c.png") no-repeat scroll center center transparent;
 }	
-#adminmenu #toplevel_page_cntctfrmtdb_manager:hover div.wp-menu-image:before,
-#adminmenu #toplevel_page_cntctfrmtdb_manager.wp-has-current-submenu div.wp-menu-image:before,
-#adminmenu #toplevel_page_cntctfrmtdb_manager div.wp-menu-image:before {
-    background: url("../images/menu_single.png") no-repeat scroll center 8px transparent;
-    content: '';
+.wrap #icon-options-general.icon32-bws {
+	background: url("../images/icon_36.png") no-repeat scroll left top transparent;
+}
+.admin-color-classic .wrap #icon-options-general.icon32-bws {
+	background: url("../images/icon_36_b.png") no-repeat scroll left top transparent;
+}
+.wrap #icon-options-general.icon32-contact-form-to-db {
+	background: url("../images/icon_32.png") no-repeat scroll left top transparent;
+}
+#adminmenu #toplevel_page_cntctfrmtdb_manager div.wp-menu-image {
+	background: url("../images/menu.png") no-repeat scroll left -33px transparent;
+}
+#adminmenu #toplevel_page_cntctfrmtdb_manager:hover div.wp-menu-image,
+#adminmenu #toplevel_page_cntctfrmtdb_manager.current div.wp-menu-image {
+	background: url("../images/menu.png") no-repeat scroll left -3px transparent;
 }
 #toplevel_page_bws_plugins .wp-submenu .wp-first-item {
 	display:none;
 }
 .bws_system_info_meta_box {
-    max-width: 850px;
+    width: 850px;
 }
 .bws_system_info_meta_box .hndle {
     cursor: pointer !important;
@@ -22,7 +35,7 @@
 .bws_system_info {
     float: left;
     margin-right: 10px;
-    max-width: 400px;
+    width: 400px;
 }
 .bws_system_info th {
     padding: 10px 0;
@@ -414,18 +427,21 @@ a.bws_plugin_menu_pro_version,
 * styles for banner on the plugins page
 */
 .cntctfrmtdb_message {
-    min-width: 800px;
-    border: 1px solid #d4d4d4;
-    margin: 12px 0;
-    background: #FFF;
-    position: relative;
-    overflow: hidden;
+    min-width:800px;
+    border:1px solid #d4d4d4;
+    margin:12px 0;
+    background:#ececec;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    position:relative;
+    overflow:hidden
 }
 .cntctfrmtdb_message .cntctfrmtdb_text {
-    color: #000;
+    color:#000;
     font-size: 15px;
     line-height: 26px;
-    margin-top: 14px;
+    margin-top: 13px;
     float: left;
 }
 .cntctfrmtdb_message .cntctfrmtdb_text span {
@@ -436,7 +452,7 @@ a.bws_plugin_menu_pro_version,
     float: left;
     border:1px solid #1f75ad; 
     font-size:14px;
-    margin: 15px 19px 15px 16px;
+    margin: 20px 19px 15px 16px;
     padding:12px 0;
     color:#FFF;
     text-shadow: 0 1px 3px #636363;

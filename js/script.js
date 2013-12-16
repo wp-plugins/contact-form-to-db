@@ -205,6 +205,16 @@
 			);
 			return false;
 		});
+		$( '#cntctfrmtdb_settings_form input' ).bind( "change click select", function() {
+			if ( $( this ).attr( 'type' ) != 'submit' ) {
+				$( '.updated.fade' ).css( 'display', 'none' );
+				$( '#cntctfrmtdb_settings_notice' ).css( 'display', 'block' );
+			};
+		});
+		$( ' #cntctfrmtdb_settings_form select').focus( function() {
+			$( '.updated.fade' ).css( 'display', 'none' );
+			$( '#cntctfrmtdb_settings_notice' ).css( 'display', 'block' );
+		});
 	});
 })(jQuery);
 

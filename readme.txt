@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Contact Form, Contact Form to DB, text, contact, form, contacts, contact form, request, contact me, feeDBack form, feeDBack, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy, save messages, download messafes, manage messages, 
 Requires at least: 3.2
-Tested up to: 3.7.1
-Stable tag: 1.3.3
+Tested up to: 3.8
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,7 +62,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the `contact-form-to-db` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin using the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust the necessary settings using your WordPress admin panel in "Settings" > "Contact Form to DB".
+3. You can adjust the necessary settings using your WordPress admin panel in "BWS Plugins" > "Contact Form to DB".
 
 == Frequently Asked Questions ==
 
@@ -94,6 +94,10 @@ Click on "Screen Options" button in the right top corner on manager page and des
 
 == Changelog ==
 
+= V1.3.4 - 16.12.2013 =
+* Update : We updated all functionality for wordpress 3.8.
+* NEW : A notice when changing settings on the plugin's settings page was added.
+
 = V1.3.3 - 25.11.2013 =
 * NEW : The French language file is added to the plugin.
 * Update : BWS plugins section is updated.
@@ -119,6 +123,9 @@ Click on "Screen Options" button in the right top corner on manager page and des
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.3.4 =
+We updated all functionality for wordpress 3.8. A notice when changing settings on the plugin's settings page was added.
 
 = V1.3.3 =
 The French language file is added to the plugin. BWS plugins section is updated.
