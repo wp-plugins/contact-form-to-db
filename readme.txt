@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Contact Form, Contact Form to DB, text, contact, form, contacts, contact form, request, contact me, feeDBack form, feeDBack, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy, save messages, download messafes, manage messages, 
 Requires at least: 3.2
-Tested up to: 3.8
-Stable tag: 1.3.4
+Tested up to: 3.8.1
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -84,6 +84,14 @@ In case you used Contact Form plugin with Contact Form to DB plugin arlier and d
 
 Click on "Screen Options" button in the right top corner on manager page and deselect the item "Send counter".
 
+= I have some problems with the plugin's work. What Information should I provide to receive proper support? =
+
+Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+1. the link to the page where the problem occurs
+2. the name of the plugin and its version. If you are using a pro version - your order number.
+3. the version of your WordPress installation
+4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+
 == Screenshots ==
 
 1. Plugin settings in WordPress admin panel when "save message" option is disabled.
@@ -93,6 +101,10 @@ Click on "Screen Options" button in the right top corner on manager page and des
 5. Spam page on the Contact Form to DB manager page display.
 
 == Changelog ==
+
+= V1.3.5 - 14.02.2014 =
+* Update : We updated all functionality for wordpress 3.8.1.
+* Update : BWS plugins section is updated.
 
 = V1.3.4 - 16.12.2013 =
 * Update : We updated all functionality for wordpress 3.8.
@@ -123,6 +135,9 @@ Click on "Screen Options" button in the right top corner on manager page and des
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.3.5 =
+We updated all functionality for wordpress 3.8.1. BWS plugins section is updated.
 
 = V1.3.4 =
 We updated all functionality for wordpress 3.8. A notice when changing settings on the plugin's settings page was added.

@@ -37,12 +37,12 @@
 			var fromInfo = $( this ).children().children( '.from-info' );
 			var fromName = $( this ).children().children( '.from-name' );
 			var height = messageContainer.height(); 
-			messageContainer .height( 17 );
+			messageContainer.height( 17 );
 			fromInfo.css( 'display', 'none' ); // hide additional info in "from"-column
 			var messageId = $( this ).children().children( 'input:checkbox' ).val();
 			// click on author's message name
 			fromName.click( function() {
-				if( messageContainer .children().children().children().is( '.attachment-img' ) ) { // if attachment exists
+				if ( messageContainer .children().children().children().is( '.attachment-img' ) ) { // if attachment exists
 					var attachmentImg = messageContainer .children().children().children( '.attachment-img' );
 					height += 8 - messageContainer .children( '.attachments-preview' ).height() ;
 					 // if attachment is image  and thumbnail is not loaded yet, we set request to get thumbnail and  original image by message id
@@ -59,7 +59,7 @@
 										var offsetRow = $(this).parent().parent().children( '.column-message' ).offset();
 										var widthRow = $(this).parent().parent().children( '.column-message' ).width();
 										var left = offsetRow.left + widthRow/2 - 16 - $( '#adminmenuwrap' ).width();
-										var top = offsetRow.top - 49;
+										var top = offsetRow.top - 24;
 										$( '.cntctfrmtdb' ).prepend( '<div class="cntctfrmtdb-preloader" style="left: ' + left + 'px;top: ' + top + 'px"><img src="' + preloaderSrc + '"/></div>' );
 										
 									}
