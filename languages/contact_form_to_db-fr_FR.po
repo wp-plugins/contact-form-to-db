@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: contact_form_to_db\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-14 13:17+0300\n"
-"PO-Revision-Date: 2014-02-14 13:17+0300\n"
+"POT-Creation-Date: 2014-03-11 18:50+0300\n"
+"PO-Revision-Date: 2014-03-11 18:50+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Luc Capronnier <lcapronnier@yahoo.com>\n"
 "Language: fr_FR\n"
@@ -15,688 +15,696 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2;plural=n>2;\n"
 "X-Generator: Poedit 1.5.7\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: contact_form_to_db.php:36
-#: contact_form_to_db.php:1966
+#: contact_form_to_db.php:75
+#: contact_form_to_db.php:1961
 msgid "Contact Form to DB"
 msgstr "Base des contacts"
 
-#: contact_form_to_db.php:37
+#: contact_form_to_db.php:76
 msgid "CF to DB"
 msgstr "CF vers DB"
 
-#: contact_form_to_db.php:66
-msgid "The requested content cannot be loaded.<br/>Please try again later."
-msgstr "Le contenu demandé ne peut pas être chargé.<br />Merci d'essayer plus tard."
-
-#: contact_form_to_db.php:67
-msgid "Letter"
-msgstr "Lettre"
-
-#: contact_form_to_db.php:68
-msgid "Spam!"
-msgstr "Spam!"
-
-#: contact_form_to_db.php:69
-#: contact_form_to_db.php:1583
-msgid "in Trash"
-msgstr "dans la poubelle"
-
-#: contact_form_to_db.php:70
-msgid "Status was not changed"
-msgstr "L'état n'a pas été changé"
-
-#: contact_form_to_db.php:108
+#: contact_form_to_db.php:184
 msgid "requires"
 msgstr "obligatoire"
 
-#: contact_form_to_db.php:108
+#: contact_form_to_db.php:184
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
 msgstr "ou supérieure, c'est pourquoi il a été désactivé! Merci de faire la mise à jour de WordPress puis de ré-essayer."
 
-#: contact_form_to_db.php:108
+#: contact_form_to_db.php:184
 msgid "Back to the WordPress"
 msgstr "Retourner à WordPress"
 
-#: contact_form_to_db.php:108
+#: contact_form_to_db.php:184
 msgid "Plugins page"
 msgstr "Page des extensions"
 
-#: contact_form_to_db.php:123
-#: contact_form_to_db.php:137
-#: contact_form_to_db.php:510
+#: contact_form_to_db.php:272
+msgid "The requested content cannot be loaded.<br/>Please try again later."
+msgstr "Le contenu demandé ne peut pas être chargé.<br />Merci d'essayer plus tard."
+
+#: contact_form_to_db.php:273
+msgid "Letter"
+msgstr "Lettre"
+
+#: contact_form_to_db.php:274
+msgid "Spam!"
+msgstr "Spam!"
+
+#: contact_form_to_db.php:275
+#: contact_form_to_db.php:1579
+msgid "in Trash"
+msgstr "dans la poubelle"
+
+#: contact_form_to_db.php:276
+msgid "Status was not changed"
+msgstr "L'état n'a pas été changé"
+
+#: contact_form_to_db.php:313
+#: contact_form_to_db.php:327
+#: contact_form_to_db.php:511
 msgid "Settings"
 msgstr "Réglages"
 
-#: contact_form_to_db.php:138
-#: contact_form_to_db.php:511
-#: contact_form_to_db.php:1955
+#: contact_form_to_db.php:328
+#: contact_form_to_db.php:512
+#: contact_form_to_db.php:1950
 msgid "FAQ"
 msgstr "FAQ"
 
-#: contact_form_to_db.php:139
+#: contact_form_to_db.php:329
 msgid "Support"
 msgstr "Support"
 
-#: contact_form_to_db.php:156
+#: contact_form_to_db.php:345
 msgid "Contact Form Plugin is not found.</br>You need install and activate this plugin for correct  work with Contact Form to DB plugin.</br>You can download Contact Form Plugin from "
 msgstr "L'extension Contact Form n'a pas été trouvée.<br />Vous devez installer et activer cette extension pour un fonctionnement correct de l'extension Contact Form to DB.<br />Vous pouvez télécharger l'extension Contact Form à partir de "
 
-#: contact_form_to_db.php:156
+#: contact_form_to_db.php:345
 msgid "Developers website"
 msgstr "Site web des développeurs"
 
-#: contact_form_to_db.php:156
+#: contact_form_to_db.php:345
 msgid "website of plugin Authors "
 msgstr "site web de l'auteur de l'extension"
 
-#: contact_form_to_db.php:156
+#: contact_form_to_db.php:345
 msgid "or "
 msgstr "ou"
 
-#: contact_form_to_db.php:156
+#: contact_form_to_db.php:345
 msgid "Wordpress."
 msgstr "Wordpress."
 
-#: contact_form_to_db.php:159
+#: contact_form_to_db.php:348
 msgid "Contact Form Plugin is not active.</br>You need activate this plugin for correct work with Contact Form to DB plugin."
 msgstr "L'extension Contact Form n'est pas active.<br />Vous devez activer cette extension pour que l'extension Contact Form to DB fonctionne correctement."
 
-#: contact_form_to_db.php:164
+#: contact_form_to_db.php:353
 msgid "Contact Form Plugin has old version.</br>You need update this plugin for correct work with Contact Form to DB plugin."
 msgstr "L'extension Contact Form est dans une version ancienne.<br />Vous devez mettre à jour cette extension pour que l'extension Contact Form to DB fonctionne correctement."
 
-#: contact_form_to_db.php:183
-#: contact_form_to_db.php:1961
-#: contact_form_to_db.php:1972
-msgid "WARNING: "
-msgstr "ATTENTION:"
-
-#: contact_form_to_db.php:208
-#: contact_form_to_db.php:515
-msgid "Notice:"
-msgstr "Avertissement:"
-
-#: contact_form_to_db.php:208
-msgid "Option \"Save messages to database\" was disabled on the plugin settings page."
-msgstr "L'option \"Enregistrer les messages dans la base\" a été désactivée dans la page des paramètres de l'extension."
-
-#: contact_form_to_db.php:208
-msgid "Enable it for saving messages from Contact Form"
-msgstr "Activer pour enregistrer les messages venant du formulaire de contact"
-
-#: contact_form_to_db.php:401
-#: contact_form_to_db.php:440
+#: contact_form_to_db.php:403
+#: contact_form_to_db.php:441
 msgid "Wrong license key"
-msgstr ""
+msgstr "Clé de licence incorrecte"
 
-#: contact_form_to_db.php:433
+#: contact_form_to_db.php:434
 msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
-msgstr ""
+msgstr "Il est survenu une erreur. Essayer de nouveau. Si l'erreur se produit de nouveau, merci de contacter <a href=http://support.bestwebsoft.com>BestWebSoft</a>. Nous sommes désolés pour le désagrément."
 
-#: contact_form_to_db.php:442
+#: contact_form_to_db.php:443
 msgid "This license key is bind to another site"
-msgstr ""
+msgstr "La clé de licence correspond à un autre site."
 
-#: contact_form_to_db.php:444
-#: contact_form_to_db.php:671
+#: contact_form_to_db.php:445
+#: contact_form_to_db.php:672
 msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
-msgstr ""
+msgstr "Désoler mais vous avez dépassé le nombre d'essai de la journée. Merci de télécharger l'extension manuellement."
 
-#: contact_form_to_db.php:462
+#: contact_form_to_db.php:463
 msgid "Failed to open the zip archive. Please, upload the plugin manually"
-msgstr ""
+msgstr "Erreur d'ouverture de l'archive zip. Merci de télécharger l'extension manuellement."
 
-#: contact_form_to_db.php:468
+#: contact_form_to_db.php:469
 msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
-msgstr ""
+msgstr "Votre server n'a pas le support du format des archives ZIP ou Phar. Merci de télécharger l'extension manuellement."
 
-#: contact_form_to_db.php:472
-#: contact_form_to_db.php:481
+#: contact_form_to_db.php:473
+#: contact_form_to_db.php:482
 msgid "Failed to download the zip archive. Please, upload the plugin manually"
-msgstr ""
+msgstr "Erreur de téléchargement de l'archive ZIP. Merci de télécharger l'extension manuellement."
 
-#: contact_form_to_db.php:485
+#: contact_form_to_db.php:486
 msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvienience."
-msgstr ""
+msgstr "Il est survenu une erreur. Essayer de nouveau ou bien télécharger l'extension manuellement.Nous sommes désolés pour le désagrément."
 
-#: contact_form_to_db.php:500
-#, fuzzy
+#: contact_form_to_db.php:501
 msgid "Please, enter Your license key"
-msgstr "Merci de saisir votre message..."
+msgstr "Merci de saisir votre clé de liecence"
 
-#: contact_form_to_db.php:508
+#: contact_form_to_db.php:509
 msgid "Contact Form to DB Settings"
 msgstr "Options du formulaire de Contact vers la base"
 
-#: contact_form_to_db.php:511
 #: contact_form_to_db.php:512
+#: contact_form_to_db.php:513
 msgid "This setting is available in Pro version"
 msgstr "Cette option est disponible dans la version Pro de l'extension"
 
-#: contact_form_to_db.php:512
+#: contact_form_to_db.php:513
 msgid "User guide"
 msgstr "Guide de l'utilisateur"
 
-#: contact_form_to_db.php:513
+#: contact_form_to_db.php:514
 msgid "Go PRO"
-msgstr ""
+msgstr "Choisir la version PRO"
 
-#: contact_form_to_db.php:515
+#: contact_form_to_db.php:516
+#: contact_form_to_db.php:2088
+msgid "Notice:"
+msgstr "Avertissement:"
+
+#: contact_form_to_db.php:516
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr "Les paramètres de l'extension ont été changés. Afin de pouvoir les enregistrer, merci de cliquer sur le bouton 'Enregistrer les modifications'."
 
-#: contact_form_to_db.php:517
+#: contact_form_to_db.php:518
 msgid "Settings saved."
 msgstr "Options enregistrées."
 
-#: contact_form_to_db.php:522
+#: contact_form_to_db.php:523
 msgid "Save messages to database"
 msgstr "Enregistrer les messages dans la base de données"
 
-#: contact_form_to_db.php:528
+#: contact_form_to_db.php:529
 msgid "Download messages in"
 msgstr "Télécharger les messages dans"
 
-#: contact_form_to_db.php:535
+#: contact_form_to_db.php:536
 msgid "format"
 msgstr "format"
 
-#: contact_form_to_db.php:537
+#: contact_form_to_db.php:538
 msgid "Input symbols for separator and enclosure"
 msgstr "Symbols de saisi pour les séparateurs et l'enveloppe"
 
-#: contact_form_to_db.php:543
+#: contact_form_to_db.php:544
 msgid " separator"
 msgstr "séparateur"
 
-#: contact_form_to_db.php:549
+#: contact_form_to_db.php:550
 msgid " enclosure"
 msgstr "enveloppe"
 
-#: contact_form_to_db.php:554
+#: contact_form_to_db.php:555
 msgid "Show messages per page"
 msgstr "Nombre de messages par page"
 
-#: contact_form_to_db.php:570
+#: contact_form_to_db.php:571
 msgid "Save attachments"
 msgstr "Enregistrer les pièces jointes"
 
-#: contact_form_to_db.php:576
+#: contact_form_to_db.php:577
 msgid "Save attachments to database."
 msgstr "Enregistrer les pièces jointes dans la base de données."
 
-#: contact_form_to_db.php:578
+#: contact_form_to_db.php:579
 msgid "Save attachments to \"Uploads\"."
 msgstr "Enregistrer les pièces jointes dans \"Uploads\"."
 
-#: contact_form_to_db.php:583
+#: contact_form_to_db.php:584
 msgid "Periodically delete old messages"
 msgstr "Supprimer les vieux messages de manière périodique"
 
-#: contact_form_to_db.php:588
+#: contact_form_to_db.php:589
 msgid "every 24 hours"
 msgstr "toutes les 24 heures"
 
-#: contact_form_to_db.php:589
+#: contact_form_to_db.php:590
 msgid "every 3 days"
 msgstr "tous les 3 jours"
 
-#: contact_form_to_db.php:590
+#: contact_form_to_db.php:591
 msgid "every 1 week"
 msgstr "toutes les semaines"
 
-#: contact_form_to_db.php:591
+#: contact_form_to_db.php:592
 msgid "every 2 weeks"
 msgstr "toutes les 2  semaines"
 
-#: contact_form_to_db.php:592
+#: contact_form_to_db.php:593
 msgid "every 1 month"
 msgstr "tous les mois"
 
-#: contact_form_to_db.php:593
+#: contact_form_to_db.php:594
 msgid "every 6 months"
 msgstr "tous les 6 mois"
 
-#: contact_form_to_db.php:594
+#: contact_form_to_db.php:595
 msgid "every 1 year"
 msgstr "tous les ans"
 
-#: contact_form_to_db.php:596
+#: contact_form_to_db.php:597
 msgid "(All messages older than the specified period will be deleted at the end of the same period)"
 msgstr "(Tous les messages plus anciens que la période définie seront supprimés à la fin de la période)"
 
-#: contact_form_to_db.php:601
+#: contact_form_to_db.php:602
 msgid "Show attachments"
 msgstr "Montrer les pièces jointes"
 
-#: contact_form_to_db.php:605
+#: contact_form_to_db.php:606
 msgid "Use fancybox to image view"
 msgstr "Utiliser fancybox pour voir les images"
 
-#: contact_form_to_db.php:610
+#: contact_form_to_db.php:611
 msgid "If you upgrade to Pro version all your settings will be saved."
 msgstr "Si vous passez à  la version Pro, tous ces paramètres seront enregistrés."
 
-#: contact_form_to_db.php:615
+#: contact_form_to_db.php:616
 msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
 msgstr "Cette fonctionalité est disponible dans le version Pro de cette extension. Pour plus de détails, merci de suivre ce lien"
 
-#: contact_form_to_db.php:625
+#: contact_form_to_db.php:626
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
-#: contact_form_to_db.php:631
+#: contact_form_to_db.php:632
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr "Si notre extension vous satisfait, merci de la notée avec 5 étoiles dans Wordpress"
 
-#: contact_form_to_db.php:632
+#: contact_form_to_db.php:633
 msgid "Rate the plugin"
 msgstr "Noter l'extensions"
 
-#: contact_form_to_db.php:635
+#: contact_form_to_db.php:636
 msgid "If there is something wrong about it, please contact us"
 msgstr "Si vous avez des questions, merci de nous contacter via "
 
-#: contact_form_to_db.php:646
+#: contact_form_to_db.php:647
 msgid "Congratulations! The PRO version of the plugin is successfully download and activated."
-msgstr ""
+msgstr "Félicitations! La version PRO de cette extension a été téléchargée et activée avec succès."
 
-#: contact_form_to_db.php:648
+#: contact_form_to_db.php:649
 msgid "Please, go to"
-msgstr ""
+msgstr "Merci d'allez à"
 
-#: contact_form_to_db.php:648
-#, fuzzy
+#: contact_form_to_db.php:649
 msgid "the setting page"
 msgstr "Options supplémentaires"
 
-#: contact_form_to_db.php:649
+#: contact_form_to_db.php:650
 msgid "You will be redirected automatically in 5 seconds."
-msgstr ""
+msgstr "Vous allez être redirigé automatiquement dans 5 secondes"
 
-#: contact_form_to_db.php:654
+#: contact_form_to_db.php:655
 msgid "You can download and activate"
-msgstr ""
+msgstr "Vous pouvez la télécharger et l'activer"
 
-#: contact_form_to_db.php:656
+#: contact_form_to_db.php:657
 msgid "version of this plugin by entering Your license key."
-msgstr ""
+msgstr "version de cette extension en donnant votre clé de licence."
 
-#: contact_form_to_db.php:658
+#: contact_form_to_db.php:659
 msgid "You can find your license key on your personal page Client area, by clicking on the link"
-msgstr ""
+msgstr "Vous pouvez trouver votre clé de licence sur votre page personnelle dans la zone cliente en cliquant sur le lien"
 
-#: contact_form_to_db.php:660
+#: contact_form_to_db.php:661
 msgid "(your username is the email you specify when purchasing the product)."
-msgstr ""
+msgstr "(votre nom d'utilisateur est l'adresse e-mail que vous avez donné lors de l'achat de l'extension)."
 
-#: contact_form_to_db.php:668
-#: contact_form_to_db.php:678
+#: contact_form_to_db.php:669
+#: contact_form_to_db.php:679
 msgid "Go!"
-msgstr ""
+msgstr "Allez!"
 
-#: contact_form_to_db.php:1067
+#: contact_form_to_db.php:1063
 msgid "Contact from to DB"
 msgstr "Contact de vers la base"
 
-#: contact_form_to_db.php:1077
+#: contact_form_to_db.php:1073
 msgid "This message was re-sent from "
 msgstr "Ce message a été ré-envoyé de"
 
-#: contact_form_to_db.php:1080
+#: contact_form_to_db.php:1076
 msgid "Name"
 msgstr "Nom"
 
-#: contact_form_to_db.php:1085
+#: contact_form_to_db.php:1081
 msgid "Address"
 msgstr "Adresse"
 
-#: contact_form_to_db.php:1090
+#: contact_form_to_db.php:1086
 msgid "Email"
 msgstr "E-mail"
 
-#: contact_form_to_db.php:1095
+#: contact_form_to_db.php:1091
 msgid "Phone"
 msgstr "Téléphone"
 
-#: contact_form_to_db.php:1100
+#: contact_form_to_db.php:1096
 msgid "Subject"
 msgstr "Sujet"
 
-#: contact_form_to_db.php:1103
-#: contact_form_to_db.php:1814
+#: contact_form_to_db.php:1099
+#: contact_form_to_db.php:1810
 msgid "Message"
 msgstr "Message"
 
-#: contact_form_to_db.php:1106
+#: contact_form_to_db.php:1102
 msgid "Site"
 msgstr "Site"
 
-#: contact_form_to_db.php:1117
+#: contact_form_to_db.php:1113
 msgid "Sent from (ip address)"
 msgstr "Envoyé de (adresse IP)"
 
-#: contact_form_to_db.php:1122
+#: contact_form_to_db.php:1118
 msgid "Date/Time"
 msgstr "Date/Heure"
 
-#: contact_form_to_db.php:1127
-#: contact_form_to_db.php:1133
+#: contact_form_to_db.php:1123
+#: contact_form_to_db.php:1129
 msgid "Sent from (referer)"
 msgstr "Envoyer de (référence)"
 
-#: contact_form_to_db.php:1146
-#: contact_form_to_db.php:1148
+#: contact_form_to_db.php:1142
+#: contact_form_to_db.php:1144
 msgid "From: "
 msgstr "De:"
 
-#: contact_form_to_db.php:1149
+#: contact_form_to_db.php:1145
 msgid "To: "
 msgstr "A:"
 
-#: contact_form_to_db.php:1150
+#: contact_form_to_db.php:1146
 msgid "Subject: "
 msgstr "Sujet:"
 
-#: contact_form_to_db.php:1151
+#: contact_form_to_db.php:1147
 msgid "Date/Time: "
 msgstr "Date/Heure:"
 
-#: contact_form_to_db.php:1229
+#: contact_form_to_db.php:1225
 msgid "Sent from (ip address): "
 msgstr "Envoyé de (adresse IP):"
 
-#: contact_form_to_db.php:1435
+#: contact_form_to_db.php:1431
 msgid "Can not create XML-files."
 msgstr "Impossible de créer les fichiers XML."
 
-#: contact_form_to_db.php:1439
+#: contact_form_to_db.php:1435
 msgid "Can not create ZIP-archive."
 msgstr "Impossible de créer l'archive ZIP."
 
-#: contact_form_to_db.php:1443
+#: contact_form_to_db.php:1439
 msgid "Unknown format."
 msgstr "Format inconnu."
 
-#: contact_form_to_db.php:1454
+#: contact_form_to_db.php:1450
 msgid "There are some problems while deleting message."
 msgstr "Il y a des problèmes pour supprimer le message."
 
-#: contact_form_to_db.php:1468
-#: contact_form_to_db.php:1484
-#: contact_form_to_db.php:1505
-#: contact_form_to_db.php:1508
-#: contact_form_to_db.php:2036
-#: contact_form_to_db.php:2039
+#: contact_form_to_db.php:1464
+#: contact_form_to_db.php:1480
+#: contact_form_to_db.php:1501
+#: contact_form_to_db.php:1504
+#: contact_form_to_db.php:2028
+#: contact_form_to_db.php:2031
 msgid "Undo"
 msgstr "Annuler"
 
-#: contact_form_to_db.php:1470
+#: contact_form_to_db.php:1466
 msgid "Problems while marking messages as Spam."
 msgstr "Il y a des problèmes pour marquer les messages comme spam."
 
-#: contact_form_to_db.php:1486
+#: contact_form_to_db.php:1482
 msgid "Problems while moving messages to Trash."
 msgstr "Il y a des problèmes pour déplacer les messages dans la poubelle."
 
-#: contact_form_to_db.php:1486
-#: contact_form_to_db.php:1972
+#: contact_form_to_db.php:1482
+#: contact_form_to_db.php:1967
 msgid " Please, try it later."
 msgstr "Merci d'essayer plus tard."
 
-#: contact_form_to_db.php:1495
+#: contact_form_to_db.php:1491
 msgid "Problems during the restoration messages"
 msgstr "Il y a des problèmes pendant la restauration des messages."
 
-#: contact_form_to_db.php:1502
-#: contact_form_to_db.php:2033
+#: contact_form_to_db.php:1498
+#: contact_form_to_db.php:2025
 msgid "One message was marked as Normal."
 msgstr "Un message a été marqué comme normal."
 
-#: contact_form_to_db.php:1505
+#: contact_form_to_db.php:1501
 msgid "One message was marked as Spam. "
 msgstr "Un message a été marqué comme spam."
 
-#: contact_form_to_db.php:1508
+#: contact_form_to_db.php:1504
 msgid "One message was marked as Trash. "
 msgstr "Un message a été marqué comme supprimmer."
 
-#: contact_form_to_db.php:1511
+#: contact_form_to_db.php:1507
 msgid "Unknown result."
 msgstr "Résultat inconnu."
 
-#: contact_form_to_db.php:1515
+#: contact_form_to_db.php:1511
 msgid "Problems while changing status of message."
 msgstr "Il y a des problèmes pour modifier l'état du message."
 
-#: contact_form_to_db.php:1522
+#: contact_form_to_db.php:1518
 msgid "Unknown action."
 msgstr "Action inconnue."
 
-#: contact_form_to_db.php:1524
+#: contact_form_to_db.php:1520
 msgid "Can not display results."
 msgstr "Impossible d'afficher les résultats."
 
-#: contact_form_to_db.php:1530
+#: contact_form_to_db.php:1526
 msgid "Can not handle request. May be you need choose some messages to handle them."
 msgstr "Impossible de traiter la demande. Peut-être faut-il sélectionner quelques messages avant de faire l'action."
 
-#: contact_form_to_db.php:1579
-#: contact_form_to_db.php:1896
+#: contact_form_to_db.php:1575
+#: contact_form_to_db.php:1892
 msgid "Mark as Spam"
 msgstr "Marquer comme un spam"
 
-#: contact_form_to_db.php:1581
-#: contact_form_to_db.php:1905
+#: contact_form_to_db.php:1577
+#: contact_form_to_db.php:1901
 msgid "Mark as Trash"
 msgstr "Mettre dans la poubelle"
 
-#: contact_form_to_db.php:1585
+#: contact_form_to_db.php:1581
 msgid "unknown status"
 msgstr "status inconnu"
 
-#: contact_form_to_db.php:1595
+#: contact_form_to_db.php:1591
 msgid "- Unknown name -"
 msgstr "- nom inconnu -"
 
-#: contact_form_to_db.php:1621
+#: contact_form_to_db.php:1617
 msgid " - No text in this message - "
 msgstr "- pas de texte dans le message -"
 
-#: contact_form_to_db.php:1631
-#: contact_form_to_db.php:1632
-#: contact_form_to_db.php:1638
-#: contact_form_to_db.php:1920
-#: contact_form_to_db.php:1954
-#: contact_form_to_db.php:1955
-#: contact_form_to_db.php:1956
-#: contact_form_to_db.php:2011
-#: contact_form_to_db.php:2012
+#: contact_form_to_db.php:1627
+#: contact_form_to_db.php:1628
+#: contact_form_to_db.php:1634
+#: contact_form_to_db.php:1916
+#: contact_form_to_db.php:1949
+#: contact_form_to_db.php:1950
+#: contact_form_to_db.php:1951
+#: contact_form_to_db.php:2003
+#: contact_form_to_db.php:2004
 msgid "This option is available in Pro version"
 msgstr "Cette option est disponible dans la version Pro"
 
-#: contact_form_to_db.php:1631
+#: contact_form_to_db.php:1627
 msgid "Download"
 msgstr "Téléchargement"
 
-#: contact_form_to_db.php:1632
+#: contact_form_to_db.php:1628
 msgid "View"
 msgstr "Voir"
 
-#: contact_form_to_db.php:1645
+#: contact_form_to_db.php:1641
 msgid "The number of dispatches"
 msgstr "Nombre d'envois"
 
-#: contact_form_to_db.php:1647
+#: contact_form_to_db.php:1643
 msgid "This message was not sent"
 msgstr "Ce message n'a pas été envoyé"
 
-#: contact_form_to_db.php:1731
+#: contact_form_to_db.php:1727
 msgid "message"
 msgstr "message"
 
-#: contact_form_to_db.php:1732
+#: contact_form_to_db.php:1728
 msgid "messages"
 msgstr "messages"
 
-#: contact_form_to_db.php:1769
+#: contact_form_to_db.php:1765
 msgid "No messages that have been sent."
 msgstr "Aucun message envoyé."
 
-#: contact_form_to_db.php:1771
+#: contact_form_to_db.php:1767
 msgid "No messages that have not been sent."
 msgstr "Aucun message non envoyé."
 
-#: contact_form_to_db.php:1773
+#: contact_form_to_db.php:1769
 msgid "No messages that have was read."
 msgstr "Aucun message lu."
 
-#: contact_form_to_db.php:1775
+#: contact_form_to_db.php:1771
 msgid "No messages that have was not read."
 msgstr "Aucun message non lu."
 
-#: contact_form_to_db.php:1777
+#: contact_form_to_db.php:1773
 msgid "No messages that have attachments."
 msgstr "Aucun message avec pièce jointe."
 
-#: contact_form_to_db.php:1779
+#: contact_form_to_db.php:1775
 msgid "No messages that was marked as Spam."
 msgstr "Aucun message marquer comme spam."
 
-#: contact_form_to_db.php:1781
+#: contact_form_to_db.php:1777
 msgid "No messages that was marked as Trash."
 msgstr "Aucun message marquer comme supprimer."
 
-#: contact_form_to_db.php:1783
+#: contact_form_to_db.php:1779
 msgid "No messages found."
 msgstr "Pas de messages trouvés."
 
-#: contact_form_to_db.php:1813
+#: contact_form_to_db.php:1809
 msgid "From"
 msgstr "De"
 
-#: contact_form_to_db.php:1816
+#: contact_form_to_db.php:1812
 msgid "Send Counter"
 msgstr "Compteur d'envoi"
 
-#: contact_form_to_db.php:1817
+#: contact_form_to_db.php:1813
 msgid "Date"
 msgstr "Date"
 
-#: contact_form_to_db.php:1829
+#: contact_form_to_db.php:1825
 msgid "All"
 msgstr "Tous"
 
-#: contact_form_to_db.php:1830
+#: contact_form_to_db.php:1826
 msgid "Sent"
 msgstr "Envoyé"
 
-#: contact_form_to_db.php:1831
+#: contact_form_to_db.php:1827
 msgid "Not sent"
 msgstr "Pas envoyé"
 
-#: contact_form_to_db.php:1832
+#: contact_form_to_db.php:1828
 msgid "Read"
 msgstr "Lu"
 
-#: contact_form_to_db.php:1833
+#: contact_form_to_db.php:1829
 msgid "Unread"
 msgstr "Non lu"
 
-#: contact_form_to_db.php:1834
+#: contact_form_to_db.php:1830
 msgid "Has attachments"
 msgstr "A des pièces jointes"
 
-#: contact_form_to_db.php:1835
-#: contact_form_to_db.php:1922
+#: contact_form_to_db.php:1831
+#: contact_form_to_db.php:1918
 msgid "Spam"
 msgstr "Spam"
 
-#: contact_form_to_db.php:1836
-#: contact_form_to_db.php:1923
-#: contact_form_to_db.php:1932
+#: contact_form_to_db.php:1832
+#: contact_form_to_db.php:1919
+#: contact_form_to_db.php:1928
 msgid "Trash"
 msgstr "Poubelle"
 
-#: contact_form_to_db.php:1895
+#: contact_form_to_db.php:1891
 msgid "Download messages"
 msgstr "Téléchargement des messages"
 
-#: contact_form_to_db.php:1899
+#: contact_form_to_db.php:1895
 msgid "Not Spam"
 msgstr "Pas un spam"
 
-#: contact_form_to_db.php:1901
-#: contact_form_to_db.php:1928
+#: contact_form_to_db.php:1897
+#: contact_form_to_db.php:1924
 msgid "Restore"
 msgstr "Restaurer"
 
-#: contact_form_to_db.php:1903
-#: contact_form_to_db.php:1930
+#: contact_form_to_db.php:1899
+#: contact_form_to_db.php:1926
 msgid "Delete Permanently"
 msgstr "Supprimer définitivement"
 
-#: contact_form_to_db.php:1907
+#: contact_form_to_db.php:1903
 msgid "Re-send messages"
 msgstr "Ré-envoyer les messages"
 
-#: contact_form_to_db.php:1908
+#: contact_form_to_db.php:1904
 msgid "Download attachments"
 msgstr "Télécharger les pièces jointes"
 
-#: contact_form_to_db.php:1920
+#: contact_form_to_db.php:1916
 msgid "Re-send Message"
 msgstr "Re-soumettre le message"
 
-#: contact_form_to_db.php:1921
+#: contact_form_to_db.php:1917
 msgid "Download Message"
 msgstr "Téléchargement du message"
 
-#: contact_form_to_db.php:1926
+#: contact_form_to_db.php:1922
 msgid "Not spam"
 msgstr "Pas un spam"
 
-#: contact_form_to_db.php:1954
+#: contact_form_to_db.php:1949
 msgid "User Guide"
 msgstr "Nom de l'utilisateur"
 
-#: contact_form_to_db.php:1956
-#, fuzzy
+#: contact_form_to_db.php:1951
 msgid "Screen Options"
-msgstr "Options de style"
+msgstr "Options de l'écran"
 
-#: contact_form_to_db.php:1961
+#: contact_form_to_db.php:1956
+#: contact_form_to_db.php:1967
+#: contact_form_to_db.php:2058
+msgid "WARNING: "
+msgstr "ATTENTION:"
+
+#: contact_form_to_db.php:1956
 msgid "For fully-functional work of plugin, please, enable javascript."
 msgstr "Pour avoir une extension avec toutes ses fonctions, merci d'activer le javascript."
 
-#: contact_form_to_db.php:1968
+#: contact_form_to_db.php:1963
 #, php-format
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "Résultats de la recherche pour &#8220;%s&#8221;"
 
-#: contact_form_to_db.php:2012
+#: contact_form_to_db.php:2004
 msgid "Can not display thumbnail"
 msgstr "Impossible d'afficher les vignettes"
 
-#: contact_form_to_db.php:2036
+#: contact_form_to_db.php:2028
 msgid "One message was marked as Spam."
 msgstr "Un message a été marqué comme spam."
 
-#: contact_form_to_db.php:2039
+#: contact_form_to_db.php:2031
 msgid "One message was marked as Trash."
 msgstr "Un message a été marqué supprimer."
 
-#: contact_form_to_db.php:2042
+#: contact_form_to_db.php:2034
 msgid "<strong>WARNING: </strong>Unknown result."
 msgstr "<strong>AVERTISSEMENT: </strong>Résultat inconnu."
 
-#: contact_form_to_db.php:2046
+#: contact_form_to_db.php:2038
 msgid "<strong>WARNING: </strong>Problems while changing status of message. Please, try it later."
 msgstr "<strong>AVERTISSEMENT: </strong>Problèmes lors du changement de status d'un message. Merci de ré-essayer."
+
+#: contact_form_to_db.php:2088
+msgid "Option \"Save messages to database\" was disabled on the plugin settings page."
+msgstr "L'option \"Enregistrer les messages dans la base\" a été désactivée dans la page des paramètres de l'extension."
+
+#: contact_form_to_db.php:2088
+msgid "Enable it for saving messages from Contact Form"
+msgstr "Activer pour enregistrer les messages venant du formulaire de contact"
+
+#: contact_form_to_db.php:2140
+#, fuzzy
+msgid "Learn More"
+msgstr "En savoir plus"
+
+#: contact_form_to_db.php:2142
+msgid "It's time to upgrade your <strong>Contact Form to DB</strong> to <strong>PRO</strong> version"
+msgstr ""
+
+#: contact_form_to_db.php:2143
+msgid "Extend standard plugin functionality with new great options"
+msgstr ""
 
 #~ msgid "One message was delete successfully"
 #~ msgstr "Un message a été supprimé."
@@ -803,6 +811,9 @@ msgstr "<strong>AVERTISSEMENT: </strong>Problèmes lors du changement de status 
 #~ msgid "Sorry, email message could not be delivered."
 #~ msgstr "Désolé, votre e-mail n'a pas pu être envoyé."
 
+#~ msgid "Switch to new interface"
+#~ msgstr "Basculer vers la nouvelle interface"
+
 #~ msgid "Pro plugins"
 #~ msgstr "Extensions Pro"
 
@@ -869,40 +880,65 @@ msgstr "<strong>AVERTISSEMENT: </strong>Problèmes lors du changement de status 
 #~ msgid "Send to custom email &#187;"
 #~ msgstr "Envoyer un e-mail spécifique &#187;"
 
-#, fuzzy
+#~ msgid "Switch to old interface"
+#~ msgstr "Basculer vers l'ancienne interface"
+
 #~ msgid "Plugins"
-#~ msgstr "Extensions Pro"
+#~ msgstr "Extensions"
 
-#, fuzzy
+#~ msgid "Themes"
+#~ msgstr "Thèmes"
+
 #~ msgid "Installed"
-#~ msgstr "%s installé"
+#~ msgstr "Installé"
 
-#, fuzzy
 #~ msgid "Recommended"
-#~ msgstr "Thèmes recommandés"
+#~ msgstr "Recommandés"
 
-#, fuzzy
-#~ msgid "Learn more"
-#~ msgstr "Lire la suite"
+#~ msgid "Go"
+#~ msgstr "Go"
 
-#, fuzzy
+#~ msgid "DONATE"
+#~ msgstr "Faire un don"
+
 #~ msgid "Activate this plugin"
-#~ msgstr "Extensions activées"
+#~ msgstr "Activer cette extension"
 
-#, fuzzy
 #~ msgid "Activate"
-#~ msgstr "Thème actif"
+#~ msgstr "Activé"
 
-#, fuzzy
 #~ msgid "Install now"
-#~ msgstr "Installa Ora"
+#~ msgstr "Installer maintenant"
 
-#, fuzzy
+#~ msgid "Try again"
+#~ msgstr "Essayer de nouveau"
+
 #~ msgid "Preview &#8220;%s&#8221;"
-#~ msgstr "Personnaliser &#8220;%s&#8221;"
+#~ msgstr "Pré-visualiser &#8220;%s&#8221;"
 
 #~ msgid "Install Now"
 #~ msgstr "Installa Ora"
+
+#~ msgid "Update to version %s"
+#~ msgstr "Mettre à jour pour la version %s"
+
+#~ msgid "Update"
+#~ msgstr "Mettre à jour"
+
+#~ msgid "This theme is already installed and is up to date"
+#~ msgstr "Le thème est déjà en place et est à jour."
+
+#~ msgid "Preview %s"
+#~ msgstr "Pré-visualiser %s"
+
+#~ msgid "Preview"
+#~ msgstr "Pré-visualiser"
+
+#~ msgid "By %s"
+#~ msgstr "Par %s"
+
+#~ msgid "Details"
+#~ msgstr "Détails"
 
 #~ msgid "Contact Form"
 #~ msgstr "Formulaire de Contact"

@@ -4,11 +4,11 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Contact Form, Contact Form to DB, text, contact, form, contacts, contact form, request, contact me, feeDBack form, feeDBack, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy, save messages, download messafes, manage messages, 
 Requires at least: 3.2
 Tested up to: 3.8.1
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows you to manage the messages that have been sent from your site.
+The plugin allows you to manage messages that have been sent via the contact form on your site.
 
 == Description ==
 
@@ -18,6 +18,7 @@ Contact Form to DB is compatible both with a free and a PRO version of Contact F
 There is also a premium version of the plugin, allowing to re-send and preiodically delete old messages, manage attachments and get detailed support and answers to your questions within one business day.
 
 <a href="http://wordpress.org/plugins/contact-form-to-db/faq/" target="_blank">FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 <a href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=52c469c463ea3722c39dd9c5d9ef54b2" target="_blank">Upgrade to Pro Version</a>
@@ -90,7 +91,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">System_Status.pdf</a>
 
 == Screenshots ==
 
@@ -101,6 +102,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. Spam page on the Contact Form to DB manager page display.
 
 == Changelog ==
+
+= V1.3.6 - 11.03.2014 =
+* Budfix : Plugin optimization is done.
+* Update : The French language file is updated.
 
 = V1.3.5 - 14.02.2014 =
 * Update : We updated all functionality for wordpress 3.8.1.
@@ -135,6 +140,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.3.6 =
+Plugin optimization is done. The French language file is updated.
 
 = V1.3.5 =
 We updated all functionality for wordpress 3.8.1. BWS plugins section is updated.
