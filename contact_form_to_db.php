@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.3.6
+Version: 1.3.7
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -31,7 +31,7 @@ License: GPLv2 or later
 if ( ! function_exists( 'cntctfrmtdb_admin_menu' ) ) {
 	function cntctfrmtdb_admin_menu() {
 		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_version = '1.2';
+		$bws_menu_version = '1.2.3';
 		$base = plugin_basename(__FILE__);
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
@@ -74,10 +74,6 @@ if ( ! function_exists( 'cntctfrmtdb_admin_menu' ) ) {
 		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'edit_themes', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 ); 
 		add_submenu_page( 'bws_plugins',__( 'Contact Form to DB', 'contact_form_to_db' ), __( 'Contact Form to DB', 'contact_form_to_db' ), 'edit_themes', 'cntctfrmtdb_settings', 'cntctfrmtdb_settings_page' );
 		$hook = add_menu_page( __( 'CF to DB', 'contact_form_to_db' ), __( 'CF to DB', 'contact_form_to_db' ), 'edit_posts', 'cntctfrmtdb_manager', 'cntctfrmtdb_manager_page', plugins_url( "images/px.png", __FILE__ ), 30 );
-		//call register settings function
-		add_action( 'admin_init', 'cntctfrmtdb_settings' );
-		// add Contact Form to DB manager page
-		add_action( 'admin_init', 'cntctfrmtdb_create_table' );
 	}
 }
 
@@ -127,6 +123,12 @@ if ( ! function_exists( 'cntctfrmtdb_admin_init' ) ) {
 if ( ! function_exists( 'cntctfrmtdb_settings' ) ) {
 	function cntctfrmtdb_settings() {
 		global $wpmu, $cntctfrmtdb_options, $cntctfrmtdb_option_defaults, $cntctfrmtdb_plugin_info;
+
+		if ( ! $cntctfrmtdb_plugin_info ) {
+			if ( ! function_exists( 'get_plugin_data' ) )
+				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			$cntctfrmtdb_plugin_info = get_plugin_data( __FILE__ );	
+		}
 
 		$cntctfrmtdb_db_version = '1.2';
 		// set default settings
@@ -383,19 +385,9 @@ if ( ! function_exists( 'cntctfrmtdb_settings_page' ) ) {
 
 		/* GO PRO */
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
-			global $wpmu;			
+			global $wpmu, $bstwbsftwppdtplgns_options;			
 
 			$bws_license_key = ( isset( $_POST['bws_license_key'] ) ) ? trim( $_POST['bws_license_key'] ) : "";
-			$bstwbsftwppdtplgns_options_defaults = array();
-			if ( 1 == $wpmu ) {
-				if ( !get_site_option( 'bstwbsftwppdtplgns_options' ) )
-					add_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options_defaults, '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
-			} else {
-				if ( !get_option( 'bstwbsftwppdtplgns_options' ) )
-					add_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options_defaults, '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
-			}
 
 			if ( isset( $_POST['bws_license_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_license_nonce_name' ) ) {
 				if ( '' != $bws_license_key ) { 
@@ -445,8 +437,7 @@ if ( ! function_exists( 'cntctfrmtdb_settings_page' ) ) {
 												$error = __( "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually.", 'contact_form_to_db' );
 											}
 										}
-										if ( '' == $error ) {
-											global $wpmu;																					
+										if ( '' == $error ) {																	
 											$bstwbsftwppdtplgns_options[ $bws_license_plugin ] = $bws_license_key;
 
 											$url = 'http://bestwebsoft.com/wp-content/plugins/paid-products/plugins/downloads/?bws_first_download=' . $bws_license_plugin . '&bws_license_key=' . $bws_license_key . '&download_from=5';
@@ -2075,7 +2066,9 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 							var hide_message = $.cookie( "cntctfrmtdb_save_messages_to_db" );
 							if ( hide_message == "true" ) {
 								$( ".cntctfrmtdb_save_messages_to_db" ).css( "display", "none" );
-							};
+							} else {
+								$( ".cntctfrmtdb_save_messages_to_db" ).css( "display", "block" );
+							}
 							$( ".cntctfrmtdb_close_icon" ).click( function() {
 								$( ".cntctfrmtdb_save_messages_to_db" ).css( "display", "none" );
 								$.cookie( "cntctfrmtdb_save_messages_to_db", "true", { expires: 7 } );
@@ -2083,7 +2076,7 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 						});
 					})(jQuery);				
 				</script>
-				<div class="updated fade cntctfrmtdb_save_messages_to_db">		       							                      
+				<div class="updated fade cntctfrmtdb_save_messages_to_db" style="display: none;">		       							                      
 					<img style="float: right;cursor: pointer;" class="cntctfrmtdb_close_icon" title="" src="<?php echo plugins_url( 'images/close_banner.png', __FILE__ ); ?>" alt=""/>
 					<div style="float: left;margin: 5px;"><strong><?php _e( 'Notice:', 'contact_form_to_db'); ?></strong> <?php _e( 'Option "Save messages to database" was disabled on the plugin settings page.', 'contact_form_to_db'); ?> <a href="admin.php?page=cntctfrmtdb_settings"><?php _e( 'Enable it for saving messages from Contact Form', 'contact_form_to_db'); ?></a></div>
 					<div style="clear:both;float: none;margin: 0;"></div>
@@ -2127,7 +2120,9 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 									var hide_message = $.cookie( "cntctfrmtdb_hide_banner_on_plugin_page" );
 									if ( hide_message == "true" ) {
 										$( ".cntctfrmtdb_message" ).css( "display", "none" );
-									};
+									} else {
+										$( ".cntctfrmtdb_message" ).css( "display", "block" );
+									}
 									$( ".cntctfrmtdb_close_icon" ).click( function() {
 										$( ".cntctfrmtdb_message" ).css( "display", "none" );
 										$.cookie( "cntctfrmtdb_hide_banner_on_plugin_page", "true", { expires: 32 } );
@@ -2136,14 +2131,18 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 							})(jQuery);				
 						</script>
 					<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">					                      
-						<div class="cntctfrmtdb_message bws_banner_on_plugin_page">
-							<a class="button" target="_blank" href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=a0297729ff05dc9a4dee809c8b8e94bf&pn=91&v=' . $cntctfrmtdb_plugin_info["Version"] . '&wp_v=' . $wp_version . '">' . __( "Learn More", 'contact_form_to_db' ) . '</a>				
+						<div class="cntctfrmtdb_message bws_banner_on_plugin_page" style="display: none;">
+							<img class="cntctfrmtdb_close_icon close_icon" title="" src="' . plugins_url( 'images/close_banner.png', __FILE__ ) . '" alt=""/>
+							<div class="button_div">
+								<a class="button" target="_blank" href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=a0297729ff05dc9a4dee809c8b8e94bf&pn=91&v=' . $cntctfrmtdb_plugin_info["Version"] . '&wp_v=' . $wp_version . '">' . __( "Learn More", 'contact_form_to_db' ) . '</a>				
+							</div>
 							<div class="text">
 								' . __( "It's time to upgrade your <strong>Contact Form to DB</strong> to <strong>PRO</strong> version", 'contact_form_to_db' ) . '!<br />
 								<span>' . __( 'Extend standard plugin functionality with new great options', 'contact_form_to_db' ) . '.</span>
-							</div> 					
-							<img class="cntctfrmtdb_close_icon close_icon" title="" src="' . plugins_url( 'images/close_banner.png', __FILE__ ) . '" alt=""/>
-							<img class="icon" title="" src="' . plugins_url( 'images/banner.png', __FILE__ ) . '" alt=""/>	
+							</div> 		
+							<div class="icon">			
+								<img title="" src="' . plugins_url( 'images/banner.png', __FILE__ ) . '" alt=""/>
+							</div>	
 						</div>  
 					</div>';
 					break;

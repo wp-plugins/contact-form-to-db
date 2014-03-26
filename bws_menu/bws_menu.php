@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.2
+* Version: 1.2.3
 */
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
@@ -199,6 +199,38 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/plugin/sender/?k=89c297d14ba85a8417a0f2fc05e089c7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
 				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Sender+Bestwebsoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=sndr_settings'
+			),
+			'subscriber/subscriber.php' => array(
+				'name'			=> 'Subscriber',
+				'description'	=> 'This plugin allows you to subscribe users for newsletters from your website.',
+				'link'			=> 'http://bestwebsoft.com/plugin/subscriber/?k=a4ecc1b7800bae7329fbe8b4b04e9c88&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/subscriber/?k=a4ecc1b7800bae7329fbe8b4b04e9c88&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Subscriber+Bestwebsoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=sbscrbr_settings_page'
+			),
+			'contact-form-multi/contact-form-multi.php' => array(
+				'name'			=> 'Contact Form Multi',
+				'description'	=> 'This plugin allows you to subscribe users for newsletters from your website.',
+				'link'			=> 'http://bestwebsoft.com/plugin/contact-form-multi/?k=83cdd9e72a9f4061122ad28a67293c72&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/contact-form-multi/?k=83cdd9e72a9f4061122ad28a67293c72&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=Contact+Form+Multi+Bestwebsoft&plugin-search-input=Search+Plugins',
+				'settings'		=> ''
+			),
+			'bws-google-maps/bws-google-maps.php' => array(
+				'name'			=> 'BestWebSoft Google Maps',
+				'description'	=> 'Easy to set up and insert Google Maps to your website.',
+				'link'			=> 'http://bestwebsoft.com/plugin/bws-google-maps/?k=d8fac412d7359ebaa4ff53b46572f9f7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/bws-google-maps/?k=d8fac412d7359ebaa4ff53b46572f9f7&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=BestWebSoft+Google+Maps&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=bws-google-maps.php'
+			),
+			'bws-google-analytics/bws-google-analytics.php' => array(
+				'name'			=> 'BestWebSoft Google Analytics',
+				'description'	=> 'Allows you to retrieve basic stats from Google Analytics account and add the tracking code to your blog.',
+				'link'			=> 'http://bestwebsoft.com/plugin/bws-google-analytics/?k=261c74cad753fb279cdf5a5db63fbd43&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/plugin/bws-google-analytics/?k=261c74cad753fb279cdf5a5db63fbd43&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version . '#download',
+				'wp_install'	=> '/wp-admin/plugin-install.php?tab=search&s=BestWebSoft+Google+Analytics&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=bws-google-analytics.php'
 			)
 		);
 		$bws_plugins_pro	= array(
@@ -808,9 +840,14 @@ if ( ! function_exists ( 'bws_plugin_init' ) ) {
 if ( ! function_exists ( 'bws_admin_head' ) ) {
 	function bws_admin_head() {
 		global $wp_version;
+		if ( $wp_version < 3.8 )
+			wp_enqueue_style( 'pdfprnt-stylesheet', plugins_url( 'css/general_style_wp_before_3.8.css', __FILE__ ) );	
+		else
+			wp_enqueue_style( 'pdfprnt-stylesheet', plugins_url( 'css/general_style.css', __FILE__ ) );
+
 		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" ) {
 			wp_enqueue_style( 'bws_menu_style', plugins_url( 'css/style.css', __FILE__ ) );
-			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js' , __FILE__ ) );
+			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js' , __FILE__ ) );			
 			if ( $wp_version >= '3.8' )
 				wp_enqueue_script( 'theme-install' );
 			elseif ( $wp_version >= '3.4' )

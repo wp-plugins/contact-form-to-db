@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Contact Form, Contact Form to DB, text, contact, form, contacts, contact form, request, contact me, feeDBack form, feeDBack, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy, save messages, download messafes, manage messages, 
 Requires at least: 3.2
 Tested up to: 3.8.1
-Stable tag: 1.3.6
+Stable tag: 1.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,8 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 
 * French (fr_FR) (thanks to <a href="mailto:lcapronnier@yahoo.com">Capronnier luc</a>)
 * Russian (ru_RU)
+* Serbian (sr_RS) (thanks to <a href="mailto:ognjend@firstsiteguide.com">Ognjen Djuraskovic</a>, www.firstsiteguide.com)
+* Spain (es_ES) (thanks to <a href="mailto:ognjend@firstsiteguide.com">Ognjen Djuraskovic</a>, www.firstsiteguide.com)
 * Ukrainian (uk)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -103,6 +105,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.3.7 - 26.03.2014 =
+* NEW : Serbian language file is added to the plugin.
+* NEW : Spain language file is added to the plugin.
+
 = V1.3.6 - 11.03.2014 =
 * Budfix : Plugin optimization is done.
 * Update : The French language file is updated.
@@ -140,6 +146,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.3.7 =
+Serbian language file is added to the plugin. Spain language file is added to the plugin.
 
 = V1.3.6 =
 Plugin optimization is done. The French language file is updated.
