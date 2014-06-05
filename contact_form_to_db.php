@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.3.8
+Version: 1.3.9
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -31,7 +31,8 @@ License: GPLv2 or later
 if ( ! function_exists( 'cntctfrmtdb_admin_menu' ) ) {
 	function cntctfrmtdb_admin_menu() {
 		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_version = '1.2.6';
+		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
+		$bws_menu_version = $bws_menu_info["Version"];
 		$base = plugin_basename(__FILE__);
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
@@ -468,7 +469,7 @@ if ( ! function_exists( 'cntctfrmtdb_settings_page' ) ) {
 			<h2><?php _e( "Contact Form to DB Settings", 'contact_form_to_db' ); ?></h2>
 			<h2 class="nav-tab-wrapper">
 				<a class="nav-tab<?php if ( isset( $_GET['page'] ) && 'cntctfrmtdb_settings' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=cntctfrmtdb_settings"><?php _e( 'Settings', 'contact_form_to_db' ); ?></a>
-				<a class="bws_plugin_menu_pro_version nav-tab" href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=5906020043c50e2eab1528d63b126791&pn=91&v=<?php echo $cntctfrmtdb_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="<?php _e( 'This setting is available in Pro version', 'contact_form_to_db' ); ?>"><?php _e( 'FAQ', 'contact_form_to_db' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/plugin/contact-form-to-db/#faq" target="_blank"><?php _e( 'FAQ', 'contact_form_to_db' ); ?></a>
 				<a class="bws_plugin_menu_pro_version nav-tab" href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=5906020043c50e2eab1528d63b126791&pn=91&v=<?php echo $cntctfrmtdb_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="<?php _e( 'This setting is available in Pro version', 'contact_form_to_db' ); ?>"><?php _e( 'User guide', 'contact_form_to_db' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=cntctfrmtdb_settings&amp;action=go_pro"><?php _e( 'Go PRO', 'contact_form_to_db' ); ?></a>
 			</h2>
@@ -631,7 +632,7 @@ if ( ! function_exists( 'cntctfrmtdb_settings_page' ) ) {
 							$bstwbsftwppdtplgns_options['go_pro']['contact-form-to-db-pro/contact_form_to_db_pro.php']['time'] < ( time() + ( 24 * 60 * 60 ) ) ) { ?>
 							<p>
 								<input disabled="disabled" type="text" name="bws_license_key" value="<?php echo $bws_license_key; ?>" />
-								<input disabled="disabled" type="submit" class="button-primary" value="<?php _e( 'Go!', 'contact_form_to_db' ); ?>" />
+								<input disabled="disabled" type="submit" class="button-primary" value="<?php _e( 'Activate', 'contact_form_to_db' ); ?>" />
 							</p>
 							<p>
 								<?php _e( "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually.", 'contact_form_to_db' ); ?>
@@ -641,7 +642,7 @@ if ( ! function_exists( 'cntctfrmtdb_settings_page' ) ) {
 								<input type="text" name="bws_license_key" value="<?php echo $bws_license_key; ?>" />
 								<input type="hidden" name="bws_license_plugin" value="contact-form-to-db-pro/contact_form_to_db_pro.php" />
 								<input type="hidden" name="bws_license_submit" value="submit" />
-								<input type="submit" class="button-primary" value="<?php _e( 'Go!', 'contact_form_to_db' ); ?>" />
+								<input type="submit" class="button-primary" value="<?php _e( 'Activate', 'contact_form_to_db' ); ?>" />
 								<?php wp_nonce_field( plugin_basename(__FILE__), 'bws_license_nonce_name' ); ?>
 							</p>
 						<?php } ?>
@@ -2090,8 +2091,11 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 		}
 		if ( $hook_suffix == 'plugins.php' ) {  
 			$banner_array = array(
+				array( 'sndr_hide_banner_on_plugin_page', 'sender/sender.php', '0.5' ),
+				array( 'srrl_hide_banner_on_plugin_page', 'user-role/user-role.php', '1.4' ),	
 				array( 'pdtr_hide_banner_on_plugin_page', 'updater/updater.php', '1.12' ),
-				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),		
+				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),
+				array( 'cntctfrmmlt_hide_banner_on_plugin_page', 'contact-form-multi/contact-form-multi.php', '1.0.7' ),		
 				array( 'gglmps_hide_banner_on_plugin_page', 'bws-google-maps/bws-google-maps.php', '1.2' ),		
 				array( 'fcbkbttn_hide_banner_on_plugin_page', 'facebook-button-plugin/facebook-button-plugin.php', '2.29' ),
 				array( 'twttr_hide_banner_on_plugin_page', 'twitter-plugin/twitter.php', '2.34' ),
@@ -2167,9 +2171,12 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 if ( ! function_exists ( 'cntctfrmtdb_delete_options' ) ) {
 	function cntctfrmtdb_delete_options() {
 		global $wpdb;
-		$prefix = $wpdb->prefix . 'cntctfrmtdb_';
-		$sql = "DROP TABLE `" . $prefix . "message_status`, `" . $prefix . "blogname`, `" . $prefix . "to_email`, `" . $prefix . "hosted_site`, `" . $prefix . "refer`, `" . $prefix . "field_selection`, `" . $prefix . "message`;";
-		$wpdb->query( $sql );
+		$all_plugins = get_plugins();
+		if ( ! array_key_exists( 'contact-form-to-db-pro/contact_form_to_db_pro.php', $all_plugins ) ) {
+			$prefix = $wpdb->prefix . 'cntctfrmtdb_';
+			$sql = "DROP TABLE `" . $prefix . "message_status`, `" . $prefix . "blogname`, `" . $prefix . "to_email`, `" . $prefix . "hosted_site`, `" . $prefix . "refer`, `" . $prefix . "field_selection`, `" . $prefix . "message`;";
+			$wpdb->query( $sql );
+		}
 		delete_option( "cntctfrmtdb_version" );
 		delete_option( "cntctfrmtdb_options" );
 		delete_site_option( "cntctfrmtdb_version" );
