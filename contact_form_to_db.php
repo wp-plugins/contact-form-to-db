@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.3.9
+Version: 1.4.0
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -657,11 +657,12 @@ if ( ! function_exists( 'cntctfrmtdb_settings_page' ) ) {
 * Function to get mail data from contact form
 */
 if ( ! function_exists( 'cntctfrmtdb_get_mail_data' ) ) {
-	function cntctfrmtdb_get_mail_data( $to, $name, $email, $address, $phone, $subject, $message, $form_action_url, $user_agent, $userdomain ) {
-		global $sendto, $username, $useremail, $useraddress, $userphone, $message_subject, $message_text, $refer, $useragent, $user_domain;
+	function cntctfrmtdb_get_mail_data( $to, $name, $email, $address, $phone, $subject, $message, $form_action_url, $user_agent, $userdomain, $location = '' ) {
+		global $sendto, $username, $useremail, $useraddress, $userlocation, $userphone, $message_subject, $message_text, $refer, $useragent, $user_domain;
 		$sendto					= $to;
 		$username				= $name;
 		$useremail				= $email;
+		$userlocation			= $location;
 		$useraddress			= $address;
 		$userphone				= $phone;
 		$message_subject		= $subject;
@@ -711,7 +712,7 @@ if ( ! function_exists( 'cntctfrmtdb_check_dispatch' ) ) {
  */
 if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 	function cntctfrmtdb_save_new_message() {
-		global $message_id, $sendto, $username, $useremail, $useraddress,
+		global $message_id, $sendto, $username, $useremail, $useraddress, $userlocation,
 		$userphone, $message_subject, $message_text, $refer,
 		$useragent, $user_domain, $attachment_status, $dispatched, $wpdb, $cntctfrm_options_for_this_plugin, $cntctfrmtdb_options;
 		$prefix = $wpdb->prefix . 'cntctfrmtdb_';
@@ -756,7 +757,7 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 			$blogname_id = $wpdb->insert_id;
 		}
 		
-		//insert data about who was adressed to email
+		//insert data about who was addressed to email
 		$to_email_id = $wpdb->get_var( "SELECT `id` FROM `" . $prefix . "to_email` WHERE `email`='" . $sendto . "'" );
 		if ( ! isset( $to_email_id ) ) {
 			$wpdb->insert( $prefix . 'to_email', array( 'email' => $sendto ) );
@@ -778,6 +779,15 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 		}
 
 		//insert data about additionals fields
+		if ( isset( $userlocation ) && '' != $userlocation ) {
+			$field_id = $wpdb->get_var( 'SELECT `id` FROM `' . $wpdb->prefix . "cntctfrm_field` WHERE `name`='location'");
+			$wpdb->insert( $prefix . 'field_selection', array( 
+				'cntctfrm_field_id' => $field_id,
+				'message_id'        => $message_id,
+				'field_value'       =>  $userlocation,
+				)
+			);
+		}
 		if ( isset( $useraddress ) && '' != $useraddress ) {
 			$field_id = $wpdb->get_var( 'SELECT `id` FROM `' . $wpdb->prefix . "cntctfrm_field` WHERE `name`='address'");
 			$wpdb->insert( $prefix . 'field_selection', array( 
@@ -834,7 +844,7 @@ if ( ! function_exists( 'cntctfrmtdb_save_message' ) ) {
 		// - If previous message exists: we check message text and author name of previous message with message text and author name of current message.
 		// - If the same, then we increments the dispatch counter previous message, if message was sent in this time, we so update 'sent' column in 'message' table.
 		// - If not - write new message in database.
-		$previous_message_data = $wpdb->get_row( $wpdb->prepare( "SELECT `id`, `from_user`, `message_text`, `dispatch_counter`, `sent` FROM `" . $prefix . "message` WHERE `id` = ( SELECT MAX(`id`) FROM `" . $prefix . "message` )", array() ), ARRAY_A ); // array() - because that is not necessary to pass any variables to $wpdb->prepare
+		$previous_message_data = $wpdb->get_row( "SELECT `id`, `from_user`, `message_text`, `dispatch_counter`, `sent` FROM `" . $prefix . "message` WHERE `id` = ( SELECT MAX(`id`) FROM `" . $prefix . "message` )", ARRAY_A );
 		if (  '' != $previous_message_data ) {
 			if ( $message_text == $previous_message_data['message_text'] && $username == $previous_message_data['from_user'] ) {
 				$counter = intval( $previous_message_data['dispatch_counter'] );
@@ -985,7 +995,7 @@ if ( ! function_exists( 'cntctfrmtdb_action_links' ) ) {
 											$name				= $content->appendChild( $xml->createElement( 'cnttfrmtdb_name' ) );// insert <name></name> in to <content></content>
 											$name_text	= $name->appendChild( $xml->createTextNode( $data->from_user ) );// insert text  in to <name></name>
 										}
-										if ( isset( $data_adres ) && '' !=  $data_adress ) {
+										if ( isset( $data_address ) && '' != $data_address ) {
 											$address		= $content->appendChild( $xml->createElement( 'cnttfrmtdb_address' ) );// insert <address></address> in to <content></content>
 											$address_text	= $address->appendChild( $xml->createTextNode( $data_address ) );// insert text  in to <address></address>
 										}
@@ -2200,7 +2210,7 @@ add_action( 'admin_enqueue_scripts', 'cntctfrmtdb_admin_head' );
 add_filter( 'plugin_action_links', 'cntctfrmtdb_plugin_action_links', 10, 2 );
 add_filter( 'plugin_row_meta', 'cntctfrmtdb_register_plugin_links', 10, 2 );
 // hooks for get mail data
-add_action( 'cntctfrm_get_mail_data', 'cntctfrmtdb_get_mail_data', 10, 10 );
+add_action( 'cntctfrm_get_mail_data', 'cntctfrmtdb_get_mail_data', 10, 11 );
 add_action( 'cntctfrm_get_attachment_data', 'cntctfrmtdb_get_attachment_data' );
 add_action( 'cntctfrm_check_dispatch', 'cntctfrmtdb_check_dispatch', 10, 1 );
 //hooks for ajax

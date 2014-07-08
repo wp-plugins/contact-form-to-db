@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: attachment, browse messages, contact, contatc, conact, cnotact, contact button, contact form, contact form add-on, contact form plugin, Contact Form to DB, contact me, contacts, contacts form plugin, copy, database, delete messages, download messages, feedback, feedback form, form, manage messages, request, save messages, send, send copy, text
 Requires at least: 3.2
 Tested up to: 3.9.1
-Stable tag: 1.3.9
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,10 +12,9 @@ The plugin allows you to manage messages that have been sent via the contact for
 
 == Description ==
 
-Contact Form to DB plugin is an exclusive add-on for the Contact Form plugin by BestWebSoft. The plugin provides a unique opportunity to manage messages sent from your site via the contact form. The list of its features is really impressive: messages can be saved, browsed, deleted or downloaded from the Dashboard. In case you decide to deactivate the plugin, it will serve as a repository for your old messages. Once you install and activate it, not a single message will be lost!
-Please pay attention, that this plugin is an add-on ONLY for Contact Form plugin by BestWebSoft, that's why it will not work with any other contact form plugins.
-Contact Form to DB is compatible both with a free and a PRO version of Contact Form.
-There is also a premium version of the plugin, allowing to re-send and preiodically delete old messages, manage attachments and get detailed support and answers to your questions within one business day.
+Contact Form to DB plugin is an exclusive add-on for the Contact Form plugin by BestWebSoft.
+The plugin provides a unique opportunity to manage messages sent from your site via the contact form. The list of its features is really impressive: messages can be saved, browsed, deleted or downloaded from the Dashboard. In case you decide to deactivate the plugin, it will serve as a repository for your old messages. Once you install and activate it, not a single message will be lost!
+Please pay attention, that this plugin is an add-on ONLY for Contact Form plugin by BestWebSoft, that's why it will not work with any other contact form plugins. Contact Form to DB is compatible both with a free and a PRO version of Contact Form. There is also a premium version of the plugin, allowing to re-send and periodically delete old messages, manage attachments and get detailed support and answers to your questions within one business day.
 
 http://www.youtube.com/watch?v=agEWy6Hc-fY
 
@@ -97,7 +96,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit?pli=1" target="_blank">Instuction on System Status</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
 
 == Screenshots ==
 
@@ -108,6 +107,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. Spam page on the Contact Form to DB manager page display.
 
 == Changelog ==
+
+= V1.4.0 - 08.07.2014 =
+* Update : We updated all functionality for Contact Form Pro 1.29.
 
 = V1.3.9 - 05.06.2014 =
 * Update : We updated all functionality for wordpress 3.9.1.
@@ -158,6 +160,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.4.0 =
+We updated all functionality for Contact Form Pro 1.29.
 
 = V1.3.9 =
 We updated all functionality for wordpress 3.9.1. The Ukrainian language file is updated. The French language file is updated.
