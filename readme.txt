@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: attachment, browse messages, contact, contatc, conact, cnotact, contact button, contact form, contact form add-on, contact form plugin, Contact Form to DB, contact me, contacts, contacts form plugin, copy, database, delete messages, download messages, feedback, feedback form, form, manage messages, request, save messages, send, send copy, text
 Requires at least: 3.2
 Tested up to: 4.0-beta3
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,8 +108,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.4.2 - 21.08.2014 =
+* Update : We added nonce fields to action links for more security.
+* Bugfix : Some mistypes were fixed.
+
 = V1.4.1 - 07.08.2014 =
-* Budfix : Security Exploit was fixed.
+* Bugfix : Security Exploit was fixed.
 
 = V1.4.0 - 08.07.2014 =
 * Update : We updated all functionality for Contact Form Pro 1.29.
@@ -127,7 +131,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Spain language file is added to the plugin.
 
 = V1.3.6 - 11.03.2014 =
-* Budfix : Plugin optimization is done.
+* Bugfix : Plugin optimization is done.
 * Update : The French language file is updated.
 
 = V1.3.5 - 14.02.2014 =
@@ -163,6 +167,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.4.2 =
+We added nonce fields to action links for more security. Some mistypes were fixed.
 
 = V1.4.1 =
 Security Exploit was fixed.

@@ -40,6 +40,7 @@
 			messageContainer.height( 17 );
 			fromInfo.css( 'display', 'none' ); // hide additional info in "from"-column
 			var messageId = $( this ).children().children( 'input:checkbox' ).val();
+			var nonceField = $( 'input#cntctfrmtdb_manager_nonce_name' ).val();
 			// click on author's message name
 			fromName.click( function() {
 				if ( messageContainer .children().children().children().is( '.attachment-img' ) ) { // if attachment exists
@@ -102,7 +103,7 @@
 										// if message was not read, so we change "not-read" status
 										if ( anotherColumn.children().hasClass( 'not-read-message' ) ) {
 											anotherColumn.children().removeClass( 'not-read-message' );
-											cntctfrmtdb_change_read_status ( messageId );
+											cntctfrmtdb_change_read_status ( messageId, nonceField );
 										}
 									}
 								});
@@ -139,7 +140,7 @@
 						// if message was not read, so we change "not-read" status
 						if ( fromName.hasClass( 'not-read-message' ) ) {
 							fromName.removeClass( 'not-read-message' );
-							cntctfrmtdb_change_read_status ( messageId );
+							cntctfrmtdb_change_read_status ( messageId, nonceField );
 						}
 					} else {
 						fromInfo.css( 'display', 'none' );  // slide up message text
@@ -156,6 +157,7 @@
 		var firstClick = 0;
 		var lastClick = 0;
 		var oldStatus =0;
+		var nonceField = $( 'input#cntctfrmtdb_manager_nonce_name' ).val();
 		$( '.column-status div' ).click( function() {
 			if ( firstClick == 0 ) { // remember old status
 				oldStatus = $(this).text();
@@ -197,7 +199,7 @@
 					var betweenTime = controlTime - lastClick;
 					if ( betweenTime > 470  ) { // make ajax request if passed about 470 milliseconds after the last click
 						if ( newStatus != oldStatus  ) {
-							cntctfrmtdb_change_status( oldStatus, newStatus, messageID );
+							cntctfrmtdb_change_status( oldStatus, newStatus, messageID, nonceField );
 							firstClick = 0;
 						}						
 					}
@@ -222,12 +224,12 @@
  * Function to change read/not-read status of message
 */
 
-function cntctfrmtdb_change_read_status ( messageId ) {
+function cntctfrmtdb_change_read_status ( messageId, nonceField ) {
 	( function($) {
 		$.ajax({
 			url: ajaxurl,
 			type: "POST",
-			data: { action: "cntctfrmtdb_read_message", cntctfrmtdb_ajax_read_status: 1, cntctfrmtdb_ajax_message_id: messageId },
+			data: { action: "cntctfrmtdb_read_message", cntctfrmtdb_ajax_nonce_field: nonceField, cntctfrmtdb_ajax_read_status: 1, cntctfrmtdb_ajax_message_id: messageId },
 			succes: function() { // change number of messages in status links row
 				$('.not-read-count').each( function() {
 					var oldNumber = $(this).text();
@@ -254,13 +256,13 @@ function cntctfrmtdb_change_read_status ( messageId ) {
  * Function to mark message as normal, spam or trash
 */
 
-function cntctfrmtdb_change_status( oldStatus, newStatus, messageID ) {
+function cntctfrmtdb_change_status( oldStatus, newStatus, messageID, nonceField ) {
 	(function($) {
 		if ( oldStatus != newStatus ) {
 			$.ajax({
 				url: ajaxurl,
 				type: "POST",
-				data: { action: "cntctfrmtdb_change_staus", cntctfrmtdb_ajax_message_status: newStatus, cntctfrmtdb_ajax_message_id: messageID, cntctfrmtdb_ajax_old_status: oldStatus },
+				data: { action: "cntctfrmtdb_change_staus", cntctfrmtdb_ajax_nonce_field: nonceField, cntctfrmtdb_ajax_message_status: newStatus, cntctfrmtdb_ajax_message_id: messageID, cntctfrmtdb_ajax_old_status: oldStatus },
 				success: function( result ) {
 					$( result ).insertAfter( '.cntctfrmtdb h2' );
 					$( '.id' ).each( function() {
