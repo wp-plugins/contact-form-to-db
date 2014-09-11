@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.4.2
+Version: 1.4.3
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -742,9 +742,9 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 		// get option from Contact form or Contact form PRO
 		if ( ! $cntctfrm_options_for_this_plugin ) {
 			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-			if ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) || is_plugin_active( 'contact-form-plugin/contact_form.php' ) ) {
+			if ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) || is_plugin_active_for_network( 'contact-form-plugin/contact_form.php' ) ) {
 				$cntctfrm_options_for_this_plugin = get_option( 'cntctfrm_options' );
-			} elseif ( is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) || is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) ) {
+			} elseif ( is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) || is_plugin_active_for_network( 'contact-form-pro/contact_form_pro.php' ) ) {
 				$cntctfrmpr_options = get_option( 'cntctfrmpr_options' );
 				$cntctfrm_options_for_this_plugin = array();
 				foreach ( $cntctfrmpr_options as $key => $value ) {
@@ -882,9 +882,9 @@ if ( ! function_exists( 'cntctfrmtdb_action_links' ) ) {
 		// get option from Contact form or Contact form PRO
 		if ( ! $cntctfrm_options_for_this_plugin ) {
 			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-			if ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) || is_plugin_active( 'contact-form-plugin/contact_form.php' ) ) {
+			if ( is_plugin_active( 'contact-form-plugin/contact_form.php' ) || is_plugin_active_for_network( 'contact-form-plugin/contact_form.php' ) ) {
 				$cntctfrm_options_for_this_plugin = get_option( 'cntctfrm_options' );
-			} elseif ( is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) || is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) ) {
+			} elseif ( is_plugin_active( 'contact-form-pro/contact_form_pro.php' ) || is_plugin_active_for_network( 'contact-form-pro/contact_form_pro.php' ) ) {
 				$cntctfrmpr_options = get_option( 'cntctfrmpr_options' );
 				$cntctfrm_options_for_this_plugin = array();
 				foreach ( $cntctfrmpr_options as $key => $value ) {
