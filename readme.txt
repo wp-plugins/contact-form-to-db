@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: attachment, browse messages, contact, contatc, conact, cnotact, contact button, contact form, contact form add-on, contact form plugin, Contact Form to DB, contact me, contacts, contacts form plugin, copy, database, delete messages, download messages, feedback, feedback form, form, manage messages, request, save messages, send, send copy, text
 Requires at least: 3.2
-Tested up to: 4.0
-Stable tag: 1.4.3
+Tested up to: 4.1
+Stable tag: 1.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,9 +22,9 @@ http://www.youtube.com/watch?v=agEWy6Hc-fY
 
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
-<a href="http://bestwebsoft.com/plugin/contact-form-to-db-pro/?k=52c469c463ea3722c39dd9c5d9ef54b2" target="_blank">Upgrade to Pro Version</a>
+<a href="http://bestwebsoft.com/products/contact-form-to-db/?k=52c469c463ea3722c39dd9c5d9ef54b2" target="_blank">Upgrade to Pro Version</a>
 
-<a href="http://bestwebsoft.com/plugin/contact-form-pro/?k=1f9b7d7895c20420af788d9413ed8562" target="_blank">Contact Form Pro</a> 
+<a href="http://bestwebsoft.com/products/contact-form/?k=1f9b7d7895c20420af788d9413ed8562" target="_blank">Contact Form Pro</a> 
 <a href="http://wordpress.org/plugins/contact-form-plugin" target="_blank">Contact Form Plugin</a>
 
 = Copyrights for Resources used in this plugin =
@@ -42,11 +42,12 @@ http://www.youtube.com/watch?v=agEWy6Hc-fY
 The author of the Contact Form To DB also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=d76bbcf46476f5ab4bb7950255a738a6">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=d76bbcf46476f5ab4bb7950255a738a6">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
 * French (fr_FR) (thanks to <a href="mailto:lcapronnier@yahoo.com">Capronnier luc</a>)
+* Japanese (ja) (thanks to Foken)
 * Russian (ru_RU)
 * Serbian (sr_RS) (thanks to <a href="mailto:ognjend@firstsiteguide.com">Ognjen Djuraskovic</a>, www.firstsiteguide.com)
 * Spain (es_ES) (thanks to <a href="mailto:ognjend@firstsiteguide.com">Ognjen Djuraskovic</a>, www.firstsiteguide.com)
@@ -107,6 +108,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. Spam page on the Contact Form to DB manager page display.
 
 == Changelog ==
+
+= V1.4.4 - 30.12.2014 =
+* Update : The French language file is updated.
+* NEW : The Japanese language file is added to the plugin.
+* Update : We updated all functionality for wordpress 4.1.
 
 = V1.4.3 - 11.09.2014 =
 * Update : We updated all functionality for wordpress 4.0.
@@ -171,6 +177,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.4.4 =
+The French language file is updated. The Japanese language file is added to the plugin. We updated all functionality for wordpress 4.1.
 
 = V1.4.3 =
 We updated all functionality for wordpress 4.0. The misprints in the code were fixed.
