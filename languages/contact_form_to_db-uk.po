@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: contact_form_to_db\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-13 16:20+0300\n"
-"PO-Revision-Date: 2014-08-13 16:21+0300\n"
+"POT-Creation-Date: 2015-03-31 20:52+0300\n"
+"PO-Revision-Date: 2015-03-31 20:52+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -14,760 +14,729 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
-"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n%10==1 && n%100!=11) ? 3 : "
-"((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n%10==1 && n%100!=11) ? 3 : ((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: contact_form_to_db.php:76 contact_form_to_db.php:1966
-msgid "Contact Form to DB"
-msgstr "Contact Form To DB"
-
-#: contact_form_to_db.php:77
-msgid "CF to DB"
-msgstr "CF To DB"
-
-#: contact_form_to_db.php:187
-msgid "requires"
-msgstr "вимагає"
-
-#: contact_form_to_db.php:187
-msgid ""
-"or higher, that is why it has been deactivated! Please upgrade WordPress and "
-"try again."
-msgstr ""
-"або вище, ось чому його було деактивовано! Будь ласка, оновіть WordPress та "
-"спробуйте пізніше"
-
-#: contact_form_to_db.php:187
-msgid "Back to the WordPress"
-msgstr "Повернутися на WordPress"
-
-#: contact_form_to_db.php:187
-msgid "Plugins page"
-msgstr "Сторінку плагінів"
-
-#: contact_form_to_db.php:275
+#: contact_form_to_db.php:222
 msgid "The requested content cannot be loaded.<br/>Please try again later."
-msgstr ""
-"Даний контент не може бути завантажений.</br>Будь ласка, спробуйте пізніше."
+msgstr "Даний контент не може бути завантажений.</br>Будь ласка, спробуйте пізніше."
 
-#: contact_form_to_db.php:276
+#: contact_form_to_db.php:223
 msgid "Letter"
 msgstr "Лист"
 
-#: contact_form_to_db.php:277
+#: contact_form_to_db.php:224
 msgid "Spam!"
 msgstr "Спам!"
 
-#: contact_form_to_db.php:278 contact_form_to_db.php:1585
+#: contact_form_to_db.php:225
+#: contact_form_to_db.php:1394
 msgid "in Trash"
 msgstr "в Корзині"
 
-#: contact_form_to_db.php:279
+#: contact_form_to_db.php:226
 msgid "Status was not changed"
 msgstr "Статус не було змінено"
 
-#: contact_form_to_db.php:317
-msgid ""
-"Contact Form Plugin is not found.</br>You need install and activate this "
-"plugin for correct  work with Contact Form to DB plugin.</br>You can "
-"download Contact Form Plugin from "
-msgstr ""
-"Плагін Contact Form не знайдено.</br>Для коректної роботи плагіну Contact "
-"Form To DB, вам необхідно встановити та активувати Contact Form. </br>Ви "
-"можете завантажити плагін Contact Form з "
+#: contact_form_to_db.php:266
+msgid "Contact Form Plugin is not found.</br>You need install and activate this plugin for correct  work with Contact Form to DB plugin.</br>You can download Contact Form Plugin from "
+msgstr "Плагін Contact Form не знайдено.</br>Для коректної роботи плагіну Contact Form To DB, вам необхідно встановити та активувати Contact Form. </br>Ви можете завантажити плагін Contact Form з "
 
-#: contact_form_to_db.php:317
+#: contact_form_to_db.php:266
 msgid "Developers website"
 msgstr "сайту розробників"
 
-#: contact_form_to_db.php:317
+#: contact_form_to_db.php:266
 msgid "website of plugin Authors "
 msgstr "сайту авторів плагіну"
 
-#: contact_form_to_db.php:317
+#: contact_form_to_db.php:266
 msgid "or "
 msgstr "або"
 
-#: contact_form_to_db.php:317
+#: contact_form_to_db.php:266
 msgid "Wordpress."
 msgstr "Wordpress."
 
-#: contact_form_to_db.php:320
-msgid ""
-"Contact Form Plugin is not active.</br>You need activate this plugin for "
-"correct work with Contact Form to DB plugin."
-msgstr ""
-"Плагін Contact Form не активовано.</br>Для коректної роботи плагіну Contact "
-"Form To DB, вам необхідно активувати Contact Form."
+#: contact_form_to_db.php:269
+msgid "Contact Form Plugin is not active.</br>You need activate this plugin for correct work with Contact Form to DB plugin."
+msgstr "Плагін Contact Form не активовано.</br>Для коректної роботи плагіну Contact Form To DB, вам необхідно активувати Contact Form."
 
-#: contact_form_to_db.php:325
-msgid ""
-"Contact Form Plugin has old version.</br>You need update this plugin for "
-"correct work with Contact Form to DB plugin."
-msgstr ""
-"Застаріла версія плагіну Contact Form.</br>Для коректної роботи плагіну "
-"Contact Form To DB, вам необхідно оновити Contact Form."
+#: contact_form_to_db.php:274
+msgid "Contact Form Plugin has old version.</br>You need update this plugin for correct work with Contact Form to DB plugin."
+msgstr "Застаріла версія плагіну Contact Form.</br>Для коректної роботи плагіну Contact Form To DB, вам необхідно оновити Contact Form."
 
-#: contact_form_to_db.php:365 contact_form_to_db.php:403
-msgid "Wrong license key"
-msgstr "Невірний ліцензійний ключ"
-
-#: contact_form_to_db.php:396
-msgid ""
-"Something went wrong. Try again later. If the error will appear again, "
-"please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. "
-"We are sorry for inconvenience."
-msgstr ""
-"Щось не так, спробуйте пізніше. Якщо помилка повториться, будь ласка, "
-"повідомте нам <a href=http://support.bestwebsoft.com>BestWebSoft</a>. "
-"Просимо вибачення за незручності"
-
-#: contact_form_to_db.php:405
-msgid "This license key is bind to another site"
-msgstr "Цей ліцензійний ключ прив язаний до іншого сайту"
-
-#: contact_form_to_db.php:407 contact_form_to_db.php:638
-msgid ""
-"Unfortunately, you have exceeded the number of available tries per day. "
-"Please, upload the plugin manually."
-msgstr ""
-"На жаль, ви перевищили кількість можливих спроб на день. Будь ласка, "
-"завантажте плагін вручну"
-
-#: contact_form_to_db.php:424
-msgid "Failed to open the zip archive. Please, upload the plugin manually"
-msgstr "Помилка при відкритті архіву zip. Будь ласка, завантажте плагін вручну"
-
-#: contact_form_to_db.php:430
-msgid ""
-"Your server does not support either ZipArchive or Phar. Please, upload the "
-"plugin manually"
-msgstr ""
-"Ваш сервер не підтримує формати Zip та Phar. Будь ласка, завантажте плагін "
-"вручну "
-
-#: contact_form_to_db.php:434 contact_form_to_db.php:443
-msgid "Failed to download the zip archive. Please, upload the plugin manually"
-msgstr ""
-"Помилка при завантаженнні архіву zip. Будь ласка, завантажте плагін вручну "
-
-#: contact_form_to_db.php:447
-msgid ""
-"Something went wrong. Try again later or upload the plugin manually. We are "
-"sorry for inconvienience."
-msgstr ""
-"Щось не так. Спробуйте пізніше чи завантажте плагін вручну. Просимо "
-"вибачення за незручності."
-
-#: contact_form_to_db.php:462
-msgid "Please, enter Your license key"
-msgstr "Будь ласка, введіть ліцензійний ключ"
-
-#: contact_form_to_db.php:469
-msgid "Contact Form to DB Settings"
-msgstr "Налаштування плагіну Contact Form to DB"
-
-#: contact_form_to_db.php:471 contact_form_to_db.php:2061
-#: contact_form_to_db.php:2075
+#: contact_form_to_db.php:314
+#: contact_form_to_db.php:316
+#: contact_form_to_db.php:1871
+#: contact_form_to_db.php:1887
 msgid "Settings"
 msgstr "Налаштування"
 
-#: contact_form_to_db.php:472 contact_form_to_db.php:1955
-#: contact_form_to_db.php:2076
+#: contact_form_to_db.php:317
+#: contact_form_to_db.php:1766
+#: contact_form_to_db.php:1888
 msgid "FAQ"
 msgstr "Розповсюджені питання"
 
-#: contact_form_to_db.php:473
+#: contact_form_to_db.php:318
 msgid "This setting is available in Pro version"
 msgstr "Ці налаштування доступні у PRO версії плагіну"
 
-#: contact_form_to_db.php:473
+#: contact_form_to_db.php:318
 msgid "User guide"
 msgstr "Посібник користувача"
 
-#: contact_form_to_db.php:474
+#: contact_form_to_db.php:319
 msgid "Go PRO"
 msgstr "Перейти на PRO"
 
-#: contact_form_to_db.php:476 contact_form_to_db.php:2128
+#: contact_form_to_db.php:321
+#: contact_form_to_db.php:1940
 msgid "Notice:"
 msgstr "Зауважте:"
 
-#: contact_form_to_db.php:476
-msgid ""
-"The plugin's settings have been changed. In order to save them please don't "
-"forget to click the 'Save Changes' button."
-msgstr ""
-"Налаштування плагіну змінились. Щоб зберегти їх, будь ласка, не забудьте "
-"клікнути \"Зберегти зміни\". "
+#: contact_form_to_db.php:321
+msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
+msgstr "Налаштування плагіну змінились. Щоб зберегти їх, будь ласка, не забудьте клікнути \"Зберегти зміни\". "
 
-#: contact_form_to_db.php:478
+#: contact_form_to_db.php:323
 msgid "Settings saved."
 msgstr "Налаштування збережено."
 
-#: contact_form_to_db.php:483
+#: contact_form_to_db.php:328
 msgid "Save messages to database"
 msgstr "Зберегти повідомлення у базу даних"
 
-#: contact_form_to_db.php:489
+#: contact_form_to_db.php:334
 msgid "Download messages in"
 msgstr "Завантажити повідомлення у"
 
-#: contact_form_to_db.php:496
+#: contact_form_to_db.php:341
 msgid "format"
 msgstr "форматі"
 
-#: contact_form_to_db.php:498
+#: contact_form_to_db.php:343
 msgid "Input symbols for separator and enclosure"
 msgstr "Введіть символи для роздільника та обмежувача"
 
-#: contact_form_to_db.php:504
+#: contact_form_to_db.php:349
 msgid " separator"
 msgstr "роздільник"
 
-#: contact_form_to_db.php:510
+#: contact_form_to_db.php:355
 msgid " enclosure"
 msgstr "обмежувач"
 
-#: contact_form_to_db.php:515
+#: contact_form_to_db.php:360
 msgid "Show messages per page"
 msgstr "Повідомлень на сторінці"
 
-#: contact_form_to_db.php:534
+#: contact_form_to_db.php:379
 msgid "Save attachments"
 msgstr "Зберегти вкладені файли"
 
-#: contact_form_to_db.php:540
+#: contact_form_to_db.php:385
 msgid "Save attachments to database."
 msgstr "Зберегти вкладені файли у базу даних."
 
-#: contact_form_to_db.php:542
+#: contact_form_to_db.php:387
 msgid "Save attachments to \"Uploads\"."
 msgstr "Зберегти вкладені файли у папку \"Uploads\"."
 
-#: contact_form_to_db.php:547
+#: contact_form_to_db.php:392
 msgid "Periodically delete old messages"
 msgstr "Періодично видаляти старі повідомлення"
 
-#: contact_form_to_db.php:552
+#: contact_form_to_db.php:397
 msgid "every 24 hours"
 msgstr "кожні 24 години"
 
-#: contact_form_to_db.php:553
+#: contact_form_to_db.php:398
 msgid "every 3 days"
 msgstr "кожні 3 дні"
 
-#: contact_form_to_db.php:554
+#: contact_form_to_db.php:399
 msgid "every 1 week"
 msgstr "щотижня"
 
-#: contact_form_to_db.php:555
+#: contact_form_to_db.php:400
 msgid "every 2 weeks"
 msgstr "кожні 2 тижня"
 
-#: contact_form_to_db.php:556
+#: contact_form_to_db.php:401
 msgid "every 1 month"
 msgstr "щомісяця"
 
-#: contact_form_to_db.php:557
+#: contact_form_to_db.php:402
 msgid "every 6 months"
 msgstr "кожні 6 місяців"
 
-#: contact_form_to_db.php:558
+#: contact_form_to_db.php:403
 msgid "every 1 year"
 msgstr "щороку"
 
-#: contact_form_to_db.php:560
-msgid ""
-"(All messages older than the specified period will be deleted at the end of "
-"the same period)"
-msgstr ""
-"(Усі повідомлення, термін яких перевищує вказаний період, будуть видалені по "
-"його закінченні)"
+#: contact_form_to_db.php:405
+msgid "(All messages older than the specified period will be deleted at the end of the same period)"
+msgstr "(Усі повідомлення, термін яких перевищує вказаний період, будуть видалені по його закінченні)"
 
-#: contact_form_to_db.php:565
+#: contact_form_to_db.php:410
 msgid "Show attachments"
 msgstr "Відображати вкладені файли"
 
-#: contact_form_to_db.php:569
+#: contact_form_to_db.php:414
 msgid "Use fancybox to image view"
 msgstr "Використовувати fancybox для перегляду зображень"
 
-#: contact_form_to_db.php:574
+#: contact_form_to_db.php:419
 msgid "If you upgrade to Pro version all your settings will be saved."
 msgstr "Якщо ви перейдете на Pro версію, всі налаштування буде збережено"
 
-#: contact_form_to_db.php:581
+#: contact_form_to_db.php:426
 msgid "Unlock premium options by upgrading to a PRO version."
 msgstr "Відкрити додаткові опції перейшовши на Pro версію"
 
-#: contact_form_to_db.php:582 contact_form_to_db.php:2189
+#: contact_form_to_db.php:427
 msgid "Learn More"
 msgstr "Дізнатись більше"
 
-#: contact_form_to_db.php:585
+#: contact_form_to_db.php:430
 msgid "Go"
 msgstr "Перейти"
 
-#: contact_form_to_db.php:592
+#: contact_form_to_db.php:437
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
-#: contact_form_to_db.php:598
-msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr ""
-"Якщо вам подобається плагін, будь ласка, поставте нам 5 зірочок на WordPress"
-
-#: contact_form_to_db.php:599
-msgid "Rate the plugin"
-msgstr "Оцінити плагін"
-
-#: contact_form_to_db.php:602
-msgid "If there is something wrong about it, please contact us"
-msgstr "Якщо виникли проблеми, будь ласка, повідомте нам"
-
-#: contact_form_to_db.php:613
-msgid ""
-"Congratulations! The PRO version of the plugin is successfully download and "
-"activated."
-msgstr "Вітаємо! PRO версію плагіну було успішно завантажено та активовано "
-
-#: contact_form_to_db.php:615
-msgid "Please, go to"
-msgstr "Будь ласка, перейдіть на"
-
-#: contact_form_to_db.php:615
-msgid "the setting page"
-msgstr "сторінку налаштувань"
-
-#: contact_form_to_db.php:616
-msgid "You will be redirected automatically in 5 seconds."
-msgstr "Вас буде переадресовано автоматично за 5 секунд"
-
-#: contact_form_to_db.php:621
-msgid "You can download and activate"
-msgstr "Ви можете завантажити та активувати "
-
-#: contact_form_to_db.php:623
-msgid "version of this plugin by entering Your license key."
-msgstr "версію плагіну, ввівши ліцензійний ключ"
-
-#: contact_form_to_db.php:625
-msgid ""
-"You can find your license key on your personal page Client area, by clicking "
-"on the link"
-msgstr ""
-"Ви можете знайти ліцензійний ключ на вкладці \"Клієнтам\" вашої сторінки"
-
-#: contact_form_to_db.php:627
-msgid "(your username is the email you specify when purchasing the product)."
-msgstr "(ваше ім'я - це емейл, який ви вказували при купівлі продукту)"
-
-#: contact_form_to_db.php:635 contact_form_to_db.php:645
-msgid "Activate"
-msgstr "Активувати"
-
-#: contact_form_to_db.php:1040
+#: contact_form_to_db.php:835
 msgid "Contact from to DB"
 msgstr "Contact from to DB"
 
-#: contact_form_to_db.php:1050
+#: contact_form_to_db.php:845
 msgid "This message was re-sent from "
 msgstr "Дане повідомлення було перенадіслано з"
 
-#: contact_form_to_db.php:1053
+#: contact_form_to_db.php:848
 msgid "Name"
 msgstr "Ім’я"
 
-#: contact_form_to_db.php:1058
+#: contact_form_to_db.php:853
 msgid "Address"
 msgstr "Адреса"
 
-#: contact_form_to_db.php:1063
+#: contact_form_to_db.php:858
 msgid "Email"
 msgstr "Електронна адреса"
 
-#: contact_form_to_db.php:1068
+#: contact_form_to_db.php:863
 msgid "Phone"
 msgstr "Телефон"
 
-#: contact_form_to_db.php:1073
+#: contact_form_to_db.php:868
 msgid "Subject"
 msgstr "Тема"
 
-#: contact_form_to_db.php:1076 contact_form_to_db.php:1816
+#: contact_form_to_db.php:871
+#: contact_form_to_db.php:1626
 msgid "Message"
 msgstr "Повідомлення"
 
-#: contact_form_to_db.php:1079
+#: contact_form_to_db.php:874
 msgid "Site"
 msgstr "Сайт"
 
-#: contact_form_to_db.php:1090
+#: contact_form_to_db.php:885
 msgid "Sent from (ip address)"
 msgstr "Відправлено з (ip адреса)"
 
-#: contact_form_to_db.php:1095
+#: contact_form_to_db.php:890
 msgid "Date/Time"
 msgstr "Дата/Час"
 
-#: contact_form_to_db.php:1100 contact_form_to_db.php:1106
+#: contact_form_to_db.php:895
+#: contact_form_to_db.php:901
 msgid "Sent from (referer)"
 msgstr "Отримано від (реферер)"
 
-#: contact_form_to_db.php:1119 contact_form_to_db.php:1121
+#: contact_form_to_db.php:914
+#: contact_form_to_db.php:916
 msgid "From: "
 msgstr "Від: "
 
-#: contact_form_to_db.php:1122
+#: contact_form_to_db.php:917
 msgid "To: "
 msgstr "Кому: "
 
-#: contact_form_to_db.php:1123
+#: contact_form_to_db.php:918
 msgid "Subject: "
 msgstr "Тема: "
 
-#: contact_form_to_db.php:1124
+#: contact_form_to_db.php:919
 msgid "Date/Time: "
 msgstr "Дата/Час:"
 
-#: contact_form_to_db.php:1202
+#: contact_form_to_db.php:997
 msgid "Sent from (ip address): "
 msgstr "Відправлено з (ip адреса): "
 
-#: contact_form_to_db.php:1437
+#: contact_form_to_db.php:1228
 msgid "Can not create XML-files."
 msgstr "Неможливо створити XML-файл."
 
-#: contact_form_to_db.php:1441
+#: contact_form_to_db.php:1232
 msgid "Can not create ZIP-archive."
 msgstr "Неможливо створити ZIP-архів."
 
-#: contact_form_to_db.php:1445
+#: contact_form_to_db.php:1236
 msgid "Unknown format."
 msgstr "Невідомий формат."
 
-#: contact_form_to_db.php:1454
+#: contact_form_to_db.php:1246
 msgid "One message was deleted successfully."
 msgstr "Одне повідомлення було успішно видалено."
 
-#: contact_form_to_db.php:1454
+#: contact_form_to_db.php:1246
 msgid "messages were deleted successfully."
 msgstr "повідомлення (повідомлень) були успішно видалені."
 
-#: contact_form_to_db.php:1456
+#: contact_form_to_db.php:1248
 msgid "There are some problems while deleting message."
 msgstr "Виникли проблеми під час видалення повідомлень. "
 
-#: contact_form_to_db.php:1469 contact_form_to_db.php:1507
-#: contact_form_to_db.php:2035
+#: contact_form_to_db.php:1263
+#: contact_form_to_db.php:1315
+#: contact_form_to_db.php:1844
 msgid "One message was marked as Spam."
 msgstr "Одне повідомлення було позначено як Спам."
 
-#: contact_form_to_db.php:1469
+#: contact_form_to_db.php:1263
 msgid "messages were marked as Spam."
 msgstr "повідомлення (повідомлень) були позначені як спам."
 
-#: contact_form_to_db.php:1470 contact_form_to_db.php:1486
-#: contact_form_to_db.php:1507 contact_form_to_db.php:1510
-#: contact_form_to_db.php:2035 contact_form_to_db.php:2038
+#: contact_form_to_db.php:1264
+#: contact_form_to_db.php:1282
+#: contact_form_to_db.php:1315
+#: contact_form_to_db.php:1318
+#: contact_form_to_db.php:1844
+#: contact_form_to_db.php:1847
 msgid "Undo"
 msgstr "Відмінити"
 
-#: contact_form_to_db.php:1472
+#: contact_form_to_db.php:1266
 msgid "Problems while marking messages as Spam."
 msgstr "Виникли проблеми під час маркування повідомлення, як Спам."
 
-#: contact_form_to_db.php:1485
+#: contact_form_to_db.php:1281
 msgid "One message was moved to Trash."
 msgstr "Одне повідомлення було переміщено у корзину."
 
-#: contact_form_to_db.php:1485
+#: contact_form_to_db.php:1281
 msgid "messages were moved to Trash."
 msgstr "повідомлення (повідомлень) були переміщені у корзину."
 
-#: contact_form_to_db.php:1488
+#: contact_form_to_db.php:1284
 msgid "Problems while moving messages to Trash."
 msgstr "Виникли проблеми під час переміщення повідомлень до корзини."
 
-#: contact_form_to_db.php:1488 contact_form_to_db.php:1972
+#: contact_form_to_db.php:1284
+#: contact_form_to_db.php:1783
 msgid " Please, try it later."
 msgstr "Будь ласка, спробуйте пізніше."
 
-#: contact_form_to_db.php:1495
+#: contact_form_to_db.php:1292
+#: contact_form_to_db.php:1301
 msgid "One message was restored."
 msgstr "Одне повідомлення було відновлено."
 
-#: contact_form_to_db.php:1495
+#: contact_form_to_db.php:1292
+#: contact_form_to_db.php:1301
 msgid "messages were restored."
 msgstr "повідомлення (повідомлень) були відновлені."
 
-#: contact_form_to_db.php:1497
+#: contact_form_to_db.php:1294
+#: contact_form_to_db.php:1303
 msgid "Problems during the restoration messages"
 msgstr "Виникли проблеми під час відновлення повідомлень."
 
-#: contact_form_to_db.php:1504 contact_form_to_db.php:2032
+#: contact_form_to_db.php:1312
+#: contact_form_to_db.php:1841
 msgid "One message was marked as Normal."
 msgstr "Одне повідомлення було помічено, як Стандартне."
 
-#: contact_form_to_db.php:1510 contact_form_to_db.php:2038
+#: contact_form_to_db.php:1318
+#: contact_form_to_db.php:1847
 msgid "One message was marked as Trash."
 msgstr "Одне повідомлення було переміщено у Корзину."
 
-#: contact_form_to_db.php:1513
+#: contact_form_to_db.php:1321
 msgid "Unknown result."
 msgstr "Невідомий результат."
 
-#: contact_form_to_db.php:1517
+#: contact_form_to_db.php:1325
 msgid "Problems while changing status of message."
 msgstr "Виникли проблеми під час зміни статусу повідомлення."
 
-#: contact_form_to_db.php:1524
+#: contact_form_to_db.php:1333
 msgid "Unknown action."
 msgstr "Невідома дія."
 
-#: contact_form_to_db.php:1526
+#: contact_form_to_db.php:1335
 msgid "Can not display results."
 msgstr "Неможливо відобразити результат."
 
-#: contact_form_to_db.php:1532
-msgid ""
-"Can not handle request. May be you need choose some messages to handle them."
-msgstr ""
-"Неможливо обробити запит. Можливо, Вам необхідно обрати деякі повідомлення "
-"для обробки."
+#: contact_form_to_db.php:1341
+msgid "Can not handle request. May be you need choose some messages to handle them."
+msgstr "Неможливо обробити запит. Можливо, Вам необхідно обрати деякі повідомлення для обробки."
 
-#: contact_form_to_db.php:1581 contact_form_to_db.php:1898
+#: contact_form_to_db.php:1390
+#: contact_form_to_db.php:1708
 msgid "Mark as Spam"
 msgstr "Помітити як Спам"
 
-#: contact_form_to_db.php:1583 contact_form_to_db.php:1907
+#: contact_form_to_db.php:1392
+#: contact_form_to_db.php:1717
 msgid "Mark as Trash"
 msgstr "Перемістити у Корзину"
 
-#: contact_form_to_db.php:1587
+#: contact_form_to_db.php:1396
 msgid "unknown status"
 msgstr "невідомий статус"
 
-#: contact_form_to_db.php:1597
+#: contact_form_to_db.php:1406
 msgid "- Unknown name -"
 msgstr "- Невідоме ім’я -"
 
-#: contact_form_to_db.php:1623
+#: contact_form_to_db.php:1432
 msgid " - No text in this message - "
 msgstr "- Відсутній текст у повідомленні -"
 
-#: contact_form_to_db.php:1633 contact_form_to_db.php:1634
-#: contact_form_to_db.php:1640 contact_form_to_db.php:1922
-#: contact_form_to_db.php:1954 contact_form_to_db.php:1955
-#: contact_form_to_db.php:1956 contact_form_to_db.php:2009
-#: contact_form_to_db.php:2010
+#: contact_form_to_db.php:1442
+#: contact_form_to_db.php:1443
+#: contact_form_to_db.php:1449
+#: contact_form_to_db.php:1732
+#: contact_form_to_db.php:1765
+#: contact_form_to_db.php:1766
+#: contact_form_to_db.php:1767
+#: contact_form_to_db.php:1819
+#: contact_form_to_db.php:1820
 msgid "This option is available in Pro version"
 msgstr "Ця опція доступна у Pro версії плагіну."
 
-#: contact_form_to_db.php:1633
+#: contact_form_to_db.php:1442
 msgid "Download"
 msgstr "Завантажити"
 
-#: contact_form_to_db.php:1634
+#: contact_form_to_db.php:1443
 msgid "View"
 msgstr "Переглянути"
 
-#: contact_form_to_db.php:1647
+#: contact_form_to_db.php:1456
 msgid "The number of dispatches"
 msgstr "Кількість пересилок"
 
-#: contact_form_to_db.php:1649
+#: contact_form_to_db.php:1458
 msgid "This message was not sent"
 msgstr "Дане повідомлення не було відправлено"
 
-#: contact_form_to_db.php:1733
+#: contact_form_to_db.php:1543
 msgid "message"
 msgstr "повідомлення"
 
-#: contact_form_to_db.php:1734
+#: contact_form_to_db.php:1544
 msgid "messages"
 msgstr "повідомлення"
 
-#: contact_form_to_db.php:1771
+#: contact_form_to_db.php:1581
 msgid "No messages that have been sent."
 msgstr "Відсутні відправлені повідомлення"
 
-#: contact_form_to_db.php:1773
+#: contact_form_to_db.php:1583
 msgid "No messages that have not been sent."
 msgstr "Відсутні невідправлені повідомлення."
 
-#: contact_form_to_db.php:1775
+#: contact_form_to_db.php:1585
 msgid "No messages that have was read."
 msgstr "Відсутні прочитані повідомлення."
 
-#: contact_form_to_db.php:1777
+#: contact_form_to_db.php:1587
 msgid "No messages that have was not read."
 msgstr "Відсутні непрочитані повідомлення."
 
-#: contact_form_to_db.php:1779
+#: contact_form_to_db.php:1589
 msgid "No messages that have attachments."
 msgstr "Відсутні повідомлення з вкладеними файлами."
 
-#: contact_form_to_db.php:1781
+#: contact_form_to_db.php:1591
 msgid "No messages that was marked as Spam."
 msgstr "Відсутні повідомлення помічені, як Спам."
 
-#: contact_form_to_db.php:1783
+#: contact_form_to_db.php:1593
 msgid "No messages that was marked as Trash."
 msgstr "Відсутні повідомлення в Корзині."
 
-#: contact_form_to_db.php:1785
+#: contact_form_to_db.php:1595
 msgid "No messages found."
 msgstr "Жодного повідомлення не знайдено."
 
-#: contact_form_to_db.php:1815
+#: contact_form_to_db.php:1625
 msgid "From"
 msgstr "Від"
 
-#: contact_form_to_db.php:1818
+#: contact_form_to_db.php:1628
 msgid "Send Counter"
 msgstr "Лічильник відправлень"
 
-#: contact_form_to_db.php:1819
+#: contact_form_to_db.php:1629
 msgid "Date"
 msgstr "Дата"
 
-#: contact_form_to_db.php:1831
+#: contact_form_to_db.php:1641
 msgid "All"
 msgstr "Усі"
 
-#: contact_form_to_db.php:1832
+#: contact_form_to_db.php:1642
 msgid "Sent"
 msgstr "Відправлені"
 
-#: contact_form_to_db.php:1833
+#: contact_form_to_db.php:1643
 msgid "Not sent"
 msgstr "Невідправлені"
 
-#: contact_form_to_db.php:1834
+#: contact_form_to_db.php:1644
 msgid "Read"
 msgstr "Прочитані"
 
-#: contact_form_to_db.php:1835
+#: contact_form_to_db.php:1645
 msgid "Unread"
 msgstr "Непрочитані"
 
-#: contact_form_to_db.php:1836
+#: contact_form_to_db.php:1646
 msgid "Has attachments"
 msgstr "З вкладеними файлами"
 
-#: contact_form_to_db.php:1837 contact_form_to_db.php:1924
+#: contact_form_to_db.php:1647
+#: contact_form_to_db.php:1734
 msgid "Spam"
 msgstr "Спам"
 
-#: contact_form_to_db.php:1838 contact_form_to_db.php:1925
-#: contact_form_to_db.php:1934
+#: contact_form_to_db.php:1648
+#: contact_form_to_db.php:1735
+#: contact_form_to_db.php:1744
 msgid "Trash"
 msgstr "Корзина"
 
-#: contact_form_to_db.php:1897
+#: contact_form_to_db.php:1707
 msgid "Download messages"
 msgstr "Завантажити повідомлення"
 
-#: contact_form_to_db.php:1901
+#: contact_form_to_db.php:1711
 msgid "Not Spam"
 msgstr "Не Спам"
 
-#: contact_form_to_db.php:1903 contact_form_to_db.php:1930
+#: contact_form_to_db.php:1713
+#: contact_form_to_db.php:1740
 msgid "Restore"
 msgstr "Відновити"
 
-#: contact_form_to_db.php:1905 contact_form_to_db.php:1932
+#: contact_form_to_db.php:1715
+#: contact_form_to_db.php:1742
 msgid "Delete Permanently"
 msgstr "Видалити назавжди"
 
-#: contact_form_to_db.php:1909
+#: contact_form_to_db.php:1719
 msgid "Re-send messages"
 msgstr "Відправити ще раз"
 
-#: contact_form_to_db.php:1910
+#: contact_form_to_db.php:1720
 msgid "Download attachments"
 msgstr "Завантажити вкладені файли"
 
-#: contact_form_to_db.php:1922
+#: contact_form_to_db.php:1732
 msgid "Re-send Message"
 msgstr "Надіслати повідомлення ще раз"
 
-#: contact_form_to_db.php:1923
+#: contact_form_to_db.php:1733
 msgid "Download Message"
 msgstr "Завантажити повідомлення"
 
-#: contact_form_to_db.php:1928
+#: contact_form_to_db.php:1738
 msgid "Not spam"
 msgstr "Не Спам"
 
-#: contact_form_to_db.php:1954
+#: contact_form_to_db.php:1765
 msgid "User Guide"
 msgstr "Посібник користувча"
 
-#: contact_form_to_db.php:1956
+#: contact_form_to_db.php:1767
 msgid "Screen Options"
 msgstr "Опції екрану"
 
-#: contact_form_to_db.php:1961 contact_form_to_db.php:1972
-#: contact_form_to_db.php:2096
+#: contact_form_to_db.php:1772
+#: contact_form_to_db.php:1783
+#: contact_form_to_db.php:1908
 msgid "WARNING: "
 msgstr "Увага: "
 
-#: contact_form_to_db.php:1961
+#: contact_form_to_db.php:1772
 msgid "For fully-functional work of plugin, please, enable javascript."
 msgstr "Для коректної роботи плагіну, будь ласка, увімкніть javascript."
 
-#: contact_form_to_db.php:1968
+#: contact_form_to_db.php:1779
 #, php-format
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "Результати запиту для &#8220;%s&#8221;"
 
-#: contact_form_to_db.php:2010
+#: contact_form_to_db.php:1820
 msgid "Can not display thumbnail"
 msgstr "Неможливо відобразити іконку"
 
-#: contact_form_to_db.php:2041
+#: contact_form_to_db.php:1850
 msgid "<strong>WARNING: </strong>Unknown result."
 msgstr "<strong>Увага: </strong>Невідомий результат."
 
-#: contact_form_to_db.php:2045
-msgid ""
-"<strong>WARNING: </strong>Problems while changing status of message. Please, "
-"try it later."
-msgstr ""
-"<strong>Увага: </strong>Виникли проблеми під час зміни статусу повідомлення. "
-"Будь ласка, спробуйте пізніше."
+#: contact_form_to_db.php:1854
+msgid "<strong>WARNING: </strong>Problems while changing status of message. Please, try it later."
+msgstr "<strong>Увага: </strong>Виникли проблеми під час зміни статусу повідомлення. Будь ласка, спробуйте пізніше."
 
-#: contact_form_to_db.php:2077
+#: contact_form_to_db.php:1889
 msgid "Support"
 msgstr "Підтримка"
 
-#: contact_form_to_db.php:2128
-msgid ""
-"Option \"Save messages to database\" was disabled on the plugin settings "
-"page."
-msgstr ""
-"Опція \"Зберегти повідомлення в базу даних\" була відключена на сторінці "
-"налаштувань плагіну"
+#: contact_form_to_db.php:1940
+msgid "Option \"Save messages to database\" was disabled on the plugin settings page."
+msgstr "Опція \"Зберегти повідомлення в базу даних\" була відключена на сторінці налаштувань плагіну"
 
-#: contact_form_to_db.php:2128
+#: contact_form_to_db.php:1940
 msgid "Enable it for saving messages from Contact Form"
 msgstr "Увімкніть її, щоб зберігати повідомлення з контактної форми"
 
-#: contact_form_to_db.php:2192
-msgid ""
-"It's time to upgrade your <strong>Contact Form to DB</strong> to "
-"<strong>PRO</strong> version"
-msgstr ""
-"Час оновити ваш плагін <strong>Contact Form to DB</strong> до <strong>PRO</"
-"strong> версії"
+#~ msgid "Contact Form to DB"
+#~ msgstr "Contact Form To DB"
 
-#: contact_form_to_db.php:2193
-msgid "Extend standard plugin functionality with new great options"
-msgstr "Розширте стандартний функціонал плагіну новими корисними опціями"
+#~ msgid "CF to DB"
+#~ msgstr "CF To DB"
+
+#~ msgid "requires"
+#~ msgstr "вимагає"
+
+#~ msgid ""
+#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
+#~ "and try again."
+#~ msgstr ""
+#~ "або вище, ось чому його було деактивовано! Будь ласка, оновіть WordPress "
+#~ "та спробуйте пізніше"
+
+#~ msgid "Back to the WordPress"
+#~ msgstr "Повернутися на WordPress"
+
+#~ msgid "Plugins page"
+#~ msgstr "Сторінку плагінів"
+
+#~ msgid "Wrong license key"
+#~ msgstr "Невірний ліцензійний ключ"
+
+#~ msgid ""
+#~ "Something went wrong. Try again later. If the error will appear again, "
+#~ "please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</"
+#~ "a>. We are sorry for inconvenience."
+#~ msgstr ""
+#~ "Щось не так, спробуйте пізніше. Якщо помилка повториться, будь ласка, "
+#~ "повідомте нам <a href=http://support.bestwebsoft.com>BestWebSoft</a>. "
+#~ "Просимо вибачення за незручності"
+
+#~ msgid "This license key is bind to another site"
+#~ msgstr "Цей ліцензійний ключ прив язаний до іншого сайту"
+
+#~ msgid ""
+#~ "Unfortunately, you have exceeded the number of available tries per day. "
+#~ "Please, upload the plugin manually."
+#~ msgstr ""
+#~ "На жаль, ви перевищили кількість можливих спроб на день. Будь ласка, "
+#~ "завантажте плагін вручну"
+
+#~ msgid "Failed to open the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Помилка при відкритті архіву zip. Будь ласка, завантажте плагін вручну"
+
+#~ msgid ""
+#~ "Your server does not support either ZipArchive or Phar. Please, upload "
+#~ "the plugin manually"
+#~ msgstr ""
+#~ "Ваш сервер не підтримує формати Zip та Phar. Будь ласка, завантажте "
+#~ "плагін вручну "
+
+#~ msgid ""
+#~ "Failed to download the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Помилка при завантаженнні архіву zip. Будь ласка, завантажте плагін "
+#~ "вручну "
+
+#~ msgid ""
+#~ "Something went wrong. Try again later or upload the plugin manually. We "
+#~ "are sorry for inconvienience."
+#~ msgstr ""
+#~ "Щось не так. Спробуйте пізніше чи завантажте плагін вручну. Просимо "
+#~ "вибачення за незручності."
+
+#~ msgid "Please, enter Your license key"
+#~ msgstr "Будь ласка, введіть ліцензійний ключ"
+
+#~ msgid "Contact Form to DB Settings"
+#~ msgstr "Налаштування плагіну Contact Form to DB"
+
+#~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+#~ msgstr ""
+#~ "Якщо вам подобається плагін, будь ласка, поставте нам 5 зірочок на "
+#~ "WordPress"
+
+#~ msgid "Rate the plugin"
+#~ msgstr "Оцінити плагін"
+
+#~ msgid "If there is something wrong about it, please contact us"
+#~ msgstr "Якщо виникли проблеми, будь ласка, повідомте нам"
+
+#~ msgid ""
+#~ "Congratulations! The PRO version of the plugin is successfully download "
+#~ "and activated."
+#~ msgstr "Вітаємо! PRO версію плагіну було успішно завантажено та активовано "
+
+#~ msgid "Please, go to"
+#~ msgstr "Будь ласка, перейдіть на"
+
+#~ msgid "the setting page"
+#~ msgstr "сторінку налаштувань"
+
+#~ msgid "You will be redirected automatically in 5 seconds."
+#~ msgstr "Вас буде переадресовано автоматично за 5 секунд"
+
+#~ msgid "You can download and activate"
+#~ msgstr "Ви можете завантажити та активувати "
+
+#~ msgid "version of this plugin by entering Your license key."
+#~ msgstr "версію плагіну, ввівши ліцензійний ключ"
+
+#~ msgid ""
+#~ "You can find your license key on your personal page Client area, by "
+#~ "clicking on the link"
+#~ msgstr ""
+#~ "Ви можете знайти ліцензійний ключ на вкладці \"Клієнтам\" вашої сторінки"
+
+#~ msgid ""
+#~ "(your username is the email you specify when purchasing the product)."
+#~ msgstr "(ваше ім'я - це емейл, який ви вказували при купівлі продукту)"
+
+#~ msgid "Activate"
+#~ msgstr "Активувати"
+
+#~ msgid ""
+#~ "It's time to upgrade your <strong>Contact Form to DB</strong> to "
+#~ "<strong>PRO</strong> version"
+#~ msgstr ""
+#~ "Час оновити ваш плагін <strong>Contact Form to DB</strong> до "
+#~ "<strong>PRO</strong> версії"
+
+#~ msgid "Extend standard plugin functionality with new great options"
+#~ msgstr "Розширте стандартний функціонал плагіну новими корисними опціями"
 
 #~ msgid "One message was marked as Spam. "
 #~ msgstr "Одне повідомлення було помічено, як Спам."
@@ -1688,6 +1657,7 @@ msgstr "Розширте стандартний функціонал плагі�
 #~ msgstr "Настройки плагина Contact form to DB"
 
 #~ msgid "One message was re-sent successfully"
+
 #~ msgid_plural "%s messages was re-sent successfully."
 #~ msgstr[0] "Одно сообщение было переслано"
 #~ msgstr[1] "%s сообщения были пересланы"
@@ -1695,6 +1665,7 @@ msgstr "Розширте стандартний функціонал плагі�
 #~ msgstr[3] "%s сообщение было переслано"
 
 #~ msgid "One file was not found."
+
 #~ msgid_plural "%s files was not found."
 #~ msgstr[0] "Один файл не найден"
 #~ msgstr[1] "%s файла не найдены"
