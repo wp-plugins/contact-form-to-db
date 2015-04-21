@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.4.5
+Version: 1.4.6
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -200,6 +200,29 @@ if ( ! function_exists( 'cntctfrmtdb_create_table' ) ) {
 			if ( ! isset( $db_row ) || empty( $db_row ) ) {
 				$wpdb->insert(  $prefix . "message_status", array( 'name' => $value ), array( '%s' ) );	
 			}
+		}
+	}
+}
+
+/*
+ * Write plugin settings and create neccessary tables for plugin in database 
+ */
+if ( ! function_exists ( 'cntctfrmtdb_activation' ) ) {
+	function cntctfrmtdb_activation( $networkwide ) {
+		global $wpdb;
+		if ( function_exists( 'is_multisite' ) && is_multisite() && $networkwide ) {
+			$cntctfrm_blog_id = $wpdb->blogid;
+			$cntctfrmtdb_get_blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+			foreach ( $cntctfrmtdb_get_blogids as $blog_id ) {
+				switch_to_blog( $blog_id );
+				cntctfrmtdb_settings();
+				cntctfrmtdb_create_table();
+			}
+			switch_to_blog( $cntctfrm_blog_id );
+			return;
+		} else {
+			cntctfrmtdb_settings();
+			cntctfrmtdb_create_table();
 		}
 	}
 }
@@ -1369,7 +1392,21 @@ if ( ! function_exists( 'cntctfrmtdb_get_message_list' ) ) {
 		} else {
 			$sql_query .= "WHERE " . $prefix . "message.status_id=1";
 		}
-		$sql_query .= " ORDER BY send_date DESC LIMIT " . $cntctfrmtdb_options['cntctfrmtdb_messages_per_page'] . " OFFSET " . $start_row;
+		if ( isset( $_REQUEST['orderby'] ) ) {
+			switch ( $_REQUEST['orderby'] ) {
+				case 'from':
+					$order_by = 'from_user';
+					break;
+				case 'date':
+				default:
+					$order_by = 'send_date';
+					break;
+			}
+		} else {
+			$order_by = 'send_date';
+		}
+		$order = isset( $_REQUEST['order'] ) ?  $_REQUEST['order'] : 'DESC';
+		$sql_query .= " ORDER BY " . $order_by . " " . $order . " LIMIT " . $cntctfrmtdb_options['cntctfrmtdb_messages_per_page'] . " OFFSET " . $start_row;
 		$messages = $wpdb->get_results( $sql_query );
 		$i = 0;
 		$attachments_icon = '';
@@ -1547,19 +1584,18 @@ if ( file_exists( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' ) ) {
 				$message_status = 'all';
 			$search		= ( isset( $_REQUEST['s'] ) ) ? $_REQUEST['s'] : '';
 			$columns	= $this->get_columns();
-			$hidden		= array( );
-			$sortable = ''; // in manager sorting is doing during request handling to database by send date Desc, thats why value of this variable is NULL
+			$hidden		= array( 'id' );
+			$sortable   = $this->get_sortable_columns();
 			$this->_column_headers = array( $columns, $hidden, $sortable );
 			$per_page			= $cntctfrmtdb_options['cntctfrmtdb_messages_per_page'];
 			$current_page = $this->get_pagenum();
 			$total_items	= intval( cntctfrmtdb_number_of_messages() );
-			$this->found_data = cntctfrmtdb_get_message_list();
+			$this->items = cntctfrmtdb_get_message_list();
 			$this->set_pagination_args( array(
 				'total_items' => $total_items,
 				'per_page'    => $per_page,
 				)
 			);
-			$this->items = $this->found_data;
 		}
 
 		/*
@@ -1620,6 +1656,19 @@ if ( file_exists( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' ) ) {
 			);
 			return $columns;
 		}
+
+		/**
+         * Get a list of sortable columns.  
+         * @return array list of sortable columns
+         */
+        function get_sortable_columns() {
+            $sortable_columns = array(
+                'from'    => array( 'from', false ),
+                'date'    => array( 'date', false )
+            );
+            return $sortable_columns;
+        }
+
 		/*
 		* Function to add action links before and after list of messages 
 		*/
@@ -1860,7 +1909,7 @@ if ( ! function_exists( 'cntctfrmtdb_plugin_action_links' ) ) {
 			if ( $file == $this_plugin ) {
 				$settings_link = '<a href="admin.php?page=cntctfrmtdb_settings">' . __( 'Settings', 'contact_form_to_db' ) . '</a>';
 				array_unshift( $links, $settings_link );
-			}			
+			}
 		}
 		return $links;
 	}
@@ -1933,7 +1982,7 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 			<?php }
 		}
 		if ( $hook_suffix == 'plugins.php' ) {  
-			bws_plugin_banner( $cntctfrmtdb_plugin_info, 'cntctfrmtdb', 'contact-form-to-db', 'a0297729ff05dc9a4dee809c8b8e94bf', '91', plugins_url( 'images/banner.png', __FILE__ ) ); 
+			bws_plugin_banner( $cntctfrmtdb_plugin_info, 'cntctfrmtdb', 'contact-form-to-db', 'a0297729ff05dc9a4dee809c8b8e94bf', '91', 'http://ps.w.org/contact-form-to-db/assets/icon-128x128.png' ); 
 		}
 	}
 }
@@ -1958,7 +2007,7 @@ if ( ! function_exists ( 'cntctfrmtdb_delete_options' ) ) {
 * Add all hooks
 */
 /* Activate plugin */
-register_activation_hook( __FILE__, 'cntctfrmtdb_create_table' );
+register_activation_hook( __FILE__, 'cntctfrmtdb_activation' );
 // add menu items in to dashboard menu
 add_action( 'admin_menu', 'cntctfrmtdb_admin_menu' );
 // init hooks
@@ -1981,3 +2030,4 @@ add_action( 'wp_ajax_cntctfrmtdb_change_staus', 'cntctfrmtdb_change_status' );
 add_action( 'admin_notices', 'cntctfrmtdb_show_notices' );
 // uninstal hook
 register_uninstall_hook( __FILE__, 'cntctfrmtdb_delete_options' );
+?>

@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: attachment, browse messages, contact, contatc, conact, cnotact, contact button, contact form, contact form add-on, contact form plugin, Contact Form to DB, contact me, contacts, contacts form plugin, copy, database, delete messages, download messages, feedback, feedback form, form, manage messages, request, save messages, send, send copy, text
 Requires at least: 3.2
-Tested up to: 4.1.1
-Stable tag: 1.4.5
+Tested up to: 4.2-RC1
+Stable tag: 1.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,7 @@ Please pay attention, that this plugin is an add-on ONLY for Contact Form plugin
 http://www.youtube.com/watch?v=agEWy6Hc-fY
 
 <a href="http://wordpress.org/plugins/contact-form-to-db/faq/" target="_blank">FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 <a href="http://bestwebsoft.com/products/contact-form-to-db/?k=52c469c463ea3722c39dd9c5d9ef54b2" target="_blank">Upgrade to Pro Version</a>
@@ -103,6 +104,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.4.6 - 21.04.2015 =
+* NEW    : We added the ability to sort the list of letters.
+* Bugfix : We fixed positioning of the blocks on the page a list of letters.
+* Bugfix : We fixed bug with displaying the list of messages.
+
 = V1.4.5 - 03.04.2015 =
 * Bugfix : Plugin optimization is done.
 * Update : We updated all functionality for wordpress 4.1.1.
@@ -175,6 +181,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.4.6 =
+We added the ability to sort the list of letters. We fixed positioning of the blocks on the page a list of letters. We fixed bug with displaying the list of messages.
 
 = V1.4.5 =
 Plugin optimization is done. We updated all functionality for wordpress 4.1.1.

@@ -119,10 +119,6 @@
 .cntctfrmtdb .wp-list-table .column-cb #cb-select-all-2 {
 	margin-top: 0;
 }
-.cntctfrmtdb .wp-list-table .column-id {
-	width: 0;
-	padding: 0;
-}
 .cntctfrmtdb .wp-list-table .column-status {
 	width: 2%;
 	vertical-align: top;
@@ -271,7 +267,7 @@
 	width: 34px;
 	height: 19px;
 	padding-top: 1px;
-	margin-top: 2px;
+	margin-top: 12px;
 	margin-left: 9px;	
 	-webkit-border-radius: 2px ;
 	-moz-border-radius: 2px; 
