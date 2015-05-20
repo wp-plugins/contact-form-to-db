@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.5.8
+* Version: 1.6.0
 */
 
 if ( ! function_exists ( 'bws_admin_enqueue_scripts' ) )
@@ -11,7 +11,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $wpdb, $wp_version, $bws_plugin_info;
 		$error = $message = $bwsmn_form_email = '';
-		$bws_donate_link = 'https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94';
+		$bws_donate_link = 'http://bestwebsoft.com/donate/';
 
 		if ( ! function_exists( 'is_plugin_active_for_network' ) )
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -247,7 +247,7 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			),
 			'contact-form-multi/contact-form-multi.php' => array(
 				'name'			=> 'Contact Form Multi',
-				'description'	=> 'This plugin allows you to subscribe users for newsletters from your website.',
+				'description'	=> 'Add-on to the Contact Form plugin that allows to create and implement multiple contact forms.',
 				'link'			=> 'http://bestwebsoft.com/products/contact-form-multi/?k=83cdd9e72a9f4061122ad28a67293c72&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'download'		=> 'http://bestwebsoft.com/products/contact-form-multi/download/?k=83cdd9e72a9f4061122ad28a67293c72&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&s=Contact+Form+Multi+Bestwebsoft&plugin-search-input=Search+Plugins',
@@ -409,6 +409,14 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				'download'		=> 'http://bestwebsoft.com/products/zendesk-help-center/download/?k=2a5fd2f4b2f4bde46f2ca44b8d15846d&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
 				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Zendesk+Help+Center+Backup+BestWebSoft&plugin-search-input=Search+Plugins',
 				'settings'		=> 'admin.php?page=zendesk_hc.php&tab=settings'
+			),
+			'social-buttons-pack/social-buttons-pack.php' => array(
+				'name'			=> 'Social Buttons Pack',
+				'description'	=> 'Add Social buttons to your WordPress website.',
+				'link'			=> 'http://bestwebsoft.com/products/social-buttons-pack/?k=b6440fad9f54274429e536b0c61b42da&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'download'		=> 'http://bestwebsoft.com/products/social-buttons-pack/download/?k=b6440fad9f54274429e536b0c61b42da&pn=' . $bws_plugin_info["id"] . '&v=' . $bws_plugin_info["version"] . '&wp_v=' . $wp_version,
+				'wp_install'	=> $admin_url . 'plugin-install.php?tab=search&type=term&s=Social+Buttons+Pack+BestWebSoft&plugin-search-input=Search+Plugins',
+				'settings'		=> 'admin.php?page=social-buttons.php'
 			)
 		);
 

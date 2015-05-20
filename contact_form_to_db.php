@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.4.6
+Version: 1.4.7
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -1982,7 +1982,7 @@ if ( ! function_exists( 'cntctfrmtdb_show_notices' ) ) {
 			<?php }
 		}
 		if ( $hook_suffix == 'plugins.php' ) {  
-			bws_plugin_banner( $cntctfrmtdb_plugin_info, 'cntctfrmtdb', 'contact-form-to-db', 'a0297729ff05dc9a4dee809c8b8e94bf', '91', 'http://ps.w.org/contact-form-to-db/assets/icon-128x128.png' ); 
+			bws_plugin_banner( $cntctfrmtdb_plugin_info, 'cntctfrmtdb', 'contact-form-to-db', 'a0297729ff05dc9a4dee809c8b8e94bf', '91', '//ps.w.org/contact-form-to-db/assets/icon-128x128.png' ); 
 		}
 	}
 }
