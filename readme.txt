@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: attachment, browse messages, contact, contatc, conact, cnotact, contact button, contact form, contact form add-on, contact form plugin, Contact Form to DB, contact me, contacts, contacts form plugin, copy, database, delete messages, download messages, feedback, feedback form, form, manage messages, request, save messages, send, send copy, text
 Requires at least: 3.2
 Tested up to: 4.2.2
-Stable tag: 1.4.7
+Stable tag: 1.4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,7 @@ http://www.youtube.com/watch?v=agEWy6Hc-fY
 <a href="http://bestwebsoft.com/products/contact-form-to-db/?k=52c469c463ea3722c39dd9c5d9ef54b2" target="_blank">Upgrade to Pro Version</a>
 
 <a href="http://bestwebsoft.com/products/contact-form/?k=1f9b7d7895c20420af788d9413ed8562" target="_blank">Contact Form Pro</a> 
+
 <a href="http://wordpress.org/plugins/contact-form-plugin" target="_blank">Contact Form Plugin</a>
 
 = Features =
@@ -106,6 +107,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. Spam page on the Contact Form to DB manager page display.
 
 == Changelog ==
+
+= V1.4.8 - 19.06.2015 =
+* New : Ability to restore settings to defaults.
 
 = V1.4.7 - 20.05.2015 =
 * Update : We updated all functionality for wordpress 4.2.2.
@@ -187,6 +191,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.4.8 =
+Ability to restore settings to defaults.
 
 = V1.4.7 =
 We updated all functionality for wordpress 4.2.2.
