@@ -1,10 +1,10 @@
-=== Contact Form To DB by BestWebSoft ===
+=== Contact Form to DB by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: attachment, browse messages, contact, contatc, conact, cnotact, contact button, contact form, contact form add-on, contact form plugin, Contact Form to DB, contact me, contacts, contacts form plugin, copy, database, delete messages, download messages, feedback, feedback form, form, manage messages, request, save messages, send, send copy, text
 Requires at least: 3.2
-Tested up to: 4.2.2
-Stable tag: 1.4.8
+Tested up to: 4.2.3
+Stable tag: 1.4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.4.9 - 27.07.2015 =
+* Update : We updated all functionality for wordpress 4.2.3.
+
 = V1.4.8 - 19.06.2015 =
 * New : Ability to restore settings to defaults.
 
@@ -191,6 +194,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Ability to manage messages that have been sent from website from Contact Form Plugin by BestWebSoft.
 
 == Upgrade Notice ==
+
+= V1.4.9 =
+We updated all functionality for wordpress 4.2.3.
 
 = V1.4.8 =
 Ability to restore settings to defaults.

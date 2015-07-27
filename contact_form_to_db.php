@@ -4,7 +4,7 @@ Plugin Name: Contact Form to DB by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Add-on for Contact Form Plugin by BestWebSoft.
 Author: BestWebSoft
-Version: 1.4.8
+Version: 1.4.9
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -102,7 +102,7 @@ if ( ! function_exists( 'cntctfrmtdb_settings' ) ) {
 			'cntctfrmtdb_mail_address'          => 1,
 			'cntctfrmtdb_delete_messages'       => 1,
 			'cntctfrmtdb_delete_messages_after' => 'daily',
-			'cntctfrmtdb_messages_per_page'     => 10,
+			'cntctfrmtdb_messages_per_page'     => 10
 		);
 		/* add options to database */
 		if ( ! get_option( 'cntctfrmtdb_options' ) )
@@ -193,7 +193,7 @@ if ( ! function_exists( 'cntctfrmtdb_create_table' ) ) {
 		dbDelta( $sql );
 		$status = array( 'normal',
 			'spam',
-			'trash',
+			'trash'
 		);
 		foreach ( $status as $key => $value ) {
 			$db_row = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM `" . $prefix . "message_status` WHERE `name` = %s", $value  ), ARRAY_A );
@@ -549,7 +549,7 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 			'was_read'          => '0',
 			'sent'              => $dispatched,
 			'status_id'         => '1',
-			'attachment_status' => $attachment_status,
+			'attachment_status' => $attachment_status
 			)
 		);
 		$message_id = $wpdb->insert_id;
@@ -607,7 +607,7 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 			$wpdb->insert( $prefix . 'field_selection', array( 
 				'cntctfrm_field_id' => $field_id,
 				'message_id'        => $message_id,
-				'field_value'       =>  $userlocation,
+				'field_value'       =>  $userlocation
 				)
 			);
 		}
@@ -616,7 +616,7 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 			$wpdb->insert( $prefix . 'field_selection', array( 
 				'cntctfrm_field_id' => $field_id,
 				'message_id'        => $message_id,
-				'field_value'       =>  $useraddress,
+				'field_value'       =>  $useraddress
 				)
 			);
 		}
@@ -625,7 +625,7 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 			$wpdb->insert( $prefix . 'field_selection', array(
 				'cntctfrm_field_id' => $field_id,
 				'message_id'        => $message_id,
-				'field_value'       => $userphone,
+				'field_value'       => $userphone
 				)
 			);
 		}
@@ -635,7 +635,7 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 				$wpdb->insert( $prefix . 'field_selection', array(
 					'cntctfrm_field_id' => $field_id,
 					'message_id'        => $message_id,
-					'field_value'       => $useragent,
+					'field_value'       => $useragent
 					)
 				);
 			}
@@ -646,7 +646,7 @@ if ( ! function_exists( 'cntctfrmtdb_save_new_message' ) ) {
 			'blogname_id'    => $blogname_id,
 			'to_id'          => $to_email_id,
 			'hosted_site_id' => $blogurl_id,
-			'refer_id'       => $refer_id,
+			'refer_id'       => $refer_id
 			 ), array( 
 				'id' => $message_id )
 		);
@@ -673,9 +673,9 @@ if ( ! function_exists( 'cntctfrmtdb_save_message' ) ) {
 				$counter++;
 				$wpdb->update( $prefix . 'message', array(
 						'sent'             => $dispatched,
-						'dispatch_counter' => $counter,
+						'dispatch_counter' => $counter
 					), array(
-						'id' => $previous_message_data['id'],
+						'id' => $previous_message_data['id']
 					)
 				);
 			} else {
@@ -1509,7 +1509,7 @@ if ( ! function_exists( 'cntctfrmtdb_get_message_list' ) ) {
 					'message'    => $message_content,
 					'attachment' => $attachments_icon,
 					'sent'       => $counter_sent_status,
-					'date'       => '<span style="text-align: center;">' . $send_date . '</span>',
+					'date'       => '<span style="text-align: center;">' . $send_date . '</span>'
 				);
 				$i++;
 			} else {
@@ -1522,7 +1522,7 @@ if ( ! function_exists( 'cntctfrmtdb_get_message_list' ) ) {
 						'message'    => $message_content,
 						'attachment' => $attachments_icon,
 						'sent'       => $counter_sent_status,
-						'date'       => '<span style="text-align: center;">' . $send_date . '</span>',
+						'date'       => '<span style="text-align: center;">' . $send_date . '</span>'
 					);
 					$i++;
 				}
@@ -1583,7 +1583,7 @@ if ( file_exists( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' ) ) {
 			parent::__construct( array(
 				'singular'  => __( 'message', 'contact_form_to_db' ),
 				'plural'    => __( 'messages', 'contact_form_to_db' ),
-				'ajax'      => true,
+				'ajax'      => true
 				)
 			);
 		}
@@ -1666,7 +1666,7 @@ if ( file_exists( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' ) ) {
 				'message'    => __( 'Message', 'contact_form_to_db' ),
 				'attachment' => '<div class="cntctfrmtdb-attachment-column-title"></div>',
 				'sent'       => __( 'Send Counter', 'contact_form_to_db' ),
-				'date'       => __( 'Date', 'contact_form_to_db' ),
+				'date'       => __( 'Date', 'contact_form_to_db' )
 			);
 			return $columns;
 		}
@@ -1698,7 +1698,7 @@ if ( file_exists( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' ) ) {
 				'not_read_messages' => __( 'Unread', 'contact_form_to_db' ),
 				'has_attachment'    => __( 'Has attachments', 'contact_form_to_db' ),
 				'spam'              => __( 'Spam', 'contact_form_to_db' ),
-				'trash'             => __( 'Trash', 'contact_form_to_db' ),
+				'trash'             => __( 'Trash', 'contact_form_to_db' )
 			);
 			$prefix = $wpdb->prefix . 'cntctfrmtdb_';
 			$filters_count = $wpdb->get_results(
